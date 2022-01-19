@@ -1,0 +1,6 @@
+pyld
+requests
+pyparsing
+pyshacl
+python-decouple
+rdflib

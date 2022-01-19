@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/project/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/project",
+  "imports": [
+    "http://rescs.org/dash/organization"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ProjectShape",
+      "@type": "sh:NodeShape",
+      "label": "Project",
+      "comment": "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim. Use properties from [[Organization]], [[subOrganization]]/[[parentOrganization]] to indicate project sub-structures.",
+      "targetClass": "schema:Project",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/organization/OrganizationShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:startDate",
+              "name": "startDate",
+              "description": "The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).",
+              "datatype": "xsd:date",
+              "minCount": 1,
+              "maxCount": 1,
+              "lessThan": "schema:endDate"
+            },
+            {
+              "path": "schema:endDate",
+              "name": "endDate",
+              "description": "The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).",
+              "datatype": "xsd:date",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

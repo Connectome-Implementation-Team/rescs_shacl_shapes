@@ -1,0 +1,91 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/organization/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/organization",
+  "imports": [
+    "http://rescs.org/dash/thing"
+  ],
+  "shapes": [
+    {
+      "@id": "this:OrganizationShape",
+      "@type": "sh:NodeShape",
+      "label": "Organization",
+      "comment": "An organization such as a school, NGO, corporation, club, etc.",
+      "targetClass": "schema:Organization",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/thing/ThingShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:address",
+              "name": "address",
+              "description": "Physical address of the item.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "schema:contactPoint",
+              "name": "contactPoint",
+              "description": "A contact point for a person or organization.",
+              "class": "schema:ContactPoint",
+              "nodeKind": "sh:IRI",
+              "maxCount": 1
+            },
+            {
+              "path": "schema:email",
+              "name": "email",
+              "description": "Email address.",
+              "datatype": "xsd:string",
+              "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+              "maxCount": 1
+            },
+            {
+              "path": "schema:funder",
+              "name": "funder",
+              "description": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+              "or": [
+                {
+                  "class": "schema:Person",
+                  "nodeKind": "sh:IRI"
+                },
+                {
+                  "class": "schema:Organization",
+                  "nodeKind": "sh:IRI"
+                }
+              ]
+            },
+            {
+              "path": "schema:member",
+              "name": "member",
+              "description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.",
+              "or": [
+                {
+                  "class": "schema:Person",
+                  "nodeKind": "sh:IRI"
+                },
+                {
+                  "class": "schema:Organization",
+                  "nodeKind": "sh:IRI"
+                }
+              ]
+            },
+            {
+              "path": "schema:subOrganization",
+              "name": "subOrganization",
+              "description": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.",
+              "class": "schema:Organization",
+              "nodeKind": "sh:IRI"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

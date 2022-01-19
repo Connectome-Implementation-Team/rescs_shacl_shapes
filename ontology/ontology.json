@@ -1,0 +1,154 @@
+{
+  "@context": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "shsh": "http://www.w3.org/ns/shacl-shacl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "schema": "http://schema.org/",
+    "schemashapes": "https://schemaorgshapes.org/",
+    "vann": "http://purl.org/vocab/vann",
+    "rescs": "http://rescs.org"
+  },
+  "@graph": [
+    {
+      "@id": "http://rescs.org",
+      "@type": "owl:Ontology",
+      "vann:preferredNamespacePrefix": "rescs",
+      "rdfs:comment": "RESCS (Research Commons) defines SHACL shapes that restrict schema.org entities. RESCS is based on https://datashapes.org/schema.",
+      "rdfs:label": "RESCS SHACL Shapes",
+      "owl:versionInfo": {
+        "@type": "xsd:date",
+        "@value": "2022-01-10"
+      }
+    },
+    {
+      "@id": "schema:Thing",
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "schema:CreativeWork",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "schema:Article",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "schema:ScholarlyArticle",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Article"
+      }
+    },
+    {
+      "@id": "schema:Dataset",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "schema:MediaObject",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "schema:DataDownload",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:MediaObject"
+      }
+    },
+    {
+      "@id": "schema:Organization",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "schema:Project",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Organization"
+      }
+    },
+    {
+      "@id": "schema:ResearchProject",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Project"
+      }
+    },
+    {
+      "@id": "schema:Person",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "schema:Intangible",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "schema:StructuredValue",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "schema:ContactPoint",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "schema:MonetaryAmount",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "schema:Grant",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "schema:MonetaryGrant",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Grant"
+      }
+    },
+    {
+      "@id": "schema:Place",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    }
+  ]
+}

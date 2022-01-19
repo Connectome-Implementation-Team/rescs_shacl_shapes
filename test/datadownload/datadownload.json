@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "DataDownload",
+  "name": "a name",
+  "author": {
+    "@id": "http://www.example.com/6",
+    "@type": "Person",
+    "name": "John Doe",
+    "address": "Fakestreet, Faketown",
+    "email": "john@doe.com",
+    "familyName": "Doe",
+    "givenName": "John",
+    "jobTitle": "developer",
+    "affiliation": {
+      "@id": "http://www.example.com/17",
+      "@type": "Organization",
+      "name": "my org",
+      "address": "Fakestreet, Faketown",
+      "email": "info@contact.com",
+      "contactPoint": {
+        "@id": "http://www.contact.com/1",
+        "@type": "ContactPoint",
+        "name": "a contact point,",
+        "availableLanguage": "eng",
+        "contactType": "sales",
+        "email": "info@contact.com"
+      }
+    }
+  },
+  "conditionsOfAccess": "CC",
+  "datePublished": {
+    "@type": "xsd:date",
+    "@value": "2021-09-27Z"
+  },
+  "inLanguage": "eng",
+  "contentSize": "10MB",
+  "contentUrl": {
+    "@id": "http://media.com/myfile"
+  },
+  "measurementTechnique": "spectometry"
+}

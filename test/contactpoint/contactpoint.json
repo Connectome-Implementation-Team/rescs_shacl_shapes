@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/"
+  },
+  "@type": "ContactPoint",
+  "alternateName": "My alias name",
+  "description": "a description",
+  "identifier": {
+    "@id": "http://www.example.com/1"
+  },
+  "image": {
+    "@id": "http://www.example.com/2"
+  },
+  "sameAs": {
+    "@id": "http://www.example.com/3"
+  },
+  "url": {
+    "@id": "http://www.example.com/4"
+  },
+  "name": "a contact point,",
+  "availableLanguage": "eng",
+  "contactType": "sales",
+  "email": "info@contact.com",
+  "telephone": "+41 052 111 11 11"
+}

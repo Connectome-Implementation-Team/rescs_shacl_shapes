@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/structuredvalue/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/structuredvalue",
+  "imports": [
+    "http://rescs.org/dash/intangible"
+  ],
+  "shapes": [
+    {
+      "@id": "this:StructuredValueShape",
+      "@type": "sh:NodeShape",
+      "label": "Structured value",
+      "comment": "Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.",
+      "targetClass": "schema:StructuredValue",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/intangible/IntangibleShape"
+        }
+      ]
+    }
+  ]
+}

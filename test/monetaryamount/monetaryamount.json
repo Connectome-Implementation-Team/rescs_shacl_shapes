@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "MonetaryAmount",
+  "alternateName": "My alias name",
+  "description": "a description",
+  "identifier": {
+    "@id": "http://www.example.com/1"
+  },
+  "image": {
+    "@id": "http://www.example.com/2"
+  },
+  "name": "a name",
+  "sameAs": {
+    "@id": "http://www.example.com/3"
+  },
+  "url": {
+    "@id": "http://www.example.com/4"
+  },
+  "currency": "CHF",
+  "value": {
+    "@type": "xsd:float",
+    "@value": 10000.5
+  },
+  "validFrom": {
+    "@type": "xsd:date",
+    "@value": "2021-10-01"
+  },
+  "validThrough": {
+    "@type": "xsd:date",
+    "@value": "2026-10-01"
+  }
+}

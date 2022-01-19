@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/mediaobject/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/mediaobject",
+  "imports": [
+    "http://rescs.org/dash/creativework"
+  ],
+  "shapes": [
+    {
+      "@id": "this:MediaObjectShape",
+      "@type": "sh:NodeShape",
+      "label": "Media object",
+      "comment": "A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).",
+      "targetClass": "schema:MediaObject",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/creativework/CreativeWorkShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:contentSize",
+              "name": "contentSize",
+              "description": "File size in (mega/kilo) bytes.",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "schema:contentUrl",
+              "name": "contentUrl",
+              "description": "Actual bytes of the media object, for example the image file or video file.",
+              "nodeKind": "sh:IRI",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

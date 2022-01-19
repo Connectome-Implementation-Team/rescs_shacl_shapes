@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/scholarlyarticle/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/scholarlyarticle",
+  "imports": [
+    "http://rescs.org/dash/article"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ScholarlyArticleShape",
+      "@type": "sh:NodeShape",
+      "label": "ScholarlyArticle",
+      "comment": "A scholarly article.",
+      "targetClass": "schema:ScholarlyArticle",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/article/ArticleShape"
+        }
+      ]
+    }
+  ]
+}

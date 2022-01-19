@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/place/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/place",
+  "imports": [
+    "http://rescs.org/dash/thing"
+  ],
+  "shapes": [
+    {
+      "@id": "this:PlaceShape",
+      "@type": "sh:NodeShape",
+      "label": "Place",
+      "comment": "Entities that have a somewhat fixed, physical extension.",
+      "targetClass": "schema:Place",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/thing/ThingShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:address",
+              "name": "address",
+              "description": "Physical address of the item.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "schema:telephone",
+              "name": "telephone",
+              "description": "The telephone number.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

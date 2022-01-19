@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "Grant",
+  "alternateName": "My alias name",
+  "description": "a description",
+  "identifier": {
+    "@id": "http://www.example.com/1"
+  },
+  "name": "a grant",
+  "sameAs": {
+    "@id": "http://www.example.com/2"
+  },
+  "url": {
+    "@id": "http://www.example.com/3"
+  },
+  "fundedItem": {
+    "@id": "http://www.example.com/4",
+    "@type": "Thing",
+    "name": "item"
+  }
+}

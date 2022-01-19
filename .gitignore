@@ -1,1 +1,6 @@
 .idea/*
+ontology/shapes_graph.json
+env/*
+.env
+docs/design-documentation.pdf
+docs/design-documentation.html

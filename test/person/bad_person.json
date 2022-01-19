@@ -1,0 +1,39 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "Person",
+  "name": 1,
+  "additionalName": "Joe",
+  "address": "Fakestreet, Faketown",
+  "affiliation": {
+    "@id": "http://www.example.com/8",
+    "@type": "Organization",
+    "name": "my org",
+    "address": "Fakestreet, Faketown",
+    "email": "info@contact.com",
+    "contactPoint": {
+      "@id": "http://www.contact.com/1",
+      "@type": "ContactPoint",
+      "name": "a contact point,",
+      "availableLanguage": "eng",
+      "contactType": "sales",
+      "email": "info@contact.com"
+    }
+  },
+  "birthDate": {
+    "@type": "xsd:date",
+    "@value": "1950-01-01"
+  },
+  "deathDate": {
+    "@type": "xsd:date",
+    "@value": "2050-01-01"
+  },
+  "email": "john@doe.com",
+  "familyName": "Doe",
+  "givenName": "John",
+  "honorificPrefix": "Dr",
+  "honorificSuffix": "PhD",
+  "jobTitle": "developer"
+}

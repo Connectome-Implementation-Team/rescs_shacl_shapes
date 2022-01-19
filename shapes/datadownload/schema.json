@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/datadownload/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/datadownload",
+  "imports": [
+    "http://rescs.org/dash/mediaobject"
+  ],
+  "shapes": [
+    {
+      "@id": "this:DataDownloadShape",
+      "@type": "sh:NodeShape",
+      "label": "Data download",
+      "comment": "A dataset in downloadable form.",
+      "targetClass": "schema:DataDownload",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/mediaobject/MediaObjectShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:measurementTechnique",
+              "name": "measurementTechnique",
+              "description": "A technique or technology used in a [[Dataset]] (or [[DataDownload]], [[DataCatalog]]), corresponding to the method used for measuring the corresponding variable(s) (described using [[variableMeasured]]). This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery. For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: \\\"mass spectrometry\\\" or \\\"nmr spectroscopy\\\" or \\\"colorimetry\\\" or \\\"immunofluorescence\\\". If the [[variableMeasured]] is \\\"depression rating\\\", the [[measurementTechnique]] could be \\\"Zung Scale\\\" or \\\"HAM-D\\\" or \\\"Beck Depression Inventory\\\". If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]].",
+              "or": [
+                {
+                  "datatype": "xsd:string"
+                },
+                {
+                  "nodeKind": "sh:IRI"
+                }
+              ],
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

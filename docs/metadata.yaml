@@ -1,0 +1,10 @@
+---
+title: RESCS -- Design Documentation
+author:
+- Tobias Schweizer (tobias.schweizer@switch.ch)
+- Kurt Baumann (kurt.baumann@switch)
+- Laura Rettig (laura.rettig@unifr.ch)
+date: 03.12.2021
+header-includes:
+  - \hypersetup{colorlinks=true,urlcolor=blue}
+---

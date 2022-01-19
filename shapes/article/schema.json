@@ -1,0 +1,67 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/article/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/article",
+  "imports": [
+    "http://rescs.org/dash/creativework"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ArticleShape",
+      "@type": "sh:NodeShape",
+      "label": "Article",
+      "comment": "An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.\\\\n\\\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).",
+      "targetClass": "schema:Article",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/creativework/CreativeWorkShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:articleBody",
+              "name": "articleBody",
+              "description": "The actual body of the article.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "schema:pageEnd",
+              "name": "pageEnd",
+              "description": "The page on which the work ends; for example \\\"138\\\" or \\\"xvi\\\".",
+              "or": [
+                {
+                  "datatype": "xsd:string"
+                },
+                {
+                  "datatype": "xsd:integer"
+                }
+              ],
+              "maxCount": 1
+            },
+            {
+              "path": "schema:pageStart",
+              "name": "pageStart",
+              "description": "The page on which the work starts; for example \\\"135\\\" or \\\"xiii\\\"",
+              "or": [
+                {
+                  "datatype": "xsd:string"
+                },
+                {
+                  "datatype": "xsd:integer"
+                }
+              ],
+              "lessThan": "schema:pageEnd",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

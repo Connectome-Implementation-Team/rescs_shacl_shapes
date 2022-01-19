@@ -1,0 +1,16 @@
+Model:
+  name: RdfModel
+  origin: directory
+  source: "shapes"
+  context:
+    iri: "./ontology/jsonld-context.json"
+
+Store:
+  name: BlueBrainNexus
+  searchendpoints:
+    sparql:
+      endpoint: "https://bluebrain.github.io/nexus/vocabulary/defaultSparqlIndex"
+  versioned_id_template: "{x.id}?rev={x._store_metadata._rev}"
+
+Formatters:
+  identifier: https://kg.example.ch/{}/{}

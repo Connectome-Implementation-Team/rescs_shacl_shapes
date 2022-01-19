@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/"
+  },
+  "@type": "Place",
+  "alternateName": "My alias name",
+  "description": "a description",
+  "identifier": {
+    "@id": "http://www.example.com/1"
+  },
+  "image": {
+    "@id": "http://www.example.com/2"
+  },
+  "name": "a name",
+  "sameAs": {
+    "@id": "http://www.example.com/3"
+  },
+  "url": {
+    "@id": "http://www.example.com/4"
+  },
+  "address": "Fakestreet, Faketown",
+  "telephone": "+41 52 111 11 11"
+}

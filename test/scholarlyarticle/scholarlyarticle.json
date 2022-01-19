@@ -1,0 +1,122 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "ScholarlyArticle",
+  "alternateName": "My alias name",
+  "description": "a description",
+  "identifier": {
+    "@id": "http://www.example.com/1"
+  },
+  "image": {
+    "@id": "http://www.example.com/2"
+  },
+  "name": "a name",
+  "sameAs": {
+    "@id": "http://www.example.com/3"
+  },
+  "url": {
+    "@id": "http://www.example.com/4"
+  },
+  "about": {
+    "@id": "http://www.example.com/5",
+    "@type": "Thing",
+    "name": "another thing"
+  },
+  "abstract": "a short summary",
+  "author": {
+    "@id": "http://www.example.com/6",
+    "@type": "Person",
+    "name": "John Doe",
+    "additionalName": "Joe",
+    "address": "Fakestreet, Faketown",
+    "email": "john@doe.com",
+    "familyName": "Doe",
+    "givenName": "John",
+    "jobTitle": "developer",
+    "affiliation": {
+      "@id": "http://www.example.com/17",
+      "@type": "Organization",
+      "name": "my org",
+      "address": "Fakestreet, Faketown",
+      "email": "info@contact.com",
+      "contactPoint": {
+        "@id": "http://www.contact.com/1",
+        "@type": "ContactPoint",
+        "name": "a contact point,",
+        "availableLanguage": "eng",
+        "contactType": "sales",
+        "email": "info@contact.com"
+      }
+    }
+  },
+  "citation": "a reference to another work",
+  "conditionsOfAccess": "CC",
+  "copyrightHolder": {
+    "@id": "http://www.example.com/6",
+    "@type": "Person"
+  },
+  "copyrightNotice": "my copyright",
+  "copyrightYear": 2022,
+  "creativeWorkStatus": "published",
+  "dateCreated": {
+    "@type": "xsd:date",
+    "@value": "2021-09-23Z"
+  },
+  "dateModified": {
+    "@type": "xsd:date",
+    "@value": "2021-09-25Z"
+  },
+  "datePublished": {
+    "@type": "xsd:date",
+    "@value": "2021-09-27Z"
+  },
+  "editor": {
+    "@id": "http://www.example.com/6",
+    "@type": "Person"
+  },
+  "encodingFormat": "text/plain",
+  "genre": "creative",
+  "hasPart": {
+    "@id": "http://www.example.com/8",
+    "@type": "CreativeWork",
+    "name": "another work",
+    "conditionsOfAccess": "CC",
+    "author": {
+      "@id": "http://www.example.com/6",
+      "@type": "Person"
+    },
+    "inLanguage": "eng"
+  },
+  "inLanguage": "eng",
+  "isAccessibleForFree": true,
+  "keywords": [
+    "creative",
+    "work",
+    {
+      "@id": "http://www.taxonomy.com/1"
+    }
+  ],
+  "license": {
+    "@id": "http://www.creativecommons.com/cc"
+  },
+  "maintainer": {
+    "@id": "http://www.example.com/6",
+    "@type": "Person",
+    "name": "John Doe"
+  },
+  "mentions": {
+    "@id": "http://www.example.com/5",
+    "@type": "Thing",
+    "name": "another thing"
+  },
+  "position": 1,
+  "publisher": {
+    "@id": "http://www.example.com/6",
+    "@type": "Person"
+  },
+  "articleBody": "The article's content ...",
+  "pageEnd": 100,
+  "pageStart": 50
+}

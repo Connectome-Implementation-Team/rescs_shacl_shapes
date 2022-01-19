@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/contactpoint/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/contactpoint",
+  "imports": [
+    "http://rescs.org/dash/structuredvalue"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ContactPointShape",
+      "@type": "sh:NodeShape",
+      "label": "Contact point",
+      "comment": "A contact point - for example, a Customer Complaints department.",
+      "targetClass": "schema:ContactPoint",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/structuredvalue/StructuredValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:availableLanguage",
+              "name": "availableLanguage",
+              "description": "A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].",
+              "datatype": "xsd:string",
+              "pattern": "[a-z]{3}",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "schema:contactType",
+              "name": "contactType",
+              "description": "A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.",
+              "datatype": "xsd:string",
+              "minCount": 1
+            },
+            {
+              "path": "schema:email",
+              "name": "email",
+              "description": "Email address.",
+              "datatype": "xsd:string",
+              "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "schema:telephone",
+              "name": "telephone",
+              "description": "The telephone number.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

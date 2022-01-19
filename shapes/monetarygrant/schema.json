@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/monetarygrant/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/monetarygrant",
+  "imports": [
+    "http://rescs.org/dash/grant",
+    "http://rescs.org/dash/monetaryamount"
+  ],
+  "shapes": [
+    {
+      "@id": "this:MonetaryGrantShape",
+      "@type": "sh:NodeShape",
+      "label": "Monetary grant",
+      "comment": "A monetary grant.",
+      "targetClass": "schema:MonetaryGrant",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/grant/GrantShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:amount",
+              "name": "amount",
+              "description": "The amount of money.",
+              "nodeKind": "sh:BlankNode",
+              "class": "schema:MonetaryAmount",
+              "node": "http://rescs.org/dash/monetaryamount/MonetaryAmountShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "schema:funder",
+              "name": "funder",
+              "description": "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.",
+              "or": [
+                {
+                  "class": "schema:Person",
+                  "nodeKind": "sh:IRI"
+                },
+                {
+                  "class": "schema:Organization",
+                  "nodeKind": "sh:IRI"
+                }
+              ],
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

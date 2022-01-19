@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "MonetaryGrant",
+  "alternateName": "My alias name",
+  "description": "a description",
+  "identifier": {
+    "@id": "http://www.example.com/1"
+  },
+  "name": "a grant",
+  "sameAs": {
+    "@id": "http://www.example.com/2"
+  },
+  "url": {
+    "@id": "http://www.example.com/3"
+  },
+  "fundedItem": {
+    "@id": "http://www.example.com/4",
+    "@type": "Thing",
+    "name": "item"
+  },
+  "funder": {
+    "@id": "http://www.example.com/5",
+    "@type": "Person",
+    "name": "John Doe",
+    "additionalName": "Joe",
+    "address": "Fakestreet, Faketown",
+    "email": "john@doe.com",
+    "familyName": "Doe",
+    "givenName": "John",
+    "jobTitle": "developer",
+    "affiliation": {
+      "@id": "http://www.example.com/6",
+      "@type": "Organization",
+      "name": "my org",
+      "address": "Fakestreet, Faketown",
+      "email": "info@contact.com",
+      "contactPoint": {
+        "@id": "http://www.contact.com/7",
+        "@type": "ContactPoint",
+        "name": "a contact point,",
+        "availableLanguage": "eng",
+        "contactType": "sales",
+        "email": "info@contact.com"
+      }
+    }
+  },
+  "amount": {
+    "@type": "MonetaryAmount",
+    "name": "granted amount",
+    "currency": "CHF",
+    "value": {
+      "@type": "xsd:float",
+      "@value": 10000.5
+    }
+  }
+}

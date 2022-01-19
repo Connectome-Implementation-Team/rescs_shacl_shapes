@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/thing/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/thing",
+  "shapes": [
+    {
+      "@id": "this:ThingShape",
+      "@type": "sh:NodeShape",
+      "label": "Thing",
+      "comment": "The most generic type of item.",
+      "targetClass": "schema:Thing",
+      "property": [
+        {
+          "path": "schema:alternateName",
+          "name": "alternateName",
+          "description": "An alias for the item.",
+          "datatype": "xsd:string"
+        },
+        {
+          "path": "schema:description",
+          "name": "description",
+          "description": "A description of the item.",
+          "or": [
+            {
+              "datatype": "xsd:string"
+            },
+            {
+              "datatype":  "rdf:langString"
+            }
+          ],
+          "maxCount": 1
+        },
+        {
+          "path": "schema:identifier",
+          "name": "identifier",
+          "description": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+          "or": [
+            {
+              "datatype": "xsd:string"
+            },
+            {
+              "nodeKind": "sh:IRI"
+            }
+          ],
+          "maxCount": 1
+        },
+        {
+          "path": "schema:image",
+          "name": "image",
+          "description": "An image of the item.",
+          "nodeKind": "sh:IRI",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:name",
+          "name": "name",
+          "description": "The name of the item.",
+          "datatype": "xsd:string",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "schema:sameAs",
+          "name": "sameAs",
+          "description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+          "nodeKind": "sh:IRI"
+        },
+        {
+          "path": "schema:url",
+          "name": "url",
+          "description": "URL of the item.",
+          "nodeKind": "sh:IRI"
+        }
+      ]
+    }
+  ]
+}

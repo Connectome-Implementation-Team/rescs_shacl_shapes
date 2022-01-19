@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/researchproject/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/researchproject",
+  "imports": [
+    "http://rescs.org/dash/project"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ResearchProjectShape",
+      "@type": "sh:NodeShape",
+      "label": "Research project",
+      "comment": "A Research project.",
+      "targetClass": "schema:ResearchProject",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/project/ProjectShape"
+        }
+      ]
+    }
+  ]
+}

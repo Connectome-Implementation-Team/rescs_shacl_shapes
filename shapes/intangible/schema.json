@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/intangible/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/intangible",
+  "imports": [
+    "http://rescs.org/dash/thing"
+  ],
+  "shapes": [
+    {
+      "@id": "this:IntangibleShape",
+      "@type": "sh:NodeShape",
+      "label": "Intangible",
+      "comment": "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.",
+      "targetClass": "schema:Intangible",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/thing/ThingShape"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "Project",
+  "alternateName": "My alias name",
+  "description": "a description",
+  "identifier": {
+    "@id": "http://www.example.com/1"
+  },
+  "image": {
+    "@id": "http://www.example.com/2"
+  },
+  "name": "a name",
+  "sameAs": {
+    "@id": "http://www.example.com/3"
+  },
+  "url": {
+    "@id": "http://www.example.com/4"
+  },
+  "address": "Fakestreet, Faketown",
+  "email": "info@contact.com",
+  "contactPoint": {
+    "@id": "http://www.contact.com/1",
+    "@type": "ContactPoint",
+    "name": "a contact point,",
+    "availableLanguage": "eng",
+    "contactType": "sales",
+    "email": "info@contact.com"
+  },
+  "startDate": {
+    "@type": "xsd:date",
+    "@value": "2022-10-12Z"
+  },
+  "endDate": {
+    "@type": "xsd:date",
+    "@value": "2022-10-13Z"
+  }
+}

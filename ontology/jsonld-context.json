@@ -1,0 +1,249 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Thing": {
+      "@id": "schema:Thing"
+    },
+    "alternateName": {
+      "@id": "schema:alternateName"
+    },
+    "description": {
+      "@id": "schema:description"
+    },
+    "identifier": {
+      "@id": "schema:identifier"
+    },
+    "image": {
+      "@id": "schema:image"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "sameAs": {
+      "@id": "schema:sameAs"
+    },
+    "url": {
+      "@id": "schema:url"
+    },
+    "CreativeWork": {
+      "@id": "schema:CreativeWork"
+    },
+    "about": {
+      "@id": "schema:about"
+    },
+    "abstract": {
+      "@id": "schema:abstract"
+    },
+    "author": {
+      "@id": "schema:author"
+    },
+    "citation": {
+      "@id": "schema:citation"
+    },
+    "conditionsOfAccess": {
+      "@id": "schema:conditionsOfAccess"
+    },
+    "copyrightNotice": {
+      "@id": "schema:copyrightNotice"
+    },
+    "copyrightYear": {
+      "@id": "schema:copyrightYear"
+    },
+    "creativeWorkStatus": {
+      "@id": "schema:creativeWorkStatus"
+    },
+    "dateCreated": {
+      "@id": "schema:dateCreated"
+    },
+    "dateModified": {
+      "@id": "schema:dateModified"
+    },
+    "datePublished": {
+      "@id": "schema:datePublished"
+    },
+    "editor": {
+      "@id": "schema:editor"
+    },
+    "encodingFormat": {
+      "@id": "schema:encodingFormat"
+    },
+    "funder": {
+      "@id": "schema:funder"
+    },
+    "genre": {
+      "@id": "schema:genre"
+    },
+    "hasPart": {
+      "@id": "schema:hasPart"
+    },
+    "inLanguage": {
+      "@id": "schema:inLanguage"
+    },
+    "isAccessibleForFree": {
+      "@id": "schema:isAccessibleForFree"
+    },
+    "keywords": {
+      "@id": "schema:keywords"
+    },
+    "license": {
+      "@id": "schema:license"
+    },
+    "maintainer": {
+      "@id": "schema:maintainer"
+    },
+    "mentions": {
+      "@id": "schema:mentions"
+    },
+    "position": {
+      "@id": "schema:position"
+    },
+    "publisher": {
+      "@id": "schema:publisher"
+    },
+    "Article": {
+      "@id": "schema:Article"
+    },
+    "articleBody": {
+      "@id": "schema:articleBody"
+    },
+    "pageStart": {
+      "@id": "schema:pageStart"
+    },
+    "pageEnd": {
+      "@id": "schema:pageEnd"
+    },
+    "ScholarlyArticle": {
+      "@id": "schema:ScholarlyArticle"
+    },
+    "Dataset": {
+      "@id": "schema:Dataset"
+    },
+    "distribution": {
+      "@id": "schema:distribution"
+    },
+    "MediaObject": {
+      "@id": "schema:MediaObject"
+    },
+    "contentSize": {
+      "@id": "schema:contentSize"
+    },
+    "contentUrl": {
+      "@id": "schema:contentUrl"
+    },
+    "DataDownload": {
+      "@id": "schema:DataDownload"
+    },
+    "measurementTechnique": {
+      "@id": "schema:measurementTechnique"
+    },
+    "Organization": {
+      "@id": "schema:Organization"
+    },
+    "address": {
+      "@id": "schema:address"
+    },
+    "contactPoint": {
+      "@id": "schema:contactPoint"
+    },
+    "email": {
+      "@id": "schema:email"
+    },
+    "member": {
+      "@id": "schema:member"
+    },
+    "subOrganization": {
+      "@id": "schema:subOrganization"
+    },
+    "Project": {
+      "@id": "schema:Project"
+    },
+    "startDate": {
+      "@id": "schema:startDate"
+    },
+    "endDate": {
+      "@id": "schema:endDate"
+    },
+    "ResearchProject": {
+      "@id": "schema:ResearchProject"
+    },
+    "Person": {
+      "@id": "schema:Person"
+    },
+    "additionalName": {
+      "@id": "schema:additionalName"
+    },
+    "affiliation": {
+      "@id": "schema:affiliation"
+    },
+    "birthDate": {
+      "@id": "schema:birthDate"
+    },
+    "deathDate": {
+      "@id": "schema:deathDate"
+    },
+    "familyName": {
+      "@id": "schema:familyName"
+    },
+    "givenName": {
+      "@id": "schema:givenName"
+    },
+    "honorificPrefix": {
+      "@id": "schema:honorificPrefix"
+    },
+    "honorificSuffix": {
+      "@id": "schema:honorificSuffix"
+    },
+    "jobTitle": {
+      "@id": "schema:jobTitle"
+    },
+    "Intangible": {
+      "@id": "schema:Intangible"
+    },
+    "StructuredValue": {
+      "@id": "schema:StructuredValue"
+    },
+    "ContactPoint": {
+      "@id": "schema:ContactPoint"
+    },
+    "availableLanguage": {
+      "@id": "schema:availableLanguage"
+    },
+    "contactType": {
+      "@id": "schema:contactType"
+    },
+    "telephone": {
+      "@id": "schema:telephone"
+    },
+    "MonetaryAmount": {
+      "@id": "schema:MonetaryAmount"
+    },
+    "currency": {
+      "@id": "schema:currency"
+    },
+    "value": {
+      "@id": "schema:value"
+    },
+    "validFrom": {
+      "@id": "schema:validFrom"
+    },
+    "validThrough": {
+      "@id": "schema:validThrough"
+    },
+    "Grant": {
+      "@id": "schema:Grant"
+    },
+    "fundedItem": {
+      "@id": "schema:fundedItem"
+    },
+    "MonetaryGrant": {
+      "@id": "schema:MonetaryGrant"
+    },
+    "amount": {
+      "@id": "schema:amount"
+    },
+    "Place": {
+      "@id": "schema:Place"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/dataset/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/dataset",
+  "imports": [
+    "http://rescs.org/dash/creativework"
+  ],
+  "shapes": [
+    {
+      "@id": "this:DatasetShape",
+      "@type": "sh:NodeShape",
+      "label": "Dataset",
+      "comment": "A body of structured information describing some topic(s) of interest.",
+      "targetClass": "schema:Dataset",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/creativework/CreativeWorkShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:distribution",
+              "name": "distribution",
+              "description": "A downloadable form of this dataset, at a specific location, in a specific format.",
+              "class": "schema:DataDownload",
+              "nodeKind": "sh:IRI"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
