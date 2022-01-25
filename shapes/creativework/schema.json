@@ -291,8 +291,7 @@
                   "class": "schema:Organization",
                   "nodeKind": "sh:BlankNodeOrIRI"
                 }
-              ],
-              "maxCount": 1
+              ]
             },
             {
               "path": "schema:temporalCoverage",
