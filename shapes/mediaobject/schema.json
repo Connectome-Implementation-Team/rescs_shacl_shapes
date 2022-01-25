@@ -35,7 +35,6 @@
               "name": "contentUrl",
               "description": "Actual bytes of the media object, for example the image file or video file.",
               "nodeKind": "sh:IRI",
-              "minCount": 1,
               "maxCount": 1
             }
           ]
