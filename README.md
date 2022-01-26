@@ -105,12 +105,12 @@ Make sure to create a file `.env` first containing configuration settings (see [
 
 ### Use with Standard Tools
 
-Run `scripts/generate_shapes.py` to build a graph of **all** SHACL shapes contained in the library.
-The generated file is called `ontology/shapes_graph.json`.
+Run `scripts/generate_shapes_graph.py` to build a graph of **all** SHACL shapes contained in the library.
+The generated file is called `ontology/shapes_ontology_graph.json`.
 The resulting collection contains all shapes in **one** JSON-LD graph
 and only contains standard SHACL statements (no Nexus Forge specifics).
 
-Then use it for validation, e.g., `pyshacl -sf json-ld -s ontology/shapes_graph.json -df json-ld test/thing/thing.json`
+Then use it for validation, e.g., `pyshacl -sf json-ld -s ontology/shapes_ontology_graph.json -df json-ld test/thing/thing.json`
 (use the debug mode `-d` for more detailed error messages).
 
 ## Tests
@@ -125,9 +125,9 @@ to check if the test data files contained in the directory `test` conform to the
 ### Source Files
 
 The JSON-LD files contained in the `shapes` directory are the **source files** of the SHACL shapes library.
-Running `scripts/generate_shapes.py` will generate a file called `ontology/shapes_graph.json` containing all SHACL shapes.
+Running `scripts/generate_shapes_graph.py` will generate a file called `ontology/shapes_ontology_graph.json` containing all SHACL shapes.
 
-**Please note that you have to run `generate_shapes.py` each time you changed something in the JSON-LD shape files.** 
+**Please note that you have to run `generate_shapes_graph.py` each time you changed something in the JSON-LD shape files.** 
 
 #### Structure of a SHACL Shape File
 

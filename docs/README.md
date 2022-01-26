@@ -4,10 +4,10 @@
 
 An HTML documentation can be generated using [Ontospy](https://github.com/lambdamusic/Ontospy):
 - Install `Ontospy` and its dependencies: `pip3 install ontospy django pygments`
-- Run `scripts/generate_shapes.py` to generate a graph of all SHACL shapes and some extracted ontology information.
-- Run `ontospy gendocs ontology/shapes_graph.json` and choose option 2 ("Html: multi page")
+- Run `scripts/generate_shapes_graph.py` to generate a graph of all SHACL shapes and some extracted ontology information.
+- Run `ontospy gendocs ontology/shapes_ontology_graph.json` and choose option 2 ("Html: multi page")
 
-The script `scripts/generate_shapes.py` generates the property definitions from the SHACL shapes.
+The script `scripts/generate_shapes_graph.py` generates the property definitions from the SHACL shapes.
 However, class definitions have to be added to `ontology/onytology.json` including their relations to other classes (`rdfs:subClassOf`).
 In the SHACL shapes, we do not use inference but conjunctions (`sh:and`, see [docs](https://www.w3.org/TR/shacl/#AndConstraintComponent)).
 

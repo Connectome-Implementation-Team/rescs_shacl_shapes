@@ -173,6 +173,6 @@ onto = jsonld.compact(onto, {
 
 onto_json = json.dumps(onto)
 
-f = open(absolute_from_rel_file_path('../ontology/shapes_graph.json'), 'w')
+f = open(absolute_from_rel_file_path('../ontology/shapes_ontology_graph.json'), 'w')
 f.write(onto_json)
 f.close()

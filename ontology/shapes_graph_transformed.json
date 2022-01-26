@@ -1,0 +1,2852 @@
+{
+  "@context": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "shsh": "http://www.w3.org/ns/shacl-shacl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "schema": "http://schema.org/",
+    "rescs": "http://rescs.org/"
+  },
+  "@graph": [
+    {
+      "@id": "schema:pageStart",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Article"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:integer"
+        }
+      ],
+      "rdfs:comment": "The page on which the work starts; for example \\\"135\\\" or \\\"xiii\\\"",
+      "rdfs:label": "pageStart"
+    },
+    {
+      "@id": "schema:contentUrl",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:MediaObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "sh:IRI"
+      },
+      "rdfs:comment": "Actual bytes of the media object, for example the image file or video file.",
+      "rdfs:label": "contentUrl"
+    },
+    {
+      "@id": "schema:creativeWorkStatus",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.",
+      "rdfs:label": "creativeWorkStatus"
+    },
+    {
+      "@id": "schema:email",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Organization"
+        },
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:ContactPoint"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "Email address.",
+      "rdfs:label": "email"
+    },
+    {
+      "@id": "schema:startDate",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Project"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:date"
+      },
+      "rdfs:comment": "The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).",
+      "rdfs:label": "startDate"
+    },
+    {
+      "@id": "schema:DataDownload",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:MediaObject"
+      }
+    },
+    {
+      "@id": "schema:contactType",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:ContactPoint"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.",
+      "rdfs:label": "contactType"
+    },
+    {
+      "@id": "rescs:dash/datadownload/DataDownloadShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "A dataset in downloadable form.",
+      "rdfs:label": "Data download",
+      "sh:property": {
+        "@id": "_:N8d49a86618b8487298d5ef180f206039"
+      },
+      "sh:targetClass": {
+        "@id": "schema:DataDownload"
+      }
+    },
+    {
+      "@id": "_:N8d49a86618b8487298d5ef180f206039",
+      "sh:description": "A technique or technology used in a [[Dataset]] (or [[DataDownload]], [[DataCatalog]]), corresponding to the method used for measuring the corresponding variable(s) (described using [[variableMeasured]]). This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery. For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: \\\"mass spectrometry\\\" or \\\"nmr spectroscopy\\\" or \\\"colorimetry\\\" or \\\"immunofluorescence\\\". If the [[variableMeasured]] is \\\"depression rating\\\", the [[measurementTechnique]] could be \\\"Zung Scale\\\" or \\\"HAM-D\\\" or \\\"Beck Depression Inventory\\\". If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]].",
+      "sh:maxCount": 1,
+      "sh:name": "measurementTechnique",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:Ndc9542c249694beebb20e94a17248c89"
+          },
+          {
+            "@id": "_:Naa718e1dd9984fc9839034875606da2b"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:measurementTechnique"
+      }
+    },
+    {
+      "@id": "_:Ndc9542c249694beebb20e94a17248c89",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:Naa718e1dd9984fc9839034875606da2b",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "rescs:dash/researchproject/ResearchProjectShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "A Research project.",
+      "rdfs:label": "Research project",
+      "sh:targetClass": {
+        "@id": "schema:ResearchProject"
+      }
+    },
+    {
+      "@id": "schema:deathDate",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Person"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:date"
+      },
+      "rdfs:comment": "Date of death.",
+      "rdfs:label": "deathDate"
+    },
+    {
+      "@id": "schema:additionalName",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Person"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "An additional name for a Person, can be used for a middle name.",
+      "rdfs:label": "additionalName"
+    },
+    {
+      "@id": "schema:identifier",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Thing"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "sh:IRI"
+        }
+      ],
+      "rdfs:comment": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+      "rdfs:label": "identifier"
+    },
+    {
+      "@id": "schema:hasPart",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "rdfs:comment": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+      "rdfs:label": "hasPart"
+    },
+    {
+      "@id": "schema:Grant",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "schema:distribution",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:DataDownload"
+      },
+      "rdfs:comment": "A downloadable form of this dataset, at a specific location, in a specific format.",
+      "rdfs:label": "distribution"
+    },
+    {
+      "@id": "schema:author",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "rdfs:comment": "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+      "rdfs:label": "author"
+    },
+    {
+      "@id": "schema:alternateName",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Thing"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "An alias for the item.",
+      "rdfs:label": "alternateName"
+    },
+    {
+      "@id": "rescs:dash/person/PersonShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "A person (alive, dead, undead, or fictional).",
+      "rdfs:label": "Person",
+      "sh:property": [
+        {
+          "@id": "_:N818dd956aa844e8d9ac2f50274ff3c66"
+        },
+        {
+          "@id": "_:N93cf799e201c456b97dc05d859317e42"
+        },
+        {
+          "@id": "_:N9784fef1399641faa553f815cbbcf1ca"
+        },
+        {
+          "@id": "_:Nc1c84526256d47e5b0d7a2601fb6ffdc"
+        },
+        {
+          "@id": "_:N662c0782080e4b4c8ca08630b7aa5f42"
+        },
+        {
+          "@id": "_:Na4f577deb7f94b66a91bbe96716285c9"
+        },
+        {
+          "@id": "_:N69ac6b588c164dc5828182a086f26f10"
+        },
+        {
+          "@id": "_:Nb2725bfdc9484367a119d142498da6b3"
+        },
+        {
+          "@id": "_:N0187db0914934815a4a2b5727285c0b4"
+        },
+        {
+          "@id": "_:N4bdfe20dc9944bc9a6e847f8937f1efb"
+        },
+        {
+          "@id": "_:Nabd4e44b8d0e41adae65720b3d7e7cbd"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "schema:Person"
+      }
+    },
+    {
+      "@id": "_:N818dd956aa844e8d9ac2f50274ff3c66",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "An additional name for a Person, can be used for a middle name.",
+      "sh:name": "additionalName",
+      "sh:path": {
+        "@id": "schema:additionalName"
+      }
+    },
+    {
+      "@id": "_:N93cf799e201c456b97dc05d859317e42",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "Physical address of the item.",
+      "sh:maxCount": 1,
+      "sh:name": "address",
+      "sh:path": {
+        "@id": "schema:address"
+      }
+    },
+    {
+      "@id": "_:N9784fef1399641faa553f815cbbcf1ca",
+      "sh:class": {
+        "@id": "schema:Organization"
+      },
+      "sh:description": "An organization that this person is affiliated with. For example, a school/university, a club, or a team.",
+      "sh:name": "affiliation",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:affiliation"
+      }
+    },
+    {
+      "@id": "_:Nc1c84526256d47e5b0d7a2601fb6ffdc",
+      "sh:datatype": {
+        "@id": "xsd:date"
+      },
+      "sh:description": "Date of birth.",
+      "sh:lessThan": {
+        "@id": "schema:deathDate"
+      },
+      "sh:maxCount": 1,
+      "sh:name": "birthDate",
+      "sh:path": {
+        "@id": "schema:birthDate"
+      }
+    },
+    {
+      "@id": "_:N662c0782080e4b4c8ca08630b7aa5f42",
+      "sh:datatype": {
+        "@id": "xsd:date"
+      },
+      "sh:description": "Date of death.",
+      "sh:maxCount": 1,
+      "sh:name": "deathDate",
+      "sh:path": {
+        "@id": "schema:deathDate"
+      }
+    },
+    {
+      "@id": "_:Na4f577deb7f94b66a91bbe96716285c9",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "Email address.",
+      "sh:maxCount": 1,
+      "sh:name": "email",
+      "sh:path": {
+        "@id": "schema:email"
+      },
+      "sh:pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+    },
+    {
+      "@id": "_:N69ac6b588c164dc5828182a086f26f10",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "Family name. In the U.S., the last name of a Person.",
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:name": "familyName",
+      "sh:path": {
+        "@id": "schema:familyName"
+      }
+    },
+    {
+      "@id": "_:Nb2725bfdc9484367a119d142498da6b3",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "Given name. In the U.S., the first name of a Person.",
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:name": "givenName",
+      "sh:path": {
+        "@id": "schema:givenName"
+      }
+    },
+    {
+      "@id": "_:N0187db0914934815a4a2b5727285c0b4",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.",
+      "sh:maxCount": 1,
+      "sh:name": "honorificPrefix",
+      "sh:path": {
+        "@id": "schema:honorificPrefix"
+      }
+    },
+    {
+      "@id": "_:N4bdfe20dc9944bc9a6e847f8937f1efb",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "An honorific suffix following a Person's name such as M.D. /PhD/MSCSW.",
+      "sh:maxCount": 1,
+      "sh:name": "honorificSuffix",
+      "sh:path": {
+        "@id": "schema:honorificSuffix"
+      }
+    },
+    {
+      "@id": "_:Nabd4e44b8d0e41adae65720b3d7e7cbd",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "The job title of the person (for example, Financial Manager).",
+      "sh:name": "jobTitle",
+      "sh:path": {
+        "@id": "schema:jobTitle"
+      }
+    },
+    {
+      "@id": "schema:license",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "sh:IRI"
+        }
+      ],
+      "rdfs:comment": "A license document that applies to this content, typically indicated by URL.",
+      "rdfs:label": "license"
+    },
+    {
+      "@id": "schema:funder",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Organization"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        },
+        {
+          "@id": "schema:MonetaryGrant"
+        }
+      ],
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "rdfs:comment": [
+        "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+        "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event."
+      ],
+      "rdfs:label": "funder"
+    },
+    {
+      "@id": "schema:dateModified",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:date"
+      },
+      "rdfs:comment": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+      "rdfs:label": "dateModified"
+    },
+    {
+      "@id": "schema:telephone",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:ContactPoint"
+        },
+        {
+          "@id": "schema:Place"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "The telephone number.",
+      "rdfs:label": "telephone"
+    },
+    {
+      "@id": "schema:spatialCoverage",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Place"
+      },
+      "rdfs:comment": "The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of\n      contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates\n      areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.",
+      "rdfs:label": "spatialCoverage"
+    },
+    {
+      "@id": "schema:CreativeWork",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "schema:birthDate",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Person"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:date"
+      },
+      "rdfs:comment": "Date of birth.",
+      "rdfs:label": "birthDate"
+    },
+    {
+      "@id": "schema:editor",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Person"
+      },
+      "rdfs:comment": "Specifies the Person who edited the CreativeWork.",
+      "rdfs:label": "editor"
+    },
+    {
+      "@id": "schema:Article",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "schema:MonetaryGrant",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Grant"
+      }
+    },
+    {
+      "@id": "schema:position",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:integer"
+        }
+      ],
+      "rdfs:comment": "The position of an item in a series or sequence of items.",
+      "rdfs:label": "position"
+    },
+    {
+      "@id": "schema:isAccessibleForFree",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:boolean"
+      },
+      "rdfs:comment": "A flag to signal that the item, event, or place is accessible for free.",
+      "rdfs:label": "isAccessibleForFree"
+    },
+    {
+      "@id": "schema:StructuredValue",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "schema:honorificSuffix",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Person"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "An honorific suffix following a Person's name such as M.D. /PhD/MSCSW.",
+      "rdfs:label": "honorificSuffix"
+    },
+    {
+      "@id": "schema:familyName",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Person"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "Family name. In the U.S., the last name of a Person.",
+      "rdfs:label": "familyName"
+    },
+    {
+      "@id": "schema:description",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Thing"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "rdf:langString"
+        }
+      ],
+      "rdfs:comment": "A description of the item.",
+      "rdfs:label": "description"
+    },
+    {
+      "@id": "schema:MediaObject",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "rescs:dash/creativework/CreativeWorkShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "The most generic kind of creative work, including books, movies, photographs, software programs, etc.",
+      "rdfs:label": "CreativeWork",
+      "sh:property": [
+        {
+          "@id": "_:N54d6980e86ba49d6bc00ec7a14f7b523"
+        },
+        {
+          "@id": "_:Nd766922f7aed458db0f4c1f7cbd54ac5"
+        },
+        {
+          "@id": "_:Nef185e5056cc491ba5e218eebf16139e"
+        },
+        {
+          "@id": "_:N2b827830256b40f08792ec642dd79b66"
+        },
+        {
+          "@id": "_:Na4ec9f387c1042aa8d553c990423c6b2"
+        },
+        {
+          "@id": "_:Nda763f21331945068645a77f267a7298"
+        },
+        {
+          "@id": "_:N967cb8d33c7c4616884998c2c8538b8c"
+        },
+        {
+          "@id": "_:N6c83033ee272461bbeb0c5b660d02f8e"
+        },
+        {
+          "@id": "_:N9ece5434049742f88ccb447af7e86d65"
+        },
+        {
+          "@id": "_:N5972b65cbb40497e88592dfffd35f530"
+        },
+        {
+          "@id": "_:Nfbc9af9528914ccc87836bc3b20b4f2e"
+        },
+        {
+          "@id": "_:N17847e5265304d089606d11e7e9b65b9"
+        },
+        {
+          "@id": "_:N026dd6adfcf540c0998e03189eb45ec0"
+        },
+        {
+          "@id": "_:N2c4a5c1560db47988722992949deeaa4"
+        },
+        {
+          "@id": "_:Ne464f38287f84ef99a3515bd42f50c22"
+        },
+        {
+          "@id": "_:N3d98e5cc46b0413fb695620f6b6ec6a6"
+        },
+        {
+          "@id": "_:N643bab72df794024a5855d38885f8ed3"
+        },
+        {
+          "@id": "_:N97eebff5b0a042a8aad0e6a19eefeeeb"
+        },
+        {
+          "@id": "_:Nc55c621b88984977b34ac2a98c2143a5"
+        },
+        {
+          "@id": "_:N2dedec7dc5f942eba77b409642a76c7e"
+        },
+        {
+          "@id": "_:Nba2b353cfba342b99330d8b74a48edb3"
+        },
+        {
+          "@id": "_:N304bbf310a18403f991e32cffb5821d0"
+        },
+        {
+          "@id": "_:N2dde272cc8fe46f38c1d078f009ec45f"
+        },
+        {
+          "@id": "_:N2186da330541425d9bf62a87768de7f9"
+        },
+        {
+          "@id": "_:Na579cbffd15448609241200da8bbc218"
+        },
+        {
+          "@id": "_:Nea0cdb67bb1344a3bf8a58721d53d3d5"
+        },
+        {
+          "@id": "_:N6f9b1569c243419385a669d0c969da5f"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "_:N54d6980e86ba49d6bc00ec7a14f7b523",
+      "sh:class": {
+        "@id": "schema:Thing"
+      },
+      "sh:description": "The subject matter of the content.",
+      "sh:maxCount": 1,
+      "sh:name": "about",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:about"
+      }
+    },
+    {
+      "@id": "_:Nd766922f7aed458db0f4c1f7cbd54ac5",
+      "sh:description": "An abstract is a short description that summarizes a [[CreativeWork]].",
+      "sh:maxCount": 1,
+      "sh:name": "abstract",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N116b6f041f1146558b3601b881d0f884"
+          },
+          {
+            "@id": "_:Na8d52dbc42a24832bfbb33658f5ffab4"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:abstract"
+      }
+    },
+    {
+      "@id": "_:N116b6f041f1146558b3601b881d0f884",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:Na8d52dbc42a24832bfbb33658f5ffab4",
+      "sh:datatype": {
+        "@id": "rdf:langString"
+      }
+    },
+    {
+      "@id": "_:Nef185e5056cc491ba5e218eebf16139e",
+      "sh:description": "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
+      "sh:name": "author",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N5e5de9368f794820ab5386aa2565e8c3"
+          },
+          {
+            "@id": "_:N68233ecc29c44d169c9022aefba2ed2e"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:author"
+      }
+    },
+    {
+      "@id": "_:N5e5de9368f794820ab5386aa2565e8c3",
+      "sh:class": {
+        "@id": "schema:Person"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:BlankNodeOrIRI"
+      }
+    },
+    {
+      "@id": "_:N68233ecc29c44d169c9022aefba2ed2e",
+      "sh:class": {
+        "@id": "schema:Organization"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:BlankNodeOrIRI"
+      }
+    },
+    {
+      "@id": "_:N2b827830256b40f08792ec642dd79b66",
+      "sh:description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+      "sh:name": "citation",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N6e999cce2b534e4d98819d5ea552497d"
+          },
+          {
+            "@id": "_:N153d631751204b3992f85f3ac8341baf"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:citation"
+      }
+    },
+    {
+      "@id": "_:N6e999cce2b534e4d98819d5ea552497d",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:N153d631751204b3992f85f3ac8341baf",
+      "sh:class": {
+        "@id": "schema:CreativeWork"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:Na4ec9f387c1042aa8d553c990423c6b2",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an [[ArchiveComponent]] held by an [[ArchiveOrganization]]. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.\\\\n\\\\nFor example \\\"Available by appointment from the Reading Room\\\" or \\\"Accessible only from logged-in accounts \\\".",
+      "sh:maxCount": 1,
+      "sh:name": "conditionsOfAccess",
+      "sh:path": {
+        "@id": "schema:conditionsOfAccess"
+      }
+    },
+    {
+      "@id": "_:Nda763f21331945068645a77f267a7298",
+      "sh:description": "The party holding the legal copyright to the CreativeWork.",
+      "sh:maxCount": 1,
+      "sh:name": "copyrightHolder",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:Nb3e30a42766548b0af0919b69af06524"
+          },
+          {
+            "@id": "_:N116f461475014698abb4a716cfc290b6"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:copyrightHolder"
+      }
+    },
+    {
+      "@id": "_:Nb3e30a42766548b0af0919b69af06524",
+      "sh:class": {
+        "@id": "schema:Person"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:N116f461475014698abb4a716cfc290b6",
+      "sh:class": {
+        "@id": "schema:Organization"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:N967cb8d33c7c4616884998c2c8538b8c",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "Text of a notice appropriate for describing the copyright aspects of this Creative Work, ideally indicating the owner of the copyright for the Work.",
+      "sh:maxCount": 1,
+      "sh:name": "copyrightNotice",
+      "sh:path": {
+        "@id": "schema:copyrightNotice"
+      }
+    },
+    {
+      "@id": "_:N6c83033ee272461bbeb0c5b660d02f8e",
+      "sh:datatype": {
+        "@id": "xsd:integer"
+      },
+      "sh:description": "The year during which the claimed copyright for the CreativeWork was first asserted.",
+      "sh:maxCount": 1,
+      "sh:name": "copyrightYear",
+      "sh:path": {
+        "@id": "schema:copyrightYear"
+      }
+    },
+    {
+      "@id": "_:N9ece5434049742f88ccb447af7e86d65",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.",
+      "sh:maxCount": 1,
+      "sh:name": "creativeWorkStatus",
+      "sh:path": {
+        "@id": "schema:creativeWorkStatus"
+      }
+    },
+    {
+      "@id": "_:N5972b65cbb40497e88592dfffd35f530",
+      "sh:datatype": {
+        "@id": "xsd:date"
+      },
+      "sh:description": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+      "sh:maxCount": 1,
+      "sh:name": "dateCreated",
+      "sh:path": {
+        "@id": "schema:dateCreated"
+      }
+    },
+    {
+      "@id": "_:Nfbc9af9528914ccc87836bc3b20b4f2e",
+      "sh:datatype": {
+        "@id": "xsd:date"
+      },
+      "sh:description": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+      "sh:maxCount": 1,
+      "sh:name": "dateModified",
+      "sh:path": {
+        "@id": "schema:dateModified"
+      }
+    },
+    {
+      "@id": "_:N17847e5265304d089606d11e7e9b65b9",
+      "sh:datatype": {
+        "@id": "xsd:date"
+      },
+      "sh:description": "Date of first broadcast/publication.",
+      "sh:maxCount": 1,
+      "sh:name": "datePublished",
+      "sh:path": {
+        "@id": "schema:datePublished"
+      }
+    },
+    {
+      "@id": "_:N026dd6adfcf540c0998e03189eb45ec0",
+      "sh:class": {
+        "@id": "schema:Person"
+      },
+      "sh:description": "Specifies the Person who edited the CreativeWork.",
+      "sh:maxCount": 1,
+      "sh:name": "editor",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:editor"
+      }
+    },
+    {
+      "@id": "_:N2c4a5c1560db47988722992949deeaa4",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.). In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
+      "sh:maxCount": 1,
+      "sh:name": "encodingFormat",
+      "sh:path": {
+        "@id": "schema:encodingFormat"
+      },
+      "sh:pattern": "\\w+/[-+.\\w]+"
+    },
+    {
+      "@id": "_:Ne464f38287f84ef99a3515bd42f50c22",
+      "sh:description": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+      "sh:maxCount": 1,
+      "sh:name": "funder",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:Nf207824557414bb5b1d8dedc55d67f25"
+          },
+          {
+            "@id": "_:Nbc5b0f6c4b514eb98399dbc8f3a2c6b7"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:funder"
+      }
+    },
+    {
+      "@id": "_:Nf207824557414bb5b1d8dedc55d67f25",
+      "sh:class": {
+        "@id": "schema:Person"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:Nbc5b0f6c4b514eb98399dbc8f3a2c6b7",
+      "sh:class": {
+        "@id": "schema:Organization"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:N3d98e5cc46b0413fb695620f6b6ec6a6",
+      "sh:description": "Genre of the creative work, broadcast channel or group.",
+      "sh:name": "genre",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:Nea9b87666f9c4f6f88041d82407a1aa0"
+          },
+          {
+            "@id": "_:N9defcb2c64ca494d8892548c47fd57f4"
+          },
+          {
+            "@id": "_:N9193e7f7ff6b486295c6295c56af507f"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:genre"
+      }
+    },
+    {
+      "@id": "_:Nea9b87666f9c4f6f88041d82407a1aa0",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:N9defcb2c64ca494d8892548c47fd57f4",
+      "sh:datatype": {
+        "@id": "rdf:langString"
+      }
+    },
+    {
+      "@id": "_:N643bab72df794024a5855d38885f8ed3",
+      "sh:class": {
+        "@id": "schema:CreativeWork"
+      },
+      "sh:description": "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).",
+      "sh:name": "hasPart",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:hasPart"
+      }
+    },
+    {
+      "@id": "_:N97eebff5b0a042a8aad0e6a19eefeeeb",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].",
+      "sh:name": "inLanguage",
+      "sh:path": {
+        "@id": "schema:inLanguage"
+      }
+    },
+    {
+      "@id": "_:Nc55c621b88984977b34ac2a98c2143a5",
+      "sh:datatype": {
+        "@id": "xsd:boolean"
+      },
+      "sh:description": "A flag to signal that the item, event, or place is accessible for free.",
+      "sh:maxCount": 1,
+      "sh:name": "isAccessibleForFree",
+      "sh:path": {
+        "@id": "schema:isAccessibleForFree"
+      }
+    },
+    {
+      "@id": "_:N2dedec7dc5f942eba77b409642a76c7e",
+      "sh:description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+      "sh:name": "keywords",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:Na38259c463994e06a4a49107e69d29b4"
+          },
+          {
+            "@id": "_:N1d66fdcfb4f5445ba60ec64ea73ed457"
+          },
+          {
+            "@id": "_:N4205306c44b646e79a08b118018caece"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:keywords"
+      }
+    },
+    {
+      "@id": "_:Na38259c463994e06a4a49107e69d29b4",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:N1d66fdcfb4f5445ba60ec64ea73ed457",
+      "sh:datatype": {
+        "@id": "rdf:langString"
+      }
+    },
+    {
+      "@id": "_:Nba2b353cfba342b99330d8b74a48edb3",
+      "sh:description": "A license document that applies to this content, typically indicated by URL.",
+      "sh:maxCount": 1,
+      "sh:name": "license",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N594311449e43471499ca1332a7cb9ee9"
+          },
+          {
+            "@id": "_:Nd48c48ca5afa429a916227c2865e2796"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:license"
+      }
+    },
+    {
+      "@id": "_:N594311449e43471499ca1332a7cb9ee9",
+      "sh:class": {
+        "@id": "schema:CreativeWork"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:Nd48c48ca5afa429a916227c2865e2796",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:N304bbf310a18403f991e32cffb5821d0",
+      "sh:description": "A maintainer of a [[Dataset]], software package ([[SoftwareApplication]]), or other [[Project]]. A maintainer is a [[Person]] or [[Organization]] that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on \\\"upstream\\\" sources. When [[maintainer]] is applied to a specific version of something e.g. a particular version or packaging of a [[Dataset]], it is always  possible that the upstream source has a different maintainer. The [[isBasedOn]] property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.",
+      "sh:name": "maintainer",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N8c8f508c9c2646d2b4e30beab7276634"
+          },
+          {
+            "@id": "_:N4704df766a8f4c78b46901420ea826ed"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:maintainer"
+      }
+    },
+    {
+      "@id": "_:N8c8f508c9c2646d2b4e30beab7276634",
+      "sh:class": {
+        "@id": "schema:Person"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:N4704df766a8f4c78b46901420ea826ed",
+      "sh:class": {
+        "@id": "schema:Organization"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:N2dde272cc8fe46f38c1d078f009ec45f",
+      "sh:class": {
+        "@id": "schema:Thing"
+      },
+      "sh:description": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
+      "sh:name": "mentions",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:mentions"
+      }
+    },
+    {
+      "@id": "_:N2186da330541425d9bf62a87768de7f9",
+      "sh:description": "The position of an item in a series or sequence of items.",
+      "sh:maxCount": 1,
+      "sh:name": "position",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N02b18628c7ac41cfab34b667f63c6e53"
+          },
+          {
+            "@id": "_:Naafdc79c182d4ccb90dbe9b74cfdcd50"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:position"
+      }
+    },
+    {
+      "@id": "_:N02b18628c7ac41cfab34b667f63c6e53",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:Naafdc79c182d4ccb90dbe9b74cfdcd50",
+      "sh:datatype": {
+        "@id": "xsd:integer"
+      }
+    },
+    {
+      "@id": "_:Na579cbffd15448609241200da8bbc218",
+      "sh:description": "The publisher of the creative work.",
+      "sh:name": "publisher",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N9688c85dbdf2473bb611553e34839081"
+          },
+          {
+            "@id": "_:Ned7dc894818845a197f38f6ba20f606a"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:publisher"
+      }
+    },
+    {
+      "@id": "_:N9688c85dbdf2473bb611553e34839081",
+      "sh:class": {
+        "@id": "schema:Person"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:BlankNodeOrIRI"
+      }
+    },
+    {
+      "@id": "_:Ned7dc894818845a197f38f6ba20f606a",
+      "sh:class": {
+        "@id": "schema:Organization"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:BlankNodeOrIRI"
+      }
+    },
+    {
+      "@id": "_:Nea0cdb67bb1344a3bf8a58721d53d3d5",
+      "sh:description": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in ISO 8601 time interval format. In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\".\n\nOpen-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
+      "sh:name": "temporalCoverage",
+      "sh:or": {
+        "@id": "_:N2e77e86e2881416fbfaddce072f67b70"
+      },
+      "sh:path": {
+        "@id": "schema:temporalCoverage"
+      }
+    },
+    {
+      "@id": "_:N2e77e86e2881416fbfaddce072f67b70",
+      "rdf:first": {
+        "@id": "_:N13deaa77edc246cc9d23cbaf8cf3afe7"
+      },
+      "rdf:rest": {
+        "@id": "_:N218e48ce97e04840bd1b57c55eae11fc"
+      }
+    },
+    {
+      "@id": "_:N13deaa77edc246cc9d23cbaf8cf3afe7",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:N218e48ce97e04840bd1b57c55eae11fc",
+      "rdf:first": {
+        "@id": "_:N1dbdacdd8d8a46d9a8e62facb61b1862"
+      },
+      "rdf:rest": {
+        "@id": "_:N9edfa785c282499bab2cc9e0e19e1add"
+      }
+    },
+    {
+      "@id": "_:N1dbdacdd8d8a46d9a8e62facb61b1862",
+      "sh:datatype": {
+        "@id": "rdf:langString"
+      }
+    },
+    {
+      "@id": "_:N9edfa785c282499bab2cc9e0e19e1add",
+      "rdf:first": {
+        "@id": "_:N723ad645d7564973957fe90709bf40c9"
+      },
+      "rdf:rest": {
+        "@id": "_:N31a7a622a55a470e9c896a4f779a691b"
+      }
+    },
+    {
+      "@id": "_:N6f9b1569c243419385a669d0c969da5f",
+      "sh:class": {
+        "@id": "schema:Place"
+      },
+      "sh:description": "The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of\n      contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates\n      areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.",
+      "sh:name": "spatialCoverage",
+      "sh:nodeKind": {
+        "@id": "sh:BlankNodeOrIRI"
+      },
+      "sh:path": {
+        "@id": "schema:spatialCoverage"
+      }
+    },
+    {
+      "@id": "schema:copyrightHolder",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "rdfs:comment": "The party holding the legal copyright to the CreativeWork.",
+      "rdfs:label": "copyrightHolder"
+    },
+    {
+      "@id": "schema:affiliation",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Person"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:comment": "An organization that this person is affiliated with. For example, a school/university, a club, or a team.",
+      "rdfs:label": "affiliation"
+    },
+    {
+      "@id": "schema:availableLanguage",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:ContactPoint"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].",
+      "rdfs:label": "availableLanguage"
+    },
+    {
+      "@id": "rescs:dash/monetarygrant/MonetaryGrantShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "A monetary grant.",
+      "rdfs:label": "Monetary grant",
+      "sh:property": [
+        {
+          "@id": "_:N36138017976645a98e6684a70f42b377"
+        },
+        {
+          "@id": "_:N5dcabe95c4c74bf589add8e48b69dae5"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "schema:MonetaryGrant"
+      }
+    },
+    {
+      "@id": "_:N36138017976645a98e6684a70f42b377",
+      "sh:class": {
+        "@id": "schema:MonetaryAmount"
+      },
+      "sh:description": "The amount of money.",
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:name": "amount",
+      "sh:node": {
+        "@id": "rescs:dash/monetaryamount/MonetaryAmountShape"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:BlankNode"
+      },
+      "sh:path": {
+        "@id": "schema:amount"
+      }
+    },
+    {
+      "@id": "_:N5dcabe95c4c74bf589add8e48b69dae5",
+      "sh:description": "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.",
+      "sh:minCount": 1,
+      "sh:name": "funder",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N9f5a8eeef23d47a48da0f9892789545a"
+          },
+          {
+            "@id": "_:N14ec8af21dad4d55a407545effd1e63b"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:funder"
+      }
+    },
+    {
+      "@id": "_:N9f5a8eeef23d47a48da0f9892789545a",
+      "sh:class": {
+        "@id": "schema:Person"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:N14ec8af21dad4d55a407545effd1e63b",
+      "sh:class": {
+        "@id": "schema:Organization"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "schema:honorificPrefix",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Person"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.",
+      "rdfs:label": "honorificPrefix"
+    },
+    {
+      "@id": "rescs:dash/project/ProjectShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim. Use properties from [[Organization]], [[subOrganization]]/[[parentOrganization]] to indicate project sub-structures.",
+      "rdfs:label": "Project",
+      "sh:property": [
+        {
+          "@id": "_:N78756ec55bee470d96585a7e882d4592"
+        },
+        {
+          "@id": "_:N72a5a393937d41558e1661602893c1c6"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "schema:Project"
+      }
+    },
+    {
+      "@id": "_:N78756ec55bee470d96585a7e882d4592",
+      "sh:datatype": {
+        "@id": "xsd:date"
+      },
+      "sh:description": "The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).",
+      "sh:lessThan": {
+        "@id": "schema:endDate"
+      },
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:name": "startDate",
+      "sh:path": {
+        "@id": "schema:startDate"
+      }
+    },
+    {
+      "@id": "_:N72a5a393937d41558e1661602893c1c6",
+      "sh:datatype": {
+        "@id": "xsd:date"
+      },
+      "sh:description": "The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).",
+      "sh:maxCount": 1,
+      "sh:name": "endDate",
+      "sh:path": {
+        "@id": "schema:endDate"
+      }
+    },
+    {
+      "@id": "schema:contactPoint",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Organization"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:ContactPoint"
+      },
+      "rdfs:comment": "A contact point for a person or organization.",
+      "rdfs:label": "contactPoint"
+    },
+    {
+      "@id": "schema:Intangible",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "schema:measurementTechnique",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:DataDownload"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "sh:IRI"
+        }
+      ],
+      "rdfs:comment": "A technique or technology used in a [[Dataset]] (or [[DataDownload]], [[DataCatalog]]), corresponding to the method used for measuring the corresponding variable(s) (described using [[variableMeasured]]). This is oriented towards scientific and scholarly dataset publication but may have broader applicability; it is not intended as a full representation of measurement, but rather as a high level summary for dataset discovery. For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: \\\"mass spectrometry\\\" or \\\"nmr spectroscopy\\\" or \\\"colorimetry\\\" or \\\"immunofluorescence\\\". If the [[variableMeasured]] is \\\"depression rating\\\", the [[measurementTechnique]] could be \\\"Zung Scale\\\" or \\\"HAM-D\\\" or \\\"Beck Depression Inventory\\\". If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]].",
+      "rdfs:label": "measurementTechnique"
+    },
+    {
+      "@id": "schema:image",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Thing"
+      },
+      "schema:rangeIncludes": {
+        "@id": "sh:IRI"
+      },
+      "rdfs:comment": "An image of the item.",
+      "rdfs:label": "image"
+    },
+    {
+      "@id": "schema:citation",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "schema:CreativeWork"
+        }
+      ],
+      "rdfs:comment": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+      "rdfs:label": "citation"
+    },
+    {
+      "@id": "rescs:dash/organization/OrganizationShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "An organization such as a school, NGO, corporation, club, etc.",
+      "rdfs:label": "Organization",
+      "sh:property": [
+        {
+          "@id": "_:Ne80b9f339cef4ba7a46dc496efa59ce9"
+        },
+        {
+          "@id": "_:N8b15d35ed3714f08b448363b7b54eb8f"
+        },
+        {
+          "@id": "_:Nb2a195408a814e329484b06c3aa16c4b"
+        },
+        {
+          "@id": "_:N2e8bed6920d44b87aaf2fc2a4a6dc399"
+        },
+        {
+          "@id": "_:N32f5c102df0e408295f071b8eecaf5ac"
+        },
+        {
+          "@id": "_:N6de796d0393748f6808fd2d594449cca"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "schema:Organization"
+      }
+    },
+    {
+      "@id": "_:Ne80b9f339cef4ba7a46dc496efa59ce9",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "Physical address of the item.",
+      "sh:maxCount": 1,
+      "sh:name": "address",
+      "sh:path": {
+        "@id": "schema:address"
+      }
+    },
+    {
+      "@id": "_:N8b15d35ed3714f08b448363b7b54eb8f",
+      "sh:class": {
+        "@id": "schema:ContactPoint"
+      },
+      "sh:description": "A contact point for a person or organization.",
+      "sh:maxCount": 1,
+      "sh:name": "contactPoint",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:contactPoint"
+      }
+    },
+    {
+      "@id": "_:Nb2a195408a814e329484b06c3aa16c4b",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "Email address.",
+      "sh:maxCount": 1,
+      "sh:name": "email",
+      "sh:path": {
+        "@id": "schema:email"
+      },
+      "sh:pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+    },
+    {
+      "@id": "_:N2e8bed6920d44b87aaf2fc2a4a6dc399",
+      "sh:description": "A person or organization that supports (sponsors) something through some kind of financial contribution.",
+      "sh:name": "funder",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N53198dfa944e4ff58c5be40d57aa4fab"
+          },
+          {
+            "@id": "_:N38e894d717cc466ba763ccf3969a310c"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:funder"
+      }
+    },
+    {
+      "@id": "_:N53198dfa944e4ff58c5be40d57aa4fab",
+      "sh:class": {
+        "@id": "schema:Person"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:N38e894d717cc466ba763ccf3969a310c",
+      "sh:class": {
+        "@id": "schema:Organization"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:N32f5c102df0e408295f071b8eecaf5ac",
+      "sh:description": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.",
+      "sh:name": "member",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N80efd2143dfd4a6eafa69b0953971da5"
+          },
+          {
+            "@id": "_:N7f6b8a0472744f56a5cfcca205332820"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:member"
+      }
+    },
+    {
+      "@id": "_:N80efd2143dfd4a6eafa69b0953971da5",
+      "sh:class": {
+        "@id": "schema:Person"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:N7f6b8a0472744f56a5cfcca205332820",
+      "sh:class": {
+        "@id": "schema:Organization"
+      },
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:N6de796d0393748f6808fd2d594449cca",
+      "sh:class": {
+        "@id": "schema:Organization"
+      },
+      "sh:description": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.",
+      "sh:name": "subOrganization",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:subOrganization"
+      }
+    },
+    {
+      "@id": "schema:articleBody",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Article"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "The actual body of the article.",
+      "rdfs:label": "articleBody"
+    },
+    {
+      "@id": "rescs:dash/mediaobject/MediaObjectShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).",
+      "rdfs:label": "Media object",
+      "sh:property": [
+        {
+          "@id": "_:Nf6b9e77b980b4045a63baf82756dcb5e"
+        },
+        {
+          "@id": "_:Nddd09ae3763444dca03b0ae76ac369ff"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "schema:MediaObject"
+      }
+    },
+    {
+      "@id": "_:Nf6b9e77b980b4045a63baf82756dcb5e",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "File size in (mega/kilo) bytes.",
+      "sh:maxCount": 1,
+      "sh:name": "contentSize",
+      "sh:path": {
+        "@id": "schema:contentSize"
+      }
+    },
+    {
+      "@id": "_:Nddd09ae3763444dca03b0ae76ac369ff",
+      "sh:description": "Actual bytes of the media object, for example the image file or video file.",
+      "sh:maxCount": 1,
+      "sh:name": "contentUrl",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:contentUrl"
+      }
+    },
+    {
+      "@id": "schema:fundedItem",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Grant"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Thing"
+      },
+      "rdfs:comment": "Indicates an item funded or sponsored through a [[Grant]].",
+      "rdfs:label": "fundedItem"
+    },
+    {
+      "@id": "schema:validFrom",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:MonetaryAmount"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:date"
+      },
+      "rdfs:comment": "The date when the item becomes valid.",
+      "rdfs:label": "validFrom"
+    },
+    {
+      "@id": "schema:contentSize",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:MediaObject"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "File size in (mega/kilo) bytes.",
+      "rdfs:label": "contentSize"
+    },
+    {
+      "@id": "schema:Project",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Organization"
+      }
+    },
+    {
+      "@id": "schema:endDate",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Project"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:date"
+      },
+      "rdfs:comment": "The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).",
+      "rdfs:label": "endDate"
+    },
+    {
+      "@id": "schema:encodingFormat",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.). In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information. Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.",
+      "rdfs:label": "encodingFormat"
+    },
+    {
+      "@id": "schema:Person",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "schema:maintainer",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "rdfs:comment": "A maintainer of a [[Dataset]], software package ([[SoftwareApplication]]), or other [[Project]]. A maintainer is a [[Person]] or [[Organization]] that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on \\\"upstream\\\" sources. When [[maintainer]] is applied to a specific version of something e.g. a particular version or packaging of a [[Dataset]], it is always  possible that the upstream source has a different maintainer. The [[isBasedOn]] property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.",
+      "rdfs:label": "maintainer"
+    },
+    {
+      "@id": "schema:Dataset",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "schema:member",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Organization"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "rdfs:comment": "A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.",
+      "rdfs:label": "member"
+    },
+    {
+      "@id": "schema:publisher",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Organization"
+        }
+      ],
+      "rdfs:comment": "The publisher of the creative work.",
+      "rdfs:label": "publisher"
+    },
+    {
+      "@id": "schema:Organization",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "schema:datePublished",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:date"
+      },
+      "rdfs:comment": "Date of first broadcast/publication.",
+      "rdfs:label": "datePublished"
+    },
+    {
+      "@id": "schema:givenName",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Person"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "Given name. In the U.S., the first name of a Person.",
+      "rdfs:label": "givenName"
+    },
+    {
+      "@id": "schema:validThrough",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:MonetaryAmount"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:date"
+      },
+      "rdfs:comment": "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.",
+      "rdfs:label": "validThrough"
+    },
+    {
+      "@id": "schema:MonetaryAmount",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "schema:inLanguage",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].",
+      "rdfs:label": "inLanguage"
+    },
+    {
+      "@id": "schema:mentions",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Thing"
+      },
+      "rdfs:comment": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
+      "rdfs:label": "mentions"
+    },
+    {
+      "@id": "schema:about",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Thing"
+      },
+      "rdfs:comment": "The subject matter of the content.",
+      "rdfs:label": "about"
+    },
+    {
+      "@id": "rescs:dash/dataset/DatasetShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "A body of structured information describing some topic(s) of interest.",
+      "rdfs:label": "Dataset",
+      "sh:property": {
+        "@id": "_:Nff751f126c624c878588470dc05fb7dc"
+      },
+      "sh:targetClass": {
+        "@id": "schema:Dataset"
+      }
+    },
+    {
+      "@id": "_:Nff751f126c624c878588470dc05fb7dc",
+      "sh:class": {
+        "@id": "schema:DataDownload"
+      },
+      "sh:description": "A downloadable form of this dataset, at a specific location, in a specific format.",
+      "sh:name": "distribution",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:distribution"
+      }
+    },
+    {
+      "@id": "rescs:dash/scholarlyarticle/ScholarlyArticleShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "A scholarly article.",
+      "rdfs:label": "ScholarlyArticle",
+      "sh:targetClass": {
+        "@id": "schema:ScholarlyArticle"
+      }
+    },
+    {
+      "@id": "rescs:dash/intangible/IntangibleShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.",
+      "rdfs:label": "Intangible",
+      "sh:targetClass": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "schema:conditionsOfAccess",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an [[ArchiveComponent]] held by an [[ArchiveOrganization]]. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.\\\\n\\\\nFor example \\\"Available by appointment from the Reading Room\\\" or \\\"Accessible only from logged-in accounts \\\".",
+      "rdfs:label": "conditionsOfAccess"
+    },
+    {
+      "@id": "schema:currency",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:MonetaryAmount"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "The currency in which the monetary amount is expressed.\\\\n\\\\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217) e.g. \\\"USD\\\"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies e.g. \\\"BTC\\\"; well known names for [Local Exchange Tradings Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types e.g. \\\"Ithaca HOUR\\\".",
+      "rdfs:label": "currency"
+    },
+    {
+      "@id": "rescs:dash/place/PlaceShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "Entities that have a somewhat fixed, physical extension.",
+      "rdfs:label": "Place",
+      "sh:property": [
+        {
+          "@id": "_:Nd0dfc9ab7ae44621b9c1adfd13ec76ff"
+        },
+        {
+          "@id": "_:N25363ef80aa546f9ae4fe8ae8c80f39d"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "schema:Place"
+      }
+    },
+    {
+      "@id": "_:Nd0dfc9ab7ae44621b9c1adfd13ec76ff",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "Physical address of the item.",
+      "sh:maxCount": 1,
+      "sh:name": "address",
+      "sh:path": {
+        "@id": "schema:address"
+      }
+    },
+    {
+      "@id": "_:N25363ef80aa546f9ae4fe8ae8c80f39d",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "The telephone number.",
+      "sh:maxCount": 1,
+      "sh:name": "telephone",
+      "sh:path": {
+        "@id": "schema:telephone"
+      }
+    },
+    {
+      "@id": "schema:url",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Thing"
+      },
+      "schema:rangeIncludes": {
+        "@id": "sh:IRI"
+      },
+      "rdfs:comment": "URL of the item.",
+      "rdfs:label": "url"
+    },
+    {
+      "@id": "schema:Place",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "schema:abstract",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "rdf:langString"
+        }
+      ],
+      "rdfs:comment": "An abstract is a short description that summarizes a [[CreativeWork]].",
+      "rdfs:label": "abstract"
+    },
+    {
+      "@id": "rescs:dash/structuredvalue/StructuredValueShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.",
+      "rdfs:label": "Structured value",
+      "sh:targetClass": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "schema:subOrganization",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Organization"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:Organization"
+      },
+      "rdfs:comment": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.",
+      "rdfs:label": "subOrganization"
+    },
+    {
+      "@id": "schema:address",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": [
+        {
+          "@id": "schema:Organization"
+        },
+        {
+          "@id": "schema:Person"
+        },
+        {
+          "@id": "schema:Place"
+        }
+      ],
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "Physical address of the item.",
+      "rdfs:label": "address"
+    },
+    {
+      "@id": "schema:pageEnd",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Article"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:integer"
+        }
+      ],
+      "rdfs:comment": "The page on which the work ends; for example \\\"138\\\" or \\\"xvi\\\".",
+      "rdfs:label": "pageEnd"
+    },
+    {
+      "@id": "rescs:dash/grant/GrantShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "A grant, typically financial or otherwise quantifiable, of resources. Typically a [[funder]] sponsors some [[MonetaryAmount]] to an [[Organization]] or [[Person]], sometimes not necessarily via a dedicated or long-lived [[Project]], resulting in one or more outputs, or [[fundedItem]]s. For financial sponsorship, indicate the [[funder]] of a [[MonetaryGrant]]. For non-financial support, indicate [[sponsor]] of [[Grant]]s of resources (e.g. office space). Grants support  activities directed towards some agreed collective goals, often but not always organized as [[Project]]s. Long-lived projects are sometimes sponsored by a variety of grants over time, but it is also common for a project to be associated with a single grant. The amount of a [[Grant]] is represented using [[amount]] as a [[MonetaryAmount]].",
+      "rdfs:label": "Grant",
+      "sh:property": {
+        "@id": "_:N89c986c86524402f861cb88036bd69b4"
+      },
+      "sh:targetClass": {
+        "@id": "schema:Grant"
+      }
+    },
+    {
+      "@id": "_:N89c986c86524402f861cb88036bd69b4",
+      "sh:class": {
+        "@id": "schema:Thing"
+      },
+      "sh:description": "Indicates an item funded or sponsored through a [[Grant]].",
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:name": "fundedItem",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:fundedItem"
+      }
+    },
+    {
+      "@id": "schema:dateCreated",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:date"
+      },
+      "rdfs:comment": "The date on which the CreativeWork was created or the item was added to a DataFeed.",
+      "rdfs:label": "dateCreated"
+    },
+    {
+      "@id": "rescs:dash/monetaryamount/MonetaryAmountShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between \u00a31,000 and \u00a31,000,000 GBP, or the value of a salary, etc. It is recommended to use [[PriceSpecification]] Types to describe the price of an Offer, Invoice, etc.",
+      "rdfs:label": "Monetary amount",
+      "sh:and": {
+        "@list": [
+          {
+            "@id": "_:N01a1a510d3164a83a2d7f3aaa54273bf"
+          },
+          {
+            "@id": "_:N37b5db2d5b9143a2a1733fabebe5ec2c"
+          }
+        ]
+      },
+      "sh:property": [
+        {
+          "@id": "_:N3d862a9a35344bd79ca0edc1891d7459"
+        },
+        {
+          "@id": "_:Ndfbd3a5dabb144799741629e88b8eb13"
+        },
+        {
+          "@id": "_:N8386dca96bc04b89a4e716fcefd74663"
+        },
+        {
+          "@id": "_:N3b4f06bb6e9b4971bda53e62ddb83d7a"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "schema:MonetaryAmount"
+      }
+    },
+    {
+      "@id": "_:N3d862a9a35344bd79ca0edc1891d7459",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "The currency in which the monetary amount is expressed.\\\\n\\\\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217) e.g. \\\"USD\\\"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies e.g. \\\"BTC\\\"; well known names for [Local Exchange Tradings Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types e.g. \\\"Ithaca HOUR\\\".",
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:name": "currency",
+      "sh:path": {
+        "@id": "schema:currency"
+      },
+      "sh:pattern": "[A-Z]{3}"
+    },
+    {
+      "@id": "_:Ndfbd3a5dabb144799741629e88b8eb13",
+      "sh:datatype": {
+        "@id": "xsd:date"
+      },
+      "sh:description": "The date when the item becomes valid.",
+      "sh:lessThan": {
+        "@id": "schema:validThrough"
+      },
+      "sh:maxCount": 1,
+      "sh:name": "validFrom",
+      "sh:path": {
+        "@id": "schema:validFrom"
+      }
+    },
+    {
+      "@id": "_:N8386dca96bc04b89a4e716fcefd74663",
+      "sh:datatype": {
+        "@id": "xsd:date"
+      },
+      "sh:description": "The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.",
+      "sh:maxCount": 1,
+      "sh:name": "validThrough",
+      "sh:path": {
+        "@id": "schema:validThrough"
+      }
+    },
+    {
+      "@id": "_:N3b4f06bb6e9b4971bda53e62ddb83d7a",
+      "sh:datatype": {
+        "@id": "xsd:float"
+      },
+      "sh:description": "The value of the quantitative value or property value node.\\\\n\\\\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\\\\n* For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.\\\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\\\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:minExclusive": 0,
+      "sh:name": "value",
+      "sh:path": {
+        "@id": "schema:value"
+      }
+    },
+    {
+      "@id": "_:N01a1a510d3164a83a2d7f3aaa54273bf",
+      "sh:node": {
+        "@id": "rescs:dash/structuredvalue/StructuredValueShape"
+      }
+    },
+    {
+      "@id": "schema:amount",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:MonetaryGrant"
+      },
+      "schema:rangeIncludes": {
+        "@id": "schema:MonetaryAmount"
+      },
+      "rdfs:comment": "The amount of money.",
+      "rdfs:label": "amount"
+    },
+    {
+      "@id": "schema:genre",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "rdf:langString"
+        },
+        {
+          "@id": "sh:IRI"
+        }
+      ],
+      "rdfs:comment": "Genre of the creative work, broadcast channel or group.",
+      "rdfs:label": "genre"
+    },
+    {
+      "@id": "rescs:dash/thing/ThingShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "The most generic type of item.",
+      "rdfs:label": "Thing",
+      "sh:property": [
+        {
+          "@id": "_:N2d5572c747f548cba4acac0b6d1ed006"
+        },
+        {
+          "@id": "_:N0c0ae880e55541e083912338e7229d40"
+        },
+        {
+          "@id": "_:N8179414f1b7f49f08c84bfe3a67c0d92"
+        },
+        {
+          "@id": "_:Nbe364e4de63b432d82fc1aab9fd84d1b"
+        },
+        {
+          "@id": "_:N73943547cfb44b07be624f484843ee9b"
+        },
+        {
+          "@id": "_:N3002e13238cd442db2856c7049130686"
+        },
+        {
+          "@id": "_:N818bb1d9be064cbe838abeca39238f86"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "_:N2d5572c747f548cba4acac0b6d1ed006",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "An alias for the item.",
+      "sh:name": "alternateName",
+      "sh:path": {
+        "@id": "schema:alternateName"
+      }
+    },
+    {
+      "@id": "_:N0c0ae880e55541e083912338e7229d40",
+      "sh:description": "A description of the item.",
+      "sh:maxCount": 1,
+      "sh:name": "description",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N3c9b51cbf520411b8271dd72d01b2eda"
+          },
+          {
+            "@id": "_:N892ee861561f4f699115e3106b3bf778"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:description"
+      }
+    },
+    {
+      "@id": "_:N3c9b51cbf520411b8271dd72d01b2eda",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:N892ee861561f4f699115e3106b3bf778",
+      "sh:datatype": {
+        "@id": "rdf:langString"
+      }
+    },
+    {
+      "@id": "_:N8179414f1b7f49f08c84bfe3a67c0d92",
+      "sh:description": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.",
+      "sh:maxCount": 1,
+      "sh:name": "identifier",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N55f546fdb78143598aa6b4e65871d8ac"
+          },
+          {
+            "@id": "_:N0cf3b5cbe9ea4cd6919c23495956f77e"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:identifier"
+      }
+    },
+    {
+      "@id": "_:N55f546fdb78143598aa6b4e65871d8ac",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:N0cf3b5cbe9ea4cd6919c23495956f77e",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      }
+    },
+    {
+      "@id": "_:Nbe364e4de63b432d82fc1aab9fd84d1b",
+      "sh:description": "An image of the item.",
+      "sh:maxCount": 1,
+      "sh:name": "image",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:image"
+      }
+    },
+    {
+      "@id": "_:N73943547cfb44b07be624f484843ee9b",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "The name of the item.",
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:name": "name",
+      "sh:path": {
+        "@id": "schema:name"
+      }
+    },
+    {
+      "@id": "_:N3002e13238cd442db2856c7049130686",
+      "sh:description": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+      "sh:name": "sameAs",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:sameAs"
+      }
+    },
+    {
+      "@id": "_:N818bb1d9be064cbe838abeca39238f86",
+      "sh:description": "URL of the item.",
+      "sh:name": "url",
+      "sh:nodeKind": {
+        "@id": "sh:IRI"
+      },
+      "sh:path": {
+        "@id": "schema:url"
+      }
+    },
+    {
+      "@id": "rescs:dash/contactpoint/ContactPointShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "A contact point - for example, a Customer Complaints department.",
+      "rdfs:label": "Contact point",
+      "sh:property": [
+        {
+          "@id": "_:N37a6cbbe31dd4b279a6705407bb427d8"
+        },
+        {
+          "@id": "_:N6fad8bfa9e9a42bcb013535301e5eba7"
+        },
+        {
+          "@id": "_:Nbe250e71498741be9e6dfd29c5785b2d"
+        },
+        {
+          "@id": "_:N9e18e1e5a1b04014bf118b147c27e792"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "schema:ContactPoint"
+      }
+    },
+    {
+      "@id": "_:N37a6cbbe31dd4b279a6705407bb427d8",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].",
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:name": "availableLanguage",
+      "sh:path": {
+        "@id": "schema:availableLanguage"
+      },
+      "sh:pattern": "[a-z]{3}"
+    },
+    {
+      "@id": "_:N6fad8bfa9e9a42bcb013535301e5eba7",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.",
+      "sh:minCount": 1,
+      "sh:name": "contactType",
+      "sh:path": {
+        "@id": "schema:contactType"
+      }
+    },
+    {
+      "@id": "_:Nbe250e71498741be9e6dfd29c5785b2d",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "Email address.",
+      "sh:maxCount": 1,
+      "sh:minCount": 1,
+      "sh:name": "email",
+      "sh:path": {
+        "@id": "schema:email"
+      },
+      "sh:pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+    },
+    {
+      "@id": "_:N9e18e1e5a1b04014bf118b147c27e792",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "The telephone number.",
+      "sh:maxCount": 1,
+      "sh:name": "telephone",
+      "sh:path": {
+        "@id": "schema:telephone"
+      }
+    },
+    {
+      "@id": "schema:ContactPoint",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "schema:sameAs",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Thing"
+      },
+      "schema:rangeIncludes": {
+        "@id": "sh:IRI"
+      },
+      "rdfs:comment": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+      "rdfs:label": "sameAs"
+    },
+    {
+      "@id": "schema:keywords",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "rdf:langString"
+        },
+        {
+          "@id": "sh:IRI"
+        }
+      ],
+      "rdfs:comment": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+      "rdfs:label": "keywords"
+    },
+    {
+      "@id": "schema:Thing",
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "schema:value",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:MonetaryAmount"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:float"
+      },
+      "rdfs:comment": "The value of the quantitative value or property value node.\\\\n\\\\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\\\\n* For [[PropertyValue]], it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.\\\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.\\\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.",
+      "rdfs:label": "value"
+    },
+    {
+      "@id": "schema:copyrightYear",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:integer"
+      },
+      "rdfs:comment": "The year during which the claimed copyright for the CreativeWork was first asserted.",
+      "rdfs:label": "copyrightYear"
+    },
+    {
+      "@id": "schema:name",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Thing"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "The name of the item.",
+      "rdfs:label": "name"
+    },
+    {
+      "@id": "schema:copyrightNotice",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "Text of a notice appropriate for describing the copyright aspects of this Creative Work, ideally indicating the owner of the copyright for the Work.",
+      "rdfs:label": "copyrightNotice"
+    },
+    {
+      "@id": "schema:temporalCoverage",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:CreativeWork"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "rdf:langString"
+        },
+        {
+          "@id": "sh:IRI"
+        },
+        {
+          "@id": "xsd:date"
+        }
+      ],
+      "rdfs:comment": "The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in ISO 8601 time interval format. In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written \"2011/2012\"). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via \"1939/1945\".\n\nOpen-ended date ranges can be written with \"..\" in place of the end date. For example, \"2015-11/..\" indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.",
+      "rdfs:label": "temporalCoverage"
+    },
+    {
+      "@id": "schema:jobTitle",
+      "@type": "rdf:Property",
+      "schema:domainIncludes": {
+        "@id": "schema:Person"
+      },
+      "schema:rangeIncludes": {
+        "@id": "xsd:string"
+      },
+      "rdfs:comment": "The job title of the person (for example, Financial Manager).",
+      "rdfs:label": "jobTitle"
+    },
+    {
+      "@id": "rescs:dash/article/ArticleShape",
+      "@type": "sh:NodeShape",
+      "rdfs:comment": "An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.\\\\n\\\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).",
+      "rdfs:label": "Article",
+      "sh:property": [
+        {
+          "@id": "_:Ncd545b3760014a25819d64cbf60aad14"
+        },
+        {
+          "@id": "_:N49c269b927e14e32bf38db2d36a6eb51"
+        },
+        {
+          "@id": "_:N65c33b2716854b198ad54cde1f0bc10f"
+        }
+      ],
+      "sh:targetClass": {
+        "@id": "schema:Article"
+      }
+    },
+    {
+      "@id": "_:Ncd545b3760014a25819d64cbf60aad14",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      },
+      "sh:description": "The actual body of the article.",
+      "sh:maxCount": 1,
+      "sh:name": "articleBody",
+      "sh:path": {
+        "@id": "schema:articleBody"
+      }
+    },
+    {
+      "@id": "_:N49c269b927e14e32bf38db2d36a6eb51",
+      "sh:description": "The page on which the work ends; for example \\\"138\\\" or \\\"xvi\\\".",
+      "sh:maxCount": 1,
+      "sh:name": "pageEnd",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:Nc40a55dcb46e47abaa6ea671233854f3"
+          },
+          {
+            "@id": "_:N18dc9e42e504437e99a1d367f7ad17a3"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:pageEnd"
+      }
+    },
+    {
+      "@id": "_:Nc40a55dcb46e47abaa6ea671233854f3",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:N18dc9e42e504437e99a1d367f7ad17a3",
+      "sh:datatype": {
+        "@id": "xsd:integer"
+      }
+    },
+    {
+      "@id": "_:N65c33b2716854b198ad54cde1f0bc10f",
+      "sh:description": "The page on which the work starts; for example \\\"135\\\" or \\\"xiii\\\"",
+      "sh:lessThan": {
+        "@id": "schema:pageEnd"
+      },
+      "sh:maxCount": 1,
+      "sh:name": "pageStart",
+      "sh:or": {
+        "@list": [
+          {
+            "@id": "_:N958cd24f1e7a475ba2f3fb8862f97fd6"
+          },
+          {
+            "@id": "_:N000fe10f6d3e4ba9841ba8238d9cc070"
+          }
+        ]
+      },
+      "sh:path": {
+        "@id": "schema:pageStart"
+      }
+    },
+    {
+      "@id": "_:N958cd24f1e7a475ba2f3fb8862f97fd6",
+      "sh:datatype": {
+        "@id": "xsd:string"
+      }
+    },
+    {
+      "@id": "_:N000fe10f6d3e4ba9841ba8238d9cc070",
+      "sh:datatype": {
+        "@id": "xsd:integer"
+      }
+    }
+  ]
+}
