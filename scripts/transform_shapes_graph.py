@@ -3,10 +3,10 @@
 from pyld import jsonld
 import os
 import json
-from typing import List
+from typing import List, Dict
 from rdflib import Graph
 from rdflib.query import Result
-from rdflib.plugins.sparql.results.jsonresults import JSONResultSerializer
+
 
 def absolute_from_rel_file_path(relative_path: str) -> str:
     """
@@ -55,11 +55,24 @@ def remove_and_conjunction_from_shapes(graph: List) -> List:
 
     return copy
 
-def determine_inherited_properties(ontology_file_path: str, transformed_graph_file_path: str) -> None:
+def determine_inherited_properties(ontology_file_path: str, transformed_graph_file_path: str) -> Dict:
+    """
+    Determines properties defined on super classes of each shape.
+
+    :param ontology_file_path: path of ontology file
+    :param transformed_graph_file_path: path of transformed shapes graph
+    :return: a SPARQL Select results with the following variables:
+             1. shape (IRI of the node shape for which the inherited properties are determined),
+             2. superClassShape (shape targeting a superclass),
+             3. superClassShapePropPath (properties defined for this superclass)
+    """
+
     g: Graph = Graph()
     g.parse(absolute_from_rel_file_path(ontology_file_path))
     g.parse(absolute_from_rel_file_path(transformed_graph_file_path))
 
+    # For each node shape, determine its superclasses
+    # and the shapes and property definitions associated with those.
     query = """
 PREFIX schema: <http://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -67,12 +80,11 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 
 SELECT ?shape ?superClassShape ?superClassShapePropPath WHERE {
     ?shape a sh:NodeShape ;
-        sh:targetClass ?targetClass .   
-    
-    ?targetClass rdfs:subClassOf+ ?superClass .
+        sh:targetClass ?targetClass .       
     
     OPTIONAL {
 
+        ?targetClass rdfs:subClassOf+ ?superClass .
         ?superClassShape sh:targetClass ?superClass .
         ?superClassShape sh:property ?superClassShapeProp .
         ?superClassShapeProp sh:path ?superClassShapePropPath .
@@ -87,22 +99,43 @@ SELECT ?shape ?superClassShape ?superClassShapePropPath WHERE {
 
     res_dict = json.loads(res_json)
 
-    print(res_dict)
+    return res_dict
 
-    #res = JSONResultSerializer.serialize(q_res)
-    #print(res)
-    #for row in q_res:
-     #   print(row)
+def close_shapes(transformed_shapes: Dict) -> Dict:
+    """
+    Adds closed:true to all node shapes and add the ignored properties (inherited properties).
 
-f = open(absolute_from_rel_file_path('../ontology/shapes_graph.json'), 'r')
-graph = json.load(f)
-compacted = jsonld.compact(graph, {})
-f.close()
+    """
+    # Attention: shallow copy
+    copy = jsonld.compact(transformed_shapes.copy(), {})
 
-transformed_graph = remove_and_conjunction_from_shapes(compacted['@graph'])
+    props = determine_inherited_properties('../ontology/ontology.json', '../ontology/shapes_graph_transformed.json')
 
-# compact the transformed graph
-transformed = jsonld.compact(transformed_graph, {
+    for node_shape in copy["@graph"]:
+        node_shape_id = node_shape['@id']
+
+        if node_shape_id == "http://rescs.org/dash/thing/ThingShape":
+            # ignore schema:Thing
+            continue
+
+        print(node_shape_id)
+
+        # collect inherited property ids
+        inherited_props = list(filter(lambda res: res['shape']['value'] == node_shape_id, props['results']['bindings']))
+        inherited_prop_ids = list(map(lambda prop: prop['superClassShapePropPath']['value'],inherited_props))
+
+        print(inherited_prop_ids)
+        print('*******')
+
+        # close node shape and add inherited properties to ignored properties
+        node_shape['http://www.w3.org/ns/shacl#closed'] = True
+        node_shape['http://www.w3.org/ns/shacl#ignoredProperties'] = {
+            '@list': list(map(lambda prop: { '@id': prop}, inherited_prop_ids))
+        }
+
+    return copy
+
+context = {
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -115,11 +148,27 @@ transformed = jsonld.compact(transformed_graph, {
     "dcterms": "http://purl.org/dc/terms/",
     "schema": "http://schema.org/",
     "rescs": "http://rescs.org/"
-})
+}
+
+f = open(absolute_from_rel_file_path('../ontology/shapes_graph.json'), 'r')
+graph = json.load(f)
+compacted = jsonld.compact(graph, {})
+f.close()
+
+transformed_graph = remove_and_conjunction_from_shapes(compacted['@graph'])
+
+# compact the transformed graph
+transformed = jsonld.compact(transformed_graph, context)
 
 # write the compacted transformed graph back
 f = open(absolute_from_rel_file_path('../ontology/shapes_graph_transformed.json'), 'w')
 f.write(json.dumps(transformed))
 f.close()
 
-determine_inherited_properties('../ontology/ontology.json', '../ontology/shapes_graph_transformed.json')
+# close the shapes
+closed_shapes = close_shapes(transformed)
+
+# write the compacted transformed closed graph back
+f = open(absolute_from_rel_file_path('../ontology/shapes_graph_transformed_closed.json'), 'w')
+f.write(json.dumps(jsonld.compact(closed_shapes, context)))
+f.close()
