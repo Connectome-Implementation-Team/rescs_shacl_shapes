@@ -4,6 +4,9 @@ from pyld import jsonld
 import os
 import json
 from typing import List
+from rdflib import Graph
+from rdflib.query import Result
+from rdflib.plugins.sparql.results.jsonresults import JSONResultSerializer
 
 def absolute_from_rel_file_path(relative_path: str) -> str:
     """
@@ -52,6 +55,45 @@ def remove_and_conjunction_from_shapes(graph: List) -> List:
 
     return copy
 
+def determine_inherited_properties(ontology_file_path: str, transformed_graph_file_path: str) -> None:
+    g: Graph = Graph()
+    g.parse(absolute_from_rel_file_path(ontology_file_path))
+    g.parse(absolute_from_rel_file_path(transformed_graph_file_path))
+
+    query = """
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+SELECT ?shape ?superClassShape ?superClassShapePropPath WHERE {
+    ?shape a sh:NodeShape ;
+        sh:targetClass ?targetClass .   
+    
+    ?targetClass rdfs:subClassOf+ ?superClass .
+    
+    OPTIONAL {
+
+        ?superClassShape sh:targetClass ?superClass .
+        ?superClassShape sh:property ?superClassShapeProp .
+        ?superClassShapeProp sh:path ?superClassShapePropPath .
+    }
+} ORDER BY ?shape ?superClassShape ?superClassShapePropPath
+    """
+
+    q_res: Result = g.query(query)
+
+    res = q_res.serialize(format='json')
+    res_json = res.decode('utf-8')
+
+    res_dict = json.loads(res_json)
+
+    print(res_dict)
+
+    #res = JSONResultSerializer.serialize(q_res)
+    #print(res)
+    #for row in q_res:
+     #   print(row)
+
 f = open(absolute_from_rel_file_path('../ontology/shapes_graph.json'), 'r')
 graph = json.load(f)
 compacted = jsonld.compact(graph, {})
@@ -79,3 +121,5 @@ transformed = jsonld.compact(transformed_graph, {
 f = open(absolute_from_rel_file_path('../ontology/shapes_graph_transformed.json'), 'w')
 f.write(json.dumps(transformed))
 f.close()
+
+determine_inherited_properties('../ontology/ontology.json', '../ontology/shapes_graph_transformed.json')
