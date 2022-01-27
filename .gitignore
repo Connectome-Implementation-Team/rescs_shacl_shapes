@@ -1,5 +1,7 @@
 .idea/*
 ontology/shapes_ontology_graph.json
+ontology/shapes_graph.json
+ontology/shapes_graph_transformed.json
 env/*
 .env
 docs/design-documentation.pdf

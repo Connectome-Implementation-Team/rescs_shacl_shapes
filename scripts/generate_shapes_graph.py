@@ -129,6 +129,21 @@ def generate_property_defs_from_shapes(graph: List) -> List:
 
     return properties
 
+context = {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "shsh": "http://www.w3.org/ns/shacl-shacl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "schema": "http://schema.org/",
+    "rescs": "http://rescs.org/"
+}
+
 onto = {
     "@graph": []
 }
@@ -141,6 +156,11 @@ for filename in glob.iglob(absolute_from_rel_file_path('../shapes/') + '**/schem
     f.close()
     compacted = jsonld.compact(shape, {})
     onto['@graph'].append(compacted['https://bluebrain.github.io/nexus/vocabulary/shapes'])
+
+# write shapes to file
+f = open(absolute_from_rel_file_path('../ontology/shapes_graph.json'), 'w')
+f.write(json.dumps(jsonld.compact(onto, context)))
+f.close()
 
 # get class defs from ontology file
 f = open(absolute_from_rel_file_path('../ontology/ontology.json'))
@@ -156,20 +176,7 @@ onto['@graph'].extend(compacted['@graph'])
 properties = generate_property_defs_from_shapes(onto['@graph'])
 onto['@graph'].extend(properties)
 
-onto = jsonld.compact(onto, {
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "prov": "http://www.w3.org/ns/prov#",
-    "dcat": "http://www.w3.org/ns/dcat#",
-    "sh": "http://www.w3.org/ns/shacl#",
-    "shsh": "http://www.w3.org/ns/shacl-shacl#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "schema": "http://schema.org/",
-    "rescs": "http://rescs.org/"
-})
+onto = jsonld.compact(onto, context)
 
 onto_json = json.dumps(onto)
 
