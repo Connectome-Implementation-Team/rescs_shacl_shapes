@@ -180,6 +180,7 @@ onto = jsonld.compact(onto, context)
 
 onto_json = json.dumps(onto)
 
+# write shapes and ontology to file
 f = open(absolute_from_rel_file_path('../ontology/shapes_ontology_graph.json'), 'w')
 f.write(onto_json)
 f.close()

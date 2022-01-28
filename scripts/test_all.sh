@@ -6,11 +6,11 @@
 # arg2: name of JSON-LD test data file in test/arg1
 function validate () {
   echo "validating: test/$1/$2.json"
-  pyshacl -o /dev/null -sf json-ld -s ../ontology/shapes_ontology_graph.json -df json-ld ../test/$1/$2.json
+  pyshacl -o /dev/null -sf json-ld -s ../ontology/shapes_graph.json -df json-ld ../test/$1/$2.json
   status=$?
   if (($status != 0)); then
     printf "%s\n" "Test case test/$1/$2.json failed, running in single mode for details:" >&2  # write error message to stderr
-    pyshacl -d -sf json-ld -s ../ontology/shapes_ontology_graph.json -df json-ld ../test/$1/$2.json
+    pyshacl -d -sf json-ld -s ../ontology/shapes_graph.json -df json-ld ../test/$1/$2.json
     exit 1
   fi
 }
@@ -21,7 +21,7 @@ function validate () {
 # arg2: name of JSON-LD test data file in test/arg1
 function attempt () {
   echo "attempting: test/$1/$2.json"
-  pyshacl -o /dev/null -sf json-ld -s ../ontology/shapes_ontology_graph.json -df json-ld ../test/$1/$2.json
+  pyshacl -o /dev/null -sf json-ld -s ../ontology/shapes_graph.json -df json-ld ../test/$1/$2.json
   status=$?
   # status is expected to be 1 (validation failed, see https://github.com/RDFLib/pySHACL#command-line-use)
   if (($status != 1)); then
@@ -45,7 +45,7 @@ if (($status != 0)); then
 fi
 
 
-pyshacl -o /dev/null -sf turtle -s ../shacl-shacl/shacl-shacl.ttl -df json-ld ../ontology/shapes_ontology_graph.json
+pyshacl -o /dev/null -sf turtle -s ../shacl-shacl/shacl-shacl.ttl -df json-ld ../ontology/shapes_graph.json
 status=$?
 if (($status != 0)); then
   printf "%s\n" "SHACL Ssapes graph did not pass shacl-shacl validation" >&2  # write error message to stderr

@@ -18,7 +18,7 @@ def absolute_from_rel_file_path(relative_path: str) -> str:
 
 # load and parse the shapes graph
 g: Graph = Graph()
-g.parse(absolute_from_rel_file_path('../ontology/shapes_ontology_graph.json'))
+g.parse(absolute_from_rel_file_path('../ontology/shapes_graph.json'))
 
 # look for sh:node references that cannot be resolved
 query = """
