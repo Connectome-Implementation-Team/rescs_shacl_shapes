@@ -10,6 +10,7 @@ function validate () {
   status=$?
   if (($status != 0)); then
     printf "%s\n" "Test case test/$1/$2.json failed, running in single mode for details:" >&2  # write error message to stderr
+    # use transformed graph (no sh:and conjunctions) for better error reporting using inference instead
     pyshacl -sf json-ld -s ../ontology/shapes_graph_transformed.json -ef json-ld -e ../ontology/ontology.json -df json-ld ../test/$1/$2.json
     exit 1
   fi
