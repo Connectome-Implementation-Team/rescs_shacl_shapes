@@ -105,6 +105,9 @@ def close_shapes(transformed_shapes: Dict) -> Dict:
     """
     Adds closed:true to all node shapes and add the ignored properties (inherited properties).
 
+    Attention: This functionality cannot be used since sh:closed does not support inheritance,
+    see <https://stackoverflow.com/questions/70785194/shacl-closed-shape-with-superclass-inheritance>.
+
     """
     # Attention: shallow copy
     copy = jsonld.compact(transformed_shapes.copy(), {})
@@ -115,23 +118,31 @@ def close_shapes(transformed_shapes: Dict) -> Dict:
         node_shape_id = node_shape['@id']
 
         if node_shape_id == "http://rescs.org/dash/thing/ThingShape":
-            # ignore schema:Thing
-            continue
+            # only inclcude rdf:type for schema:Thing
+            node_shape['http://www.w3.org/ns/shacl#closed'] = True
+            node_shape['http://www.w3.org/ns/shacl#ignoredProperties'] = {
+                '@list': [
+                    {'@id': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'}
+                ]
+            }
+        else:
+            # print(node_shape_id)
 
-        print(node_shape_id)
+            # collect inherited property ids
+            inherited_props = list(filter(lambda res: res['shape']['value'] == node_shape_id, props['results']['bindings']))
+            inherited_prop_ids = list(map(lambda prop: prop['superClassShapePropPath']['value'],inherited_props))
 
-        # collect inherited property ids
-        inherited_props = list(filter(lambda res: res['shape']['value'] == node_shape_id, props['results']['bindings']))
-        inherited_prop_ids = list(map(lambda prop: prop['superClassShapePropPath']['value'],inherited_props))
+            # print(inherited_prop_ids)
+            # print('*******')
 
-        print(inherited_prop_ids)
-        print('*******')
+            ignored_props = list(map(lambda prop: { '@id': prop}, inherited_prop_ids))
+            ignored_props.append({'@id': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'})
 
-        # close node shape and add inherited properties to ignored properties
-        node_shape['http://www.w3.org/ns/shacl#closed'] = True
-        node_shape['http://www.w3.org/ns/shacl#ignoredProperties'] = {
-            '@list': list(map(lambda prop: { '@id': prop}, inherited_prop_ids))
-        }
+            # close node shape and add inherited properties to ignored properties
+            node_shape['http://www.w3.org/ns/shacl#closed'] = True
+            node_shape['http://www.w3.org/ns/shacl#ignoredProperties'] = {
+                '@list': ignored_props
+            }
 
     return copy
 
@@ -150,25 +161,20 @@ context = {
     "rescs": "http://rescs.org/"
 }
 
+# read shapes graph
 f = open(absolute_from_rel_file_path('../ontology/shapes_graph.json'), 'r')
 graph = json.load(f)
 compacted = jsonld.compact(graph, {})
 f.close()
 
+# remove sh:and from shapes graph (use inheritance instead when validating)
 transformed_graph = remove_and_conjunction_from_shapes(compacted['@graph'])
 
 # compact the transformed graph
-transformed = jsonld.compact(transformed_graph, context)
+transformed_compacted = jsonld.compact(transformed_graph, context)
 
 # write the compacted transformed graph back
 f = open(absolute_from_rel_file_path('../ontology/shapes_graph_transformed.json'), 'w')
-f.write(json.dumps(transformed))
+f.write(json.dumps(transformed_compacted))
 f.close()
 
-# close the shapes
-closed_shapes = close_shapes(transformed)
-
-# write the compacted transformed closed graph back
-f = open(absolute_from_rel_file_path('../ontology/shapes_graph_transformed_closed.json'), 'w')
-f.write(json.dumps(jsonld.compact(closed_shapes, context)))
-f.close()
