@@ -6,6 +6,7 @@ import requests
 from decouple import config
 from typing import List
 from typing import Dict
+from pyld import jsonld
 
 # TOKEN has to be set
 # in file .env (project root): TOKEN="..."
@@ -53,9 +54,10 @@ for schema_name in order:
     f.close()
 
     # remove remote context
-    orig_context = schema['@context']
-    schema['@context'] = orig_context[1]
+    #orig_context = schema['@context']
+    #schema['@context'] = orig_context[1]
 
-    create_schema(schema)
+    # resolve all IRIs and get rid of remote schema
+    create_schema(jsonld.compact(schema, {}))
 
 
