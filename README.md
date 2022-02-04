@@ -118,8 +118,8 @@ Then use them for validation, e.g., `pyshacl -sf json-ld -s ontology/shapes_grap
 
 By design, SHACL shapes for Nexus are combined using `sh:and`,
 see [official docs](https://www.w3.org/TR/shacl/#AndConstraintComponent).
-If validation fails, it reports that the `AndConstraintComponent` has been violated which is not very helpful for debugging.
-Run `scripts/transfrom_shapes_graph.py` to generate a transformed graph which does not use `sh:and`.
+If the validation fails, it reports that the `AndConstraintComponent` has been violated which is not very helpful for debugging.
+Run `scripts/transform_shapes_graph.py` to generate a transformed graph which does not use `sh:and`.
 Instead, make use of inheritance by [including the ontology](https://github.com/RDFLib/pySHACL/blob/master/README.md#command-line-use) file when validating, e.g., 
 `pyshacl -sf json-ld -s ontology/shapes_graph_transformed.json -ef json-ld -e ontology/ontology.json -df json-ld test/person/person.json`.
 The error message directly points out what went wrong.
