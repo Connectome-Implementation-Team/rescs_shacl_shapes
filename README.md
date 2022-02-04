@@ -105,13 +105,26 @@ Make sure to create a file `.env` first containing configuration settings (see [
 
 ### Use with Standard Tools
 
-Run `scripts/generate_shapes.py` to build a graph of **all** SHACL shapes contained in the library.
-The generated file is called `ontology/shapes_graph.json`.
-The resulting collection contains all shapes in **one** JSON-LD graph
-and only contains standard SHACL statements (no Nexus Forge specifics).
+Run `scripts/generate_shapes_graph.py` to build a graph of **all** SHACL shapes contained in the library.
+Two files are generated:
+- `ontology/shapes_graph.json`: the graph of all combined SHACL shape definitions.
+- `ontology/shapes_ontology_graph.json`: the graph of all SHACL shape definitions **and** the ontology (classes and properties).
 
-Then use it for validation, e.g., `pyshacl -sf json-ld -s ontology/shapes_graph.json -df json-ld test/thing/thing.json`
+The resulting collections contain all shapes in **one** JSON-LD graph
+and only contain standard SHACL statements (no Nexus Forge specifics).
+
+Then use them for validation, e.g., `pyshacl -sf json-ld -s ontology/shapes_graph.json -df json-ld test/thing/thing.json`
 (use the debug mode `-d` for more detailed error messages).
+
+By design, SHACL shapes for Nexus are combined using `sh:and`,
+see [official docs](https://www.w3.org/TR/shacl/#AndConstraintComponent).
+If the validation fails, it reports that the `AndConstraintComponent` has been violated which is not very helpful for debugging.
+Run `scripts/transform_shapes_graph.py` to generate a transformed graph which does not use `sh:and`.
+Instead, make use of inheritance by [including the ontology](https://github.com/RDFLib/pySHACL/blob/master/README.md#command-line-use) file when validating, e.g., 
+`pyshacl -sf json-ld -s ontology/shapes_graph_transformed.json -ef json-ld -e ontology/ontology.json -df json-ld test/person/person.json`.
+The error message directly points out what went wrong.
+
+**The validation will only produce correct results with the inclusion of `ontology/ontology.json`.**
 
 ## Tests
 
@@ -125,9 +138,9 @@ to check if the test data files contained in the directory `test` conform to the
 ### Source Files
 
 The JSON-LD files contained in the `shapes` directory are the **source files** of the SHACL shapes library.
-Running `scripts/generate_shapes.py` will generate a file called `ontology/shapes_graph.json` containing all SHACL shapes.
+Running `scripts/generate_shapes_graph.py` will generate a file called `ontology/shapes_ontology_graph.json` containing all SHACL shapes.
 
-**Please note that you have to run `generate_shapes.py` each time you changed something in the JSON-LD shape files.** 
+**Please note that you have to run `generate_shapes_graph.py` each time you changed something in the JSON-LD shape files.** 
 
 #### Structure of a SHACL Shape File
 
