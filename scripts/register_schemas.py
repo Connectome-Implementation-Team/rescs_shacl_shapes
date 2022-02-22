@@ -53,11 +53,7 @@ for schema_name in order:
     schema = json.load(f)
     f.close()
 
-    # remove remote context
-    #orig_context = schema['@context']
-    #schema['@context'] = orig_context[1]
-
-    # resolve all IRIs and get rid of remote schema
+    # expand all prefixes and get rid of remote schema
     create_schema(jsonld.compact(schema, {}))
 
 
