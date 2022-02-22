@@ -98,7 +98,7 @@ since XSD datatypes are used instead of the schema.org datatypes, e.g., `xsd:flo
 | Prefix  | URI |
 |---------|-----|
 | sh:     | http://www.w3.org/ns/shacl# |
-| schema: | https://schema.org/ |
+| schema: | http://schema.org/ |
 | xsd:    | http://www.w3.org/2001/XMLSchema# |
 
 

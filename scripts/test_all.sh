@@ -10,7 +10,8 @@ function validate () {
   status=$?
   if (($status != 0)); then
     printf "%s\n" "Test case test/$1/$2.json failed, running in single mode for details:" >&2  # write error message to stderr
-    pyshacl -d -sf json-ld -s ../ontology/shapes_graph.json -df json-ld ../test/$1/$2.json
+    # use transformed graph (no sh:and conjunctions) for better error reporting using inference instead
+    pyshacl -sf json-ld -s ../ontology/shapes_graph_transformed.json -ef json-ld -e ../ontology/ontology.json -df json-ld ../test/$1/$2.json
     exit 1
   fi
 }
@@ -30,7 +31,7 @@ function attempt () {
   fi
 }
 
-./generate_shapes.py
+./generate_shapes_graph.py
 status=$?
 if (($status != 0)); then
   printf "%s\n" "Could not properly generate SHACL shapes graph" >&2  # write error message to stderr
@@ -44,11 +45,17 @@ if (($status != 0)); then
   exit 1
 fi
 
-
 pyshacl -o /dev/null -sf turtle -s ../shacl-shacl/shacl-shacl.ttl -df json-ld ../ontology/shapes_graph.json
 status=$?
 if (($status != 0)); then
   printf "%s\n" "SHACL Ssapes graph did not pass shacl-shacl validation" >&2  # write error message to stderr
+  exit 1
+fi
+
+./transform_shapes_graph.py
+status=$?
+if (($status != 0)); then
+  printf "%s\n" "Could not properly transform SHACL shapes graph" >&2  # write error message to stderr
   exit 1
 fi
 
