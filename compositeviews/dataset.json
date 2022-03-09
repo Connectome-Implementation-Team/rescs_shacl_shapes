@@ -32,6 +32,9 @@
         "dateCreated": {
             "@type": "http://www.w3.org/2001/XMLSchema#date"
         },
+        "dateModified": {
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
         "genre_en": {
             "@id": "genre",
             "@language": "en"

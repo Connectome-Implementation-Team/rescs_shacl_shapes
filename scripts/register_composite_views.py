@@ -6,6 +6,7 @@ import json
 from typing import Dict
 import os
 from typing import List
+from urllib import parse
 
 # TOKEN has to be set
 # in file .env (project root): TOKEN="..."
@@ -49,11 +50,29 @@ def update_composite_view(composite_view: Dict) -> None:
     """
     Given a CompositeView, updates it in Nexus.
     """
+
+    # get composite view's id
     composite_view_id = composite_view['@id']
 
-    composite_view = get_composite_view(composite_view_id)
+    # get the current revision of the composite view
+    composite_view_rev = get_composite_view(composite_view_id)
 
-    print(composite_view['_rev'])
+    # store the current revision number
+    rev: int = int(composite_view_rev['_rev'])
+
+    req = requests.put(
+        NEXUS_ENVIRONMENT + '/views/' + ORG + '/' + PROJECT + '/' + parse.quote_plus(NEXUS_ENVIRONMENT + '/resources/' + ORG + '/' + PROJECT + '/_/' + composite_view_id),
+        params={ 'rev': rev },
+        headers={
+            'Content-Type': 'application/json',
+            'Authorization': f'Bearer {TOKEN}'
+        },
+        data=json.dumps(composite_view),
+        verify=VERIFY_SSL
+    )
+
+    print(req.status_code)
+    print(req.json())
 
 
 def create_composite_view(composite_view: Dict) -> None:
@@ -80,5 +99,4 @@ for view_name in order:
     view = json.load(f)
     f.close()
 
-    # expand all prefixes and get rid of remote schema
     update_composite_view(view)
