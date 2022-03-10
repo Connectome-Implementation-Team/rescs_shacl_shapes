@@ -25,6 +25,7 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install mypy
+          mypy -V
       - name: Run tests
         run: |
           mypy --ignore-missing-imports .
