@@ -4,19 +4,9 @@ from decouple import config
 import requests
 import json
 from typing import Dict
-import os
 from typing import List
-import sys
 
-# https://towardsdatascience.com/understanding-python-imports-init-py-and-pythonpath-once-and-for-all-4c5249ab6355
-# TODO: Use PYTHONPATH instead
-PROJECT_ROOT = os.path.abspath(os.path.join(
-                  os.path.dirname(__file__),
-                  os.pardir)
-)
-sys.path.append(PROJECT_ROOT)
-
-from utils import absolute_from_rel_file_path
+from utils.helper_methods import absolute_from_rel_file_path
 
 # TOKEN has to be set
 # in file .env (project root): TOKEN="..."
@@ -45,7 +35,7 @@ def create_composite_view(composite_view: Dict) -> None:
 order: List[str] = ['dataset']
 
 for view_name in order:
-    f = open(absolute_from_rel_file_path('../compositeviews/' + view_name + '.json'))
+    f = open(absolute_from_rel_file_path('../compositeviews/' + view_name + '.json', __file__))
     view = json.load(f)
     f.close()
 

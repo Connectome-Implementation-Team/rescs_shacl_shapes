@@ -7,17 +7,8 @@ from typing import Dict
 from typing import List
 from urllib import parse
 import sys
-import os
 
-# https://towardsdatascience.com/understanding-python-imports-init-py-and-pythonpath-once-and-for-all-4c5249ab6355
-# TODO: Use PYTHONPATH instead
-PROJECT_ROOT = os.path.abspath(os.path.join(
-                  os.path.dirname(__file__),
-                  os.pardir)
-)
-sys.path.append(PROJECT_ROOT)
-
-from utils import absolute_from_rel_file_path
+from utils.helper_methods import absolute_from_rel_file_path
 
 # TOKEN has to be set
 # in file .env (project root): TOKEN="..."
@@ -88,7 +79,7 @@ def get_args() -> List[str]:
 args = get_args()
 
 for view_name in args:
-    f = open(absolute_from_rel_file_path('../compositeviews/' + view_name + '.json'))
+    f = open(absolute_from_rel_file_path('../compositeviews/' + view_name + '.json', __file__))
     view = json.load(f)
     f.close()
 

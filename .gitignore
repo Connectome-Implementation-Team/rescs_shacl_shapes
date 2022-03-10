@@ -7,4 +7,3 @@ env/*
 .env
 docs/design-documentation.pdf
 docs/design-documentation.html
-utils/__pycache__
