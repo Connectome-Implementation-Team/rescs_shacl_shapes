@@ -22,6 +22,11 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       - name: Install deps
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          pip install mypy
+          mypy -V
       - name: Run tests
-        run: cd scripts; ./test_all.sh
+        run: |
+          mypy --ignore-missing-imports .
+          cd scripts; ./test_all.sh

@@ -14,6 +14,7 @@ TOKEN = config('TOKEN')
 NEXUS_ENVIRONMENT = config('NEXUS')
 ORG = config('ORG')
 PROJECT = config('PROJECT')
+VERIFY_SSL: bool = bool(int(config('VERIFY_SSL'))) # throws an uncaught error if not numerical / integer
 
 def absolute_from_rel_file_path(relative_path: str) -> str:
     """
@@ -37,7 +38,7 @@ def create_schema(schema: Dict)-> None:
         headers={
             'Content-Type': 'application/json',
             'Authorization': f'Bearer {TOKEN}'
-        }, data=json.dumps(schema))
+        }, data=json.dumps(schema), verify=VERIFY_SSL)
 
     print(req.status_code)
     print(req.json())

@@ -1,0 +1,58 @@
+{
+  "@id": "connectome-test-search-composite-01",
+  "@type": "CompositeView",
+  "sources": [
+    {
+      "@id": "test-source-01",
+      "@type": "ProjectEventStream"
+    }
+  ],
+  "projections": [
+    {
+      "@id": "connectome-projection-composite-01",
+      "@type": "ElasticSearchProjection",
+      "mapping": {
+          "dynamic": false,
+          "properties": {
+            "@type": {
+                "type": "keyword"
+            },
+            "name": {
+                 "type": "text"
+            },
+            "inLanguage": {
+                "type": "text"
+            },
+            "abstract_en": {
+              "type": "text"
+            }
+        }
+      },
+      "query": "PREFIX schema: <http://schema.org/> PREFIX nxv: <https://bluebrain.github.io/nexus/vocabulary/> CONSTRUCT {  {resource_id} ?p ?o .  ?author ?pAuthor ?oAuthor .  ?place ?pPlace ?oPlace .} WHERE { {resource_id} ?p ?o .  FILTER(!strstarts(str(?p),str(nxv:)))  OPTIONAL {  {resource_id} schema:author ?author .  ?author ?pAuthor ?oAuthor .  FILTER(!strstarts(str(?pAuthor),str(nxv:)) && ?oAuthor != 'validate' && ?oAuthor != 'validate@validate.com')}    OPTIONAL {    {resource_id} schema:spatialCoverage ?place .        ?place ?pPlace ?oPlace .        FILTER(!strstarts(str(?pPlace),str(nxv:)) && ?oPlace != 'validate')    }}",
+      "context": {
+        "@base": "http://schema.org/",
+        "@vocab": "http://schema.org/",
+        "dateCreated": {
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "dateModified": {
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "genre_en": {
+            "@id": "genre",
+            "@language": "en"
+        },
+        "abstract_en": {
+          "@id": "abstract",
+          "@language": "en"
+        }
+      },
+      "resourceTypes": [ "http://schema.org/Dataset" ],
+      "includeMetadata": false
+    }
+  ],
+  "rebuildStrategy": {
+    "@type": "Interval",
+    "value": "2 minutes"
+  }
+}
