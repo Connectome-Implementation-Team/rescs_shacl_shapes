@@ -27,5 +27,5 @@ jobs:
           pip install mypy
       - name: Run tests
         run: |
-          mypy -v --ignore-missing-imports .
+          mypy --ignore-missing-imports .
           cd scripts; ./test_all.sh
