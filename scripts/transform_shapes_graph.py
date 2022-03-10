@@ -95,7 +95,10 @@ SELECT ?shape ?superClassShape ?superClassShapePropPath WHERE {
     q_res: Result = g.query(query)
 
     res = q_res.serialize(format='json')
-    res_json = res.decode('utf-8')
+    if res is not None:
+        res_json = res.decode('utf-8')
+    else:
+        raise Exception('Could not read query results')
 
     res_dict = json.loads(res_json)
 

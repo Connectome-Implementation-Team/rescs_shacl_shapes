@@ -1,5 +1,6 @@
 pyld
 requests
+types-requests
 pyparsing
 pyshacl
 python-decouple
