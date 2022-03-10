@@ -6,7 +6,7 @@ import json
 from typing import Dict
 from typing import List
 
-from utils.helper_methods import absolute_from_rel_file_path
+from utils.file_helper_methods import absolute_from_rel_file_path
 
 # TOKEN has to be set
 # in file .env (project root): TOKEN="..."

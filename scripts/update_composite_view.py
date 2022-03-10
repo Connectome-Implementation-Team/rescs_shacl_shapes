@@ -8,7 +8,8 @@ from typing import List
 from urllib import parse
 import sys
 
-from utils.helper_methods import absolute_from_rel_file_path
+from utils.file_helper_methods import absolute_from_rel_file_path
+from utils.nexus_interaction import get_composite_view
 
 # TOKEN has to be set
 # in file .env (project root): TOKEN="..."
@@ -17,24 +18,6 @@ NEXUS_ENVIRONMENT = config('NEXUS')
 ORG = config('ORG')
 PROJECT = config('PROJECT')
 VERIFY_SSL: bool = bool(int(config('VERIFY_SSL'))) # throws an uncaught error if not numerical / integer
-
-def get_composite_view(id: str) -> Dict:
-    """
-    Given the id of a composite view, fetches it from Nexus.
-
-    :param id: The composite view's id, e.g, connectome-projection-composite-01.
-    :return: The composite view fetched from Nexus.
-    """
-    req = requests.get(
-        NEXUS_ENVIRONMENT + '/views/' + ORG + '/' + PROJECT + '/' + id,
-        headers={
-            'Content-Type': 'application/json',
-            'Authorization': f'Bearer {TOKEN}'
-        },
-        verify=VERIFY_SSL
-    )
-
-    return req.json()
 
 def update_composite_view(composite_view: Dict) -> None:
     """
@@ -45,7 +28,11 @@ def update_composite_view(composite_view: Dict) -> None:
     composite_view_id = composite_view['@id']
 
     # get the current revision of the composite view
-    composite_view_rev = get_composite_view(composite_view_id)
+    composite_view_rev = get_composite_view(composite_view_id, NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
+
+    if composite_view_rev is None:
+        # composite view does not exist yet
+        return None
 
     # store the current revision number
     rev: int = int(composite_view_rev['_rev'])
