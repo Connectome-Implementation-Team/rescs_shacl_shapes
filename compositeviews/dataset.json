@@ -22,6 +22,9 @@
             },
             "inLanguage": {
                 "type": "text"
+            },
+            "abstract_en": {
+              "type": "text"
             }
         }
       },
@@ -38,6 +41,10 @@
         "genre_en": {
             "@id": "genre",
             "@language": "en"
+        },
+        "abstract_en": {
+          "@id": "abstract",
+          "@language": "en"
         }
       },
       "resourceTypes": [ "http://schema.org/Dataset" ],
