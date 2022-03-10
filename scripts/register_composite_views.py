@@ -7,6 +7,17 @@ from typing import Dict
 import os
 from typing import List
 from urllib import parse
+import sys
+
+# https://towardsdatascience.com/understanding-python-imports-init-py-and-pythonpath-once-and-for-all-4c5249ab6355
+# TODO: Use PYTHONPATH instead
+PROJECT_ROOT = os.path.abspath(os.path.join(
+                  os.path.dirname(__file__),
+                  os.pardir)
+)
+sys.path.append(PROJECT_ROOT)
+
+from utils import absolute_from_rel_file_path
 
 # TOKEN has to be set
 # in file .env (project root): TOKEN="..."
@@ -15,18 +26,6 @@ NEXUS_ENVIRONMENT = config('NEXUS')
 ORG = config('ORG')
 PROJECT = config('PROJECT')
 VERIFY_SSL: bool = bool(int(config('VERIFY_SSL'))) # throws an uncaught error if not numerical / integer
-
-def absolute_from_rel_file_path(relative_path: str) -> str:
-    """
-    Given a path relative to this file,
-    returns the absolute path.
-
-    :param relative_path: The path relative to this file.
-    :return: The absolute path.
-    """
-    dirname = os.path.dirname(__file__)
-    return os.path.join(dirname, relative_path)
-
 
 def get_composite_view(id: str) -> Dict:
     """
@@ -99,4 +98,5 @@ for view_name in order:
     view = json.load(f)
     f.close()
 
-    update_composite_view(view)
+    print(view)
+    #create_composite_view(view)
