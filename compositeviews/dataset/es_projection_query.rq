@@ -3,29 +3,20 @@ PREFIX nxv: <https://bluebrain.github.io/nexus/vocabulary/>
 
 CONSTRUCT {
     {resource_id} ?p ?o .
-    ?author ?pAuthor ?oAuthor .
-    ?affiliation ?pAffiliation ?oAffiliation .
-    ?place ?pPlace ?oPlace .
+    ?o ?pp ?oo .
+    ?oo ?ppp ?ooo .
 
 } WHERE {
     {resource_id} ?p ?o .
     FILTER(!strstarts(str(?p),str(nxv:)))
 
     OPTIONAL {
-        {resource_id} schema:author ?author .
-        ?author ?pAuthor ?oAuthor .
-        FILTER(!strstarts(str(?pAuthor),str(nxv:)) && ?oAuthor != 'validate' && ?oAuthor != 'validate@validate.com')
+        ?o ?pp ?oo .
+        FILTER(!strstarts(str(?pp),str(nxv:)) && ?oo != 'validate' && ?oo != 'validate@validate.com')
 
         OPTIONAL {
-            ?author schema:affiliation ?affiliation .
-            ?affiliation ?pAffiliation ?oAffiliation .
-            FILTER(!strstarts(str(?pAffiliation),str(nxv:)) && ?oAffiliation != 'validate' && ?oAffiliation != 'validate@validate.com')
+            ?oo ?ppp ?ooo .
+            FILTER(!strstarts(str(?ppp),str(nxv:)) && ?ooo != 'validate' && ?ooo != 'validate@validate.com')
         }
-    }
-
-    OPTIONAL {
-        {resource_id} schema:spatialCoverage ?place .
-        ?place ?pPlace ?oPlace .
-        FILTER(!strstarts(str(?pPlace),str(nxv:)) && ?oPlace != 'validate')
     }
 }
