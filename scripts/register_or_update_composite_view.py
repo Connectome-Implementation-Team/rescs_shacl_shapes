@@ -29,11 +29,21 @@ def get_args() -> List[str]:
 args = get_args()
 
 for view_name in args:
-    f = open(absolute_from_rel_file_path('../compositeviews/' + view_name + '.json', __file__))
-    view = json.load(f)
+
+    # get composite view
+    f = open(absolute_from_rel_file_path('../compositeviews/' + view_name + '/composite_view.json', __file__), 'r')
+    comp_view = json.load(f)
     f.close()
 
-    comp_view_rev: Optional[Dict] = get_composite_view(view['@id'], NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
+    # get sparql projection belonging to composite view
+    f = open(absolute_from_rel_file_path('../compositeviews/' + view_name + '/es_projection_query.rq', __file__), 'r')
+    sparql_proj_query = f.read()
+    f.close()
+
+    # add sparql projection to composite view
+    comp_view['projections'][0]['query'] = sparql_proj_query
+
+    comp_view_rev: Optional[Dict] = get_composite_view(comp_view['@id'], NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
 
     if comp_view_rev is not None:
         # composite view already exists, update it in Nexus
@@ -42,9 +52,9 @@ for view_name in args:
         except KeyError as e:
             raise Exception('No _rev given in composite view')
 
-        update_res = update_composite_view(view, rev, NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
+        update_res = update_composite_view(comp_view, rev, NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
         print('updated:', update_res)
     else:
         # composite view does not exist yet in Nexus, create it
-        created_res = create_composite_view(view, NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
+        created_res = create_composite_view(comp_view, NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
         print('created:', created_res)

@@ -1,5 +1,5 @@
 {
-  "@id": "connectome-test-search-composite-01",
+  "@id": "connectome-composite-view-01",
   "@type": "CompositeView",
   "sources": [
     {
@@ -9,7 +9,7 @@
   ],
   "projections": [
     {
-      "@id": "connectome-projection-composite-01",
+      "@id": "connectome-projection-dataset-01",
       "@type": "ElasticSearchProjection",
       "mapping": {
           "dynamic": false,
@@ -28,7 +28,7 @@
             }
         }
       },
-      "query": "PREFIX schema: <http://schema.org/> PREFIX nxv: <https://bluebrain.github.io/nexus/vocabulary/> CONSTRUCT {  {resource_id} ?p ?o .  ?author ?pAuthor ?oAuthor .  ?place ?pPlace ?oPlace .} WHERE { {resource_id} ?p ?o .  FILTER(!strstarts(str(?p),str(nxv:)))  OPTIONAL {  {resource_id} schema:author ?author .  ?author ?pAuthor ?oAuthor .  FILTER(!strstarts(str(?pAuthor),str(nxv:)) && ?oAuthor != 'validate' && ?oAuthor != 'validate@validate.com')}    OPTIONAL {    {resource_id} schema:spatialCoverage ?place .        ?place ?pPlace ?oPlace .        FILTER(!strstarts(str(?pPlace),str(nxv:)) && ?oPlace != 'validate')    }}",
+      "query": "es_projection_query.rq",
       "context": {
         "@base": "http://schema.org/",
         "@vocab": "http://schema.org/",
@@ -38,6 +38,9 @@
         "dateModified": {
             "@type": "http://www.w3.org/2001/XMLSchema#date"
         },
+        "datePublished": {
+            "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
         "genre_en": {
             "@id": "genre",
             "@language": "en"
@@ -45,6 +48,13 @@
         "abstract_en": {
           "@id": "abstract",
           "@language": "en"
+        },
+        "keywords_en": {
+          "@id": "keywords",
+          "@language": "en"
+        },
+        "url": {
+          "@type": "@id"
         }
       },
       "resourceTypes": [ "http://schema.org/Dataset" ],
