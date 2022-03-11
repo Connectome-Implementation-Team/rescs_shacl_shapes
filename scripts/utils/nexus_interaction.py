@@ -3,7 +3,7 @@ from typing import Dict, Union
 from urllib import parse
 import json
 
-def create_schema(schema: Dict, nexus_url: str, organisation: str, project: str, token: str, verify_ssl=True)-> Dict:
+def create_schema(schema: Dict, nexus_url: str, organisation: str, project: str, token: str, verify_ssl=True) -> Dict:
     """
     Given a schema, registers it in Nexus.
 
