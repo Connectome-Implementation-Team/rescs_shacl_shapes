@@ -1,3 +1,6 @@
+
+
+
 # SHACL Shapes
 
 This repo contains the SHACL shapes for RESCS (**Res**earch **C**ommon**s**).
@@ -24,6 +27,7 @@ TOKEN="mytoken"
 ORG="SW"
 PROJECT="my_test"
 NEXUS="https://nexus.switch.ch/v1"
+VERIFY_SSL=1 # set to 0 if SSL certificate should not be verified, i.e. for local dev
 ```
 `ORG` defines the organisation setting for Nexus.
 `PORJECT` sets the project.

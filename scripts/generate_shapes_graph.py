@@ -144,7 +144,7 @@ context = {
     "rescs": "http://rescs.org/"
 }
 
-onto = {
+onto: Dict = {
     "@graph": []
 }
 
