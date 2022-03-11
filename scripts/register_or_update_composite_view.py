@@ -18,12 +18,13 @@ VERIFY_SSL: bool = bool(int(config('VERIFY_SSL')))  # throws an uncaught error i
 def get_args() -> List[str]:
     argv = sys.argv[1:]
 
-    if len(argv) != 1:
+    if len(argv) < 1:
         print('Usage: ' + sys.argv[0] + ' <composite_view_name> (<composite_view_name> without file extension)')
         print('Example: ' + sys.argv[0] + ' dataset (see files in directory "compositeviews")')
         exit(1)
     else:
         return argv
+
 
 # get args
 args = get_args()
