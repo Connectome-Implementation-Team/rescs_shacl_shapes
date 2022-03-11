@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
 
-from decouple import config
-import requests
 import json
-from typing import Dict
-from typing import List
-from urllib import parse
 import sys
-
+from typing import List, Optional, Dict
+from decouple import config
 from utils.file_helper_methods import absolute_from_rel_file_path
-from utils.nexus_interaction import get_composite_view
+from utils.nexus_interaction import get_composite_view, update_composite_view
 
 # TOKEN has to be set
 # in file .env (project root): TOKEN="..."
@@ -17,40 +13,7 @@ TOKEN = config('TOKEN')
 NEXUS_ENVIRONMENT = config('NEXUS')
 ORG = config('ORG')
 PROJECT = config('PROJECT')
-VERIFY_SSL: bool = bool(int(config('VERIFY_SSL'))) # throws an uncaught error if not numerical / integer
-
-def update_composite_view(composite_view: Dict) -> None:
-    """
-    Given a CompositeView, updates it in Nexus.
-    """
-
-    # get composite view's id
-    composite_view_id = composite_view['@id']
-
-    # get the current revision of the composite view
-    composite_view_rev = get_composite_view(composite_view_id, NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
-
-    if composite_view_rev is None:
-        # composite view does not exist yet
-        return None
-
-    # store the current revision number
-    rev: int = int(composite_view_rev['_rev'])
-
-    req = requests.put(
-        NEXUS_ENVIRONMENT + '/views/' + ORG + '/' + PROJECT + '/' + parse.quote_plus(NEXUS_ENVIRONMENT + '/resources/' + ORG + '/' + PROJECT + '/_/' + composite_view_id),
-        params={ 'rev': rev },
-        headers={
-            'Content-Type': 'application/json',
-            'Authorization': f'Bearer {TOKEN}'
-        },
-        data=json.dumps(composite_view),
-        verify=VERIFY_SSL
-    )
-
-    print(req.status_code)
-    print(req.json())
-
+VERIFY_SSL: bool = bool(int(config('VERIFY_SSL')))  # throws an uncaught error if not numerical / integer
 
 def get_args() -> List[str]:
     argv = sys.argv[1:]
@@ -70,4 +33,15 @@ for view_name in args:
     view = json.load(f)
     f.close()
 
-    update_composite_view(view)
+    comp_view_rev: Optional[Dict] = get_composite_view(view['@id'], NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
+
+    if comp_view_rev is not None:
+        try:
+            rev = int(comp_view_rev['_rev'])
+        except KeyError as e:
+            raise Exception('No _rev given in composite view')
+
+        update_res = update_composite_view(view, rev, NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
+        print(update_res)
+    else:
+        print('composite view does not exist')
