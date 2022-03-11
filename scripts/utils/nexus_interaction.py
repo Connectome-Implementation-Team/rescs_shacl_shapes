@@ -38,6 +38,33 @@ def get_composite_view(id: str, nexus_url: str, organisation: str, project: str,
     return req.json()
 
 
+def create_composite_view(composite_view: Dict, nexus_url: str, organisation: str, project: str, token: str,
+                          verify_ssl=True) -> Dict:
+    """
+    Given a CompositeView, registers it in Nexus.
+
+    :param composite_view: The new revision of the composite_view..
+    :param nexus_url: The Nexus base URL.
+    :param organisation: The Nexus organisation.
+    :param project: The Nexus project.
+    :param token: The Nexus token.
+    :param verify_ssl: If set to False, SSL verification will be disabled.
+    """
+    try:
+        req = requests.post(
+            nexus_url + '/views/' + organisation + '/' + project,
+            headers={
+                'Content-Type': 'application/json',
+                'Authorization': f'Bearer {token}'
+            }, data=json.dumps(composite_view), verify=verify_ssl)
+
+        req.raise_for_status()
+
+        return req.json()
+    except requests.exceptions.HTTPError as e:
+        raise Exception(e.response.text)
+
+
 def update_composite_view(composite_view: Dict, rev: int, nexus_url: str, organisation: str, project: str, token: str,
                           verify_ssl=True) -> Dict:
     """
