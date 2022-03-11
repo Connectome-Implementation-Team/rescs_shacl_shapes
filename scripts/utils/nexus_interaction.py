@@ -3,6 +3,34 @@ from typing import Dict, Union
 from urllib import parse
 import json
 
+def create_schema(schema: Dict, nexus_url: str, organisation: str, project: str, token: str, verify_ssl=True)-> Dict:
+    """
+    Given a schema, registers it in Nexus.
+
+    :param schema: The schema to be created.
+    :param nexus_url: The Nexus base URL.
+    :param organisation: The Nexus organisation.
+    :param project: The Nexus project.
+    :param token: The Nexus token.
+    :param verify_ssl: If set to False, SSL verification will be disabled.
+    :return: The schema creation response from Nexus.
+    """
+
+    try:
+        req = requests.post(
+            nexus_url + '/schemas/' + organisation + '/' + project,
+            headers={
+                'Content-Type': 'application/json',
+                'Authorization': f'Bearer {token}'
+            }, data=json.dumps(schema), verify=verify_ssl)
+
+        req.raise_for_status()
+
+        return req.json()
+    except requests.exceptions.HTTPError as e:
+        raise Exception(e.response.text)
+
+
 def get_composite_view(id: str, nexus_url: str, organisation: str, project: str, token: str, verify_ssl=True) -> Union[
     Dict, None]:
     """
@@ -49,6 +77,7 @@ def create_composite_view(composite_view: Dict, nexus_url: str, organisation: st
     :param project: The Nexus project.
     :param token: The Nexus token.
     :param verify_ssl: If set to False, SSL verification will be disabled.
+    :return: The creation response from Nexus.
     """
     try:
         req = requests.post(
@@ -77,6 +106,7 @@ def update_composite_view(composite_view: Dict, rev: int, nexus_url: str, organi
     :param project: The Nexus project.
     :param token: The Nexus token.
     :param verify_ssl: If set to False, SSL verification will be disabled.
+    :return: The update response from Nexus.
     """
 
     # get composite view's id
