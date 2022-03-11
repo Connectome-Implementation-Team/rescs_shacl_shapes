@@ -1,0 +1,22 @@
+PREFIX schema: <http://schema.org/>
+PREFIX nxv: <https://bluebrain.github.io/nexus/vocabulary/>
+
+CONSTRUCT {
+    {resource_id} ?p ?o .
+    ?o ?pp ?oo .
+    ?oo ?ppp ?ooo .
+
+} WHERE {
+    {resource_id} ?p ?o .
+    FILTER(!strstarts(str(?p),str(nxv:)))
+
+    OPTIONAL {
+        ?o ?pp ?oo .
+        FILTER(!strstarts(str(?pp),str(nxv:)) && ?oo != 'validate' && ?oo != 'validate@validate.com')
+
+        OPTIONAL {
+            ?oo ?ppp ?ooo .
+            FILTER(!strstarts(str(?ppp),str(nxv:)) && ?ooo != 'validate' && ?ooo != 'validate@validate.com')
+        }
+    }
+}
