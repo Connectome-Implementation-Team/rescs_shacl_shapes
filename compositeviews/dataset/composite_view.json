@@ -12,20 +12,32 @@
       "@id": "connectome-es-projection-dataset-01",
       "@type": "ElasticSearchProjection",
       "mapping": {
-          "dynamic": false,
-          "properties": {
-            "@type": {
-                "type": "keyword"
-            },
-            "name": {
-                 "type": "text"
-            },
-            "inLanguage": {
-                "type": "text"
-            },
-            "abstract_en": {
-              "type": "text"
-            }
+        "dynamic": false,
+        "properties": {
+          "@type": {
+            "type": "keyword"
+          },
+          "name": {
+            "type": "text"
+          },
+          "inLanguage": {
+            "type": "text"
+          },
+          "abstract": {
+            "type": "text"
+          },
+          "abstract_en": {
+            "type": "text"
+          },
+          "abstract_de": {
+            "type": "text"
+          },
+          "abstract_fr": {
+            "type": "text"
+          },
+          "abstract_it": {
+            "type": "text"
+          }
         }
       },
       "query": "es_projection_query.rq",
@@ -33,31 +45,69 @@
         "@base": "http://schema.org/",
         "@vocab": "http://schema.org/",
         "dateCreated": {
-            "@type": "http://www.w3.org/2001/XMLSchema#date"
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
         },
         "dateModified": {
-            "@type": "http://www.w3.org/2001/XMLSchema#date"
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
         },
         "datePublished": {
-            "@type": "http://www.w3.org/2001/XMLSchema#date"
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
         },
         "genre_en": {
-            "@id": "genre",
-            "@language": "en"
+          "@id": "genre",
+          "@language": "en"
+        },
+        "genre_de": {
+          "@id": "genre",
+          "@language": "de"
+        },
+        "genre_fr": {
+          "@id": "genre",
+          "@language": "fr"
+        },
+        "genre_it": {
+          "@id": "genre",
+          "@language": "it"
         },
         "abstract_en": {
           "@id": "abstract",
           "@language": "en"
         },
+        "abstract_de": {
+          "@id": "abstract",
+          "@language": "de"
+        },
+        "abstract_fr": {
+          "@id": "abstract",
+          "@language": "fr"
+        },
+        "abstract_it": {
+          "@id": "abstract",
+          "@language": "it"
+        },
         "keywords_en": {
           "@id": "keywords",
           "@language": "en"
+        },
+        "keywords_de": {
+          "@id": "keywords",
+          "@language": "de"
+        },
+        "keywords_fr": {
+          "@id": "keywords",
+          "@language": "fr"
+        },
+        "keywords_it": {
+          "@id": "keywords",
+          "@language": "it"
         },
         "url": {
           "@type": "@id"
         }
       },
-      "resourceTypes": [ "http://schema.org/Dataset" ],
+      "resourceTypes": [
+        "http://schema.org/Dataset"
+      ],
       "includeMetadata": false
     },
     {
