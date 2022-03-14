@@ -76,7 +76,7 @@ Model:
 
 ### Registering SHACL Shapes in Nexus
 
-To register the SHACL shapes located on your local file system in Nexus, run `scripts/register_schemas.py`.
+To register the SHACL shapes located on your local file system in Nexus as [schemas](https://bluebrainnexus.io//docs/delta/api/schemas-api.html), run `scripts/register_schemas.py`.
 The script will create the SHACL shapes in Nexus in a **predefined** order. 
 If you add new shapes, note that you have to add them here:
 
@@ -90,6 +90,12 @@ order: List[str] = ['thing', 'person', 'organization', 'place', 'creativework', 
 Note that the schemas that are referred to from other schemas have to be created first.
 
 If you attempt to register a schema with an existing name, it will be rejected.
+
+### Registering and Updating Composite Views in Nexus
+
+To register a [composite view](https://bluebrainnexus.io//docs/delta/api/views/composite-view-api.htm) in Nexus or update an existing one,
+run `scripts/register_or_update_composite_view.py <composite_view_name>` (no file extension required/allowed, i.e "dataset""). 
+Predefined composite views are kept in the folder `./compositeviews`, e.g. "dataset".`    
 
 ## Demo
 
