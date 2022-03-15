@@ -8,7 +8,7 @@ CONSTRUCT {
 
 } WHERE {
     {resource_id} ?p ?o .
-    FILTER(!strstarts(str(?p),str(nxv:)))
+    FILTER(!strstarts(str(?p),str(nxv:)) && ?o != 'validate' && ?o != 'validate@validate.com')
 
     OPTIONAL {
         ?o ?pp ?oo .

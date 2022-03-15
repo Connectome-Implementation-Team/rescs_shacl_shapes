@@ -120,6 +120,6 @@
   ],
   "rebuildStrategy": {
     "@type": "Interval",
-    "value": "2 minutes"
+    "value": "30 minutes"
   }
 }

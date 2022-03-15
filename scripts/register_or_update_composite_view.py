@@ -42,7 +42,9 @@ for view_name in args:
     f.close()
 
     # add sparql projection to composite view
-    comp_view['projections'][0]['query'] = sparql_proj_query
+    for es_proj in comp_view['projections']:
+        if es_proj['@type'] == 'ElasticSearchProjection':
+            es_proj['query'] = sparql_proj_query
 
     comp_view_rev: Optional[Dict] = get_composite_view(comp_view['@id'], NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
 
