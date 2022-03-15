@@ -9,6 +9,67 @@
   ],
   "projections": [
     {
+      "@id": "connectome-es-projection-researchproject-01",
+      "@type": "ElasticSearchProjection",
+      "mapping": {
+        "dynamic": false,
+        "properties": {
+          "@type": {
+            "type": "keyword"
+          },
+          "name": {
+            "type": "text"
+          },
+          "description": {
+            "type": "text"
+          },
+          "description_en": {
+            "type": "text"
+          },
+          "description_de": {
+            "type": "text"
+          },
+          "description_fr": {
+            "type": "text"
+          },
+          "description_it": {
+            "type": "text"
+          }
+        }
+      },
+      "query": "es_projection_query.rq",
+      "context": {
+        "@base": "http://schema.org/",
+        "@vocab": "http://schema.org/",
+        "startDate": {
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "endDate": {
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "description_en": {
+          "@id": "description",
+          "@language": "en"
+        },
+        "description_de": {
+          "@id": "description",
+          "@language": "de"
+        },
+        "description_fr": {
+          "@id": "description",
+          "@language": "fr"
+        },
+        "description_it": {
+          "@id": "description",
+          "@language": "it"
+        }
+      },
+      "resourceTypes": [
+        "http://schema.org/ResearchProject"
+      ],
+      "includeMetadata": false
+    },
+    {
       "@id": "connectome-es-projection-dataset-01",
       "@type": "ElasticSearchProjection",
       "mapping": {
@@ -111,7 +172,7 @@
       "includeMetadata": false
     },
     {
-      "@id": "connectome-sparql-projection-dataset-01",
+      "@id": "connectome-sparql-projection-01",
       "@type": "SparqlProjection",
       "query": "PREFIX nxv: <https://bluebrain.github.io/nexus/vocabulary/> CONSTRUCT { {resource_id} ?p ?o . } WHERE { {resource_id} ?p ?o . FILTER(!strstarts(str(?p),str(nxv:)) && ?o != 'validate' && ?o != 'validate@validate.com') }",
       "includeMetadata": false,
