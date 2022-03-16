@@ -42,6 +42,20 @@
             "copy_to": "_all_fields",
             "type": "text"
           },
+          "member": {
+            "properties": {
+              "name": {
+                "type": "text"
+              },
+              "givenName": {
+                "type": "text"
+              },
+              "familyName": {
+                "type": "text"
+              }
+            },
+            "type": "nested"
+          },
           "_all_fields": {
             "copy_to": "_all_fields",
             "type": "text"
@@ -73,6 +87,9 @@
         "description_it": {
           "@id": "description",
           "@language": "it"
+        },
+        "url": {
+          "@type": "@id"
         }
       },
       "resourceTypes": [
