@@ -15,24 +15,35 @@
         "dynamic": false,
         "properties": {
           "@type": {
+            "copy_to": "_all_fields",
             "type": "keyword"
           },
           "name": {
+            "copy_to": "_all_fields",
             "type": "text"
           },
           "description": {
+            "copy_to": "_all_fields",
             "type": "text"
           },
           "description_en": {
+            "copy_to": "_all_fields",
             "type": "text"
           },
           "description_de": {
+            "copy_to": "_all_fields",
             "type": "text"
           },
           "description_fr": {
+            "copy_to": "_all_fields",
             "type": "text"
           },
           "description_it": {
+            "copy_to": "_all_fields",
+            "type": "text"
+          },
+          "_all_fields": {
+            "copy_to": "_all_fields",
             "type": "text"
           }
         }
@@ -76,27 +87,38 @@
         "dynamic": false,
         "properties": {
           "@type": {
+            "copy_to": "_all_fields",
             "type": "keyword"
           },
           "name": {
+            "copy_to": "_all_fields",
             "type": "text"
           },
           "inLanguage": {
+            "copy_to": "_all_fields",
             "type": "text"
           },
           "abstract": {
+            "copy_to": "_all_fields",
             "type": "text"
           },
           "abstract_en": {
+            "copy_to": "_all_fields",
             "type": "text"
           },
           "abstract_de": {
+            "copy_to": "_all_fields",
             "type": "text"
           },
           "abstract_fr": {
+            "copy_to": "_all_fields",
             "type": "text"
           },
           "abstract_it": {
+            "copy_to": "_all_fields",
+            "type": "text"
+          },
+          "_all_fields": {
             "type": "text"
           }
         }
