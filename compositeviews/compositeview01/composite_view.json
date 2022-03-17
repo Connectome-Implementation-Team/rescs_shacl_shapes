@@ -108,7 +108,24 @@
             "type": "keyword"
           },
           "name": {
-            "copy_to": "_all_fields",
+            "copy_to": [
+              "_all_fields",
+              "_sayt"
+            ],
+            "fields": {
+              "raw": {
+                "type": "keyword"
+              },
+              "reverse": {
+                "analyzer": "reverse",
+                "type": "text"
+              },
+              "trigram": {
+                "analyzer": "trigram",
+                "type": "text"
+              }
+            },
+            "term_vector": "with_positions_offsets",
             "type": "text"
           },
           "inLanguage": {
@@ -134,6 +151,54 @@
           "abstract_it": {
             "copy_to": "_all_fields",
             "type": "text"
+          },
+          "author": {
+            "properties": {
+              "@id": {
+                "copy_to": [
+                  "_all_fields",
+                  "_author_ids",
+                  "_sayt"
+                ],
+                "type": "keyword"
+              },
+              "name": {
+                "copy_to": [
+                  "_all_fields",
+                  "_sayt",
+                  "_authors"
+                ],
+                "fields": {
+                  "raw": {
+                    "type": "keyword"
+                  },
+                  "reverse": {
+                    "analyzer": "reverse",
+                    "type": "text"
+                  },
+                  "trigram": {
+                    "analyzer": "trigram",
+                    "type": "text"
+                  }
+                },
+                "term_vector": "with_positions_offsets",
+                "type": "text"
+              }
+            },
+            "type": "nested"
+          },
+          "_author_ids": {
+            "analyzer": "keyword",
+            "term_vector": "yes",
+            "type": "text"
+          },
+          "_authors": {
+            "store": true,
+            "term_vector": "with_positions_offsets",
+            "type": "text"
+          },
+          "_sayt": {
+            "type": "search_as_you_type"
           },
           "_all_fields": {
             "type": "text"

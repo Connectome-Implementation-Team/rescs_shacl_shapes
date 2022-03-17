@@ -41,10 +41,16 @@ for view_name in args:
     sparql_proj_query = f.read()
     f.close()
 
-    # add sparql projection to composite view
+    # get ES settings belonging to composite view
+    f = open(absolute_from_rel_file_path('../compositeviews/' + view_name + '/es_settings.json', __file__), 'r')
+    es_settings = json.load(f)
+    f.close()
+
+    # add SPARQL query and ES settings to composite view's ES projection
     for es_proj in comp_view['projections']:
         if es_proj['@type'] == 'ElasticSearchProjection':
             es_proj['query'] = sparql_proj_query
+            es_proj['settings'] = es_settings
 
     comp_view_rev: Optional[Dict] = get_composite_view(comp_view['@id'], NEXUS_ENVIRONMENT, ORG, PROJECT, TOKEN, VERIFY_SSL)
 
