@@ -4,6 +4,10 @@
   "mapping": {
     "dynamic": false,
     "properties": {
+      "@id": {
+        "copy_to": "_all_fields",
+        "type": "keyword"
+      },
       "@type": {
         "copy_to": "_all_fields",
         "type": "keyword"
