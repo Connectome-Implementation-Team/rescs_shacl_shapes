@@ -29,9 +29,28 @@
         "term_vector": "with_positions_offsets",
         "type": "text"
       },
-      "inLanguage": {
-        "copy_to": "_all_fields",
+      "keywords": {
+        "copy_to": "_keywords",
         "type": "text"
+      },
+      "keywords_en": {
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "keywords_de": {
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "keywords_fr": {
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "keywords_it": {
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "inLanguage": {
+        "type": "keyword"
       },
       "abstract": {
         "copy_to": "_all_fields",
@@ -102,6 +121,9 @@
         "type": "search_as_you_type"
       },
       "_all_fields": {
+        "type": "text"
+      },
+      "_keywords": {
         "type": "text"
       }
     }
