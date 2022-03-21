@@ -13,7 +13,7 @@
     {
       "@id": "connectome-sparql-projection-01",
       "@type": "SparqlProjection",
-      "query": "PREFIX nxv: <https://bluebrain.github.io/nexus/vocabulary/> CONSTRUCT { {resource_id} ?p ?o . } WHERE { {resource_id} ?p ?o . FILTER(!strstarts(str(?p),str(nxv:)) && ?o != 'validate' && ?o != 'validate@validate.com') }",
+      "query": "PREFIX nxv: <https://bluebrain.github.io/nexus/vocabulary/> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> CONSTRUCT { {resource_id} ?p ?o . } WHERE { {resource_id} ?p ?o . FILTER(!strstarts(str(?p),str(nxv:)) && ?o != \"validate\"^^xsd:string && ?o != \"validate@validate.com\"^^xsd:string) }",
       "includeMetadata": false,
       "includeDeprecated": false
     }

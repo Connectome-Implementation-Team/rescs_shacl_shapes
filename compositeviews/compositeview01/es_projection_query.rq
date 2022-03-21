@@ -1,5 +1,6 @@
 PREFIX schema: <http://schema.org/>
 PREFIX nxv: <https://bluebrain.github.io/nexus/vocabulary/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 CONSTRUCT {
     {resource_id} ?p ?o .
@@ -8,15 +9,15 @@ CONSTRUCT {
 
 } WHERE {
     {resource_id} ?p ?o .
-    FILTER(!strstarts(str(?p),str(nxv:)) && ?o != 'validate' && ?o != 'validate@validate.com')
+    FILTER(!strstarts(str(?p),str(nxv:)) && ?o != "validate"^^xsd:string && ?o != "validate@validate.com"^^xsd:string)
 
     OPTIONAL {
         ?o ?pp ?oo .
-        FILTER(!strstarts(str(?pp),str(nxv:)) && ?oo != 'validate' && ?oo != 'validate@validate.com')
+        FILTER(!strstarts(str(?pp),str(nxv:)) && ?oo != "validate"^^xsd:string && ?oo != "validate@validate.com"^^xsd:string)
 
         OPTIONAL {
             ?oo ?ppp ?ooo .
-            FILTER(!strstarts(str(?ppp),str(nxv:)) && ?ooo != 'validate' && ?ooo != 'validate@validate.com')
+            FILTER(!strstarts(str(?ppp),str(nxv:)) && ?ooo != "validate"^^xsd:string && ?ooo != "validate@validate.com"^^xsd:string)
         }
     }
 }
