@@ -274,9 +274,10 @@ Example:
 ### License
 
 This software (mainly the contents of the `scripts` directory) is licensed under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE Version 3, see [license document](LICENSE).
+Software dependencies are explicitly mentioned in the [dependencies document](DEPENDENCIES.md). 
 
 ### Additional Terms
 
 Parts of this repository are licensed under additional terms.
-The contents of the `shapes` and `ontology` folder are licensed under the terms of the [Creative Commons Attribution-ShareAlike License (version 3.0)](http://creativecommons.org/licenses/by-sa/3.0/) 
+The contents of the `shapes` and `ontology` folders are licensed under the terms of the [Creative Commons Attribution-ShareAlike License (version 3.0)](http://creativecommons.org/licenses/by-sa/3.0/) 
 since they are derived from [schema.org](https://schema.org).
