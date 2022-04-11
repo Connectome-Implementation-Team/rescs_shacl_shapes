@@ -3,7 +3,7 @@
 #
 #
 #     RESCS SHACL Shapes: Build Tools for the RESCS SHACL Shapes Library
-#     Copyright (C) 2022  Tobias Schweizer, Kurt Baumann, Laura Rettig
+#     Copyright (C) 2022 SWITCH
 #
 #     This program is free software: you can redistribute it and/or modify
 #     it under the terms of the GNU Affero General Public License as published
