@@ -3,7 +3,7 @@
 - pyparsing, Copyright (c) 2022 Paul McGuire, https://github.com/pyparsing/pyparsing
 - python-decouple, Copyright (c) 2022 Henrique Bastos, https://github.com/henriquebastos/python-decouple
 - mypy, Copyright (c) 2022 Jukka Lehtosalo and contributors, https://github.com/python/mypy
-- Ontospy,  Copyright (c) 2022 Michele Pasin, https://github.com/lambdamusic/Ontospy
+- Ontospy, Copyright (c) 2022 Michele Pasin, https://github.com/lambdamusic/Ontospy
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,13 +23,31 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+-----------------------------------------------------------------------------
+                        Apache 2.0 License
+                        
+- Nexus SDK, Copyright (c) 2022 Blue Brain Project https://github.com/BlueBrain/nexus-python-sdk
+- requests, Copyright (c) 2022 Python Software Foundation, https://github.com/psf/requests
+- types-requests, Copyright (c) 2022 Jukka Lehtosalo and contributors, https://github.com/python/typeshed
+- pyshacl, Copyright (c) 2022 RDFlib, https://github.com/RDFLib/pySHACL
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+
 ## Software
 - Nexus Forge, https://github.com/BlueBrain/nexus-forge, GNU LESSER GENERAL PUBLIC LICENSE, https://github.com/BlueBrain/nexus-forge/blob/master/LICENSE.txt
-- Nexus SDK, https://github.com/BlueBrain/nexus-python-sdk, Apache-2.0 License, https://github.com/BlueBrain/nexus-python-sdk/blob/master/LICENSE.txt
 - PyLD: https://github.com/digitalbazaar/pyld, New BSD License, https://github.com/digitalbazaar/pyld/blob/master/LICENSE
-- requests, https://github.com/psf/requests, Apache-2.0 License, https://github.com/psf/requests/blob/main/LICENSE
-- types-requests, https://github.com/python/typeshed,  Apache-2.0 License, https://github.com/python/typeshed/blob/master/LICENSE
-- pyshacl, https://github.com/RDFLib/pySHACL, Apache-2.0 License, https://github.com/RDFLib/pySHACL/blob/master/LICENSE.txt
 - rdflib, https://github.com/RDFLib/rdflib, BSD-3-Clause License, https://github.com/RDFLib/rdflib/blob/master/LICENSE
 - Django, https://github.com/django/django, https://github.com/django/django/blob/main/LICENSE, redistribution allowed under the same conditions as stated by the license
 - Pygments, https://github.com/pygments/pygments, BSD-2-Clause License, https://github.com/pygments/pygments/blob/master/LICENSE 
