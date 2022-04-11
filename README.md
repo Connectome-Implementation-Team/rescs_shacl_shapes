@@ -274,7 +274,7 @@ Example:
 ### License
 
 This software (mainly the contents of the `scripts` directory) is licensed under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE Version 3, see [license document](LICENSE).
-Software dependencies are explicitly mentioned in the [dependencies document](DEPENDENCIES.md).
+Software dependencies are explicitly mentioned in the [dependencies document](DEPENDENCIES.txt).
 
 ### Additional Terms
 
