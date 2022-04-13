@@ -99,5 +99,5 @@ validate "place" "place"
 
 attempt "thing" "bad_thing"
 attempt "person" "bad_person"
-
+attempt "organization" "bad_organization_keywords"
 
