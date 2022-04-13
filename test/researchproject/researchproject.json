@@ -36,5 +36,12 @@
   "endDate": {
     "@type": "xsd:date",
     "@value": "2022-10-13Z"
-  }
+  },
+  "keywords": [
+    "creative",
+    "work",
+    {
+      "@id": "http://www.taxonomy.com/1"
+    }
+  ]
 }
