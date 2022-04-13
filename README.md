@@ -268,3 +268,15 @@ Example:
 6. Add class and property names (`sh:targetClass`, `sh:name`) to the JSON-LD context object, e.g., `Person`, `givenName` etc., see [above](#json-ld-context-object). 
 7. Add the new to shape in `scripts/register_schemas.py`, see [above](#registering-shacl-shapes-in-nexus).
 8. Add the class and its properties to `ontology/ontology.json` (needed to generate the HTML docs).
+
+## License and Additional Terms
+
+### License
+
+This software is licensed under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE Version 3 or any later version, see [license document](LICENSE).
+Software dependencies are explicitly mentioned in the [dependencies document](DEPENDENCIES.txt).
+
+The contents of the `shapes` and `ontology` folders are licensed under the terms of the [Creative Commons Attribution-ShareAlike License (version 3.0)](http://creativecommons.org/licenses/by-sa/3.0/)
+since they are derived from [schema.org](https://schema.org).
+
+COPYRIGHT © 2022 SWITCH
