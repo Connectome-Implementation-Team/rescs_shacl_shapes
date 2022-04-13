@@ -82,6 +82,22 @@
               "description": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.",
               "class": "schema:Organization",
               "nodeKind": "sh:IRI"
+            },
+            {
+              "path": "schema:keywords",
+              "name": "keywords",
+              "description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+              "or": [
+                {
+                  "datatype": "xsd:string"
+                },
+                {
+                  "datatype": "rdf:langString"
+                },
+                {
+                  "nodeKind": "sh:IRI"
+                }
+              ]
             }
           ]
         }
