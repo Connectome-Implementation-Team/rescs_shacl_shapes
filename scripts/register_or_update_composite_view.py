@@ -42,7 +42,7 @@ f.close()
 # get referenced ES projections by its nname, e.g., researchproject.json.
 for index, es_proj_name in enumerate(comp_view['projections']):
     # Check if it is a dict (SPARQL projection)
-    # If it is not a dict, it is a ES projection name to be resolved.
+    # If it is not a dict, it is an ES projection name to be resolved.
     if not isinstance(es_proj_name, dict):
         # get the referenced ES projection by its name
         f = open(absolute_from_rel_file_path('../compositeviews/' + view_name + '/' + es_proj_name, __file__),
