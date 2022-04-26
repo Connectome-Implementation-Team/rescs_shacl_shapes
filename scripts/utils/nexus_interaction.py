@@ -64,7 +64,7 @@ def get_composite_view(id: str, nexus_url: str, organisation: str, project: str,
 
     try:
         req = requests.get(
-            nexus_url + '/views/' + organisation + '/' + project + '/' + id,
+            nexus_url + '/views/' + organisation + '/' + project + '/' + parse.quote_plus(id),
             headers={
                 'Content-Type': 'application/json',
                 'Authorization': f'Bearer {token}'
@@ -135,6 +135,7 @@ def update_composite_view(composite_view: Dict, rev: int, nexus_url: str, organi
     try:
         req = requests.put(
             nexus_url + '/views/' + organisation + '/' + project + '/' + parse.quote_plus(
+                # TODO: adapt so it also works for global search (id has a different base path)
                 nexus_url + '/resources/' + organisation + '/' + project + '/_/' + composite_view_id),
             params={'rev': rev},
             headers={

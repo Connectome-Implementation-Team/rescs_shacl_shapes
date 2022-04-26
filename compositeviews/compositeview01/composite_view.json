@@ -1,0 +1,25 @@
+{
+  "@id": "connectome-composite-view-01",
+  "@type": "CompositeView",
+  "sources": [
+    {
+      "@id": "test-source-01",
+      "@type": "ProjectEventStream"
+    }
+  ],
+  "projections": [
+    "researchproject.json",
+    "dataset.json",
+    {
+      "@id": "connectome-sparql-projection-01",
+      "@type": "SparqlProjection",
+      "query": "PREFIX nxv: <https://bluebrain.github.io/nexus/vocabulary/> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> CONSTRUCT { {resource_id} ?p ?o . } WHERE { {resource_id} ?p ?o . FILTER(!strstarts(str(?p),str(nxv:)) && ?o != \"validate\"^^xsd:string && ?o != \"validate@validate.com\"^^xsd:string && ?o != <http://schema.org/Thing>) }",
+      "includeMetadata": false,
+      "includeDeprecated": false
+    }
+  ],
+  "rebuildStrategy": {
+    "@type": "Interval",
+    "value": "30 minutes"
+  }
+}
