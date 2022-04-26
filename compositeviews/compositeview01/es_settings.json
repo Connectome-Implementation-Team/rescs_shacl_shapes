@@ -1,0 +1,45 @@
+{
+  "analysis": {
+    "analyzer": {
+      "nexus": {
+        "filter": [
+          "trim",
+          "word_delimiter_nexus",
+          "lowercase"
+        ],
+        "tokenizer": "classic",
+        "type": "custom"
+      },
+      "reverse": {
+        "filter": [
+          "lowercase",
+          "reverse"
+        ],
+        "tokenizer": "standard",
+        "type": "custom"
+      },
+      "trigram": {
+        "filter": [
+          "lowercase",
+          "shingle"
+        ],
+        "tokenizer": "standard",
+        "type": "custom"
+      }
+    },
+    "filter": {
+      "shingle": {
+        "max_shingle_size": 3,
+        "min_shingle_size": 2,
+        "type": "shingle"
+      },
+      "word_delimiter_nexus": {
+        "split_on_numerics": false,
+        "type": "word_delimiter_graph"
+      }
+    }
+  },
+  "index": {
+    "number_of_shards": 1
+  }
+}
