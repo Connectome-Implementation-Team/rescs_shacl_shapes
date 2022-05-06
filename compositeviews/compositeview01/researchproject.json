@@ -16,6 +16,10 @@
         "copy_to": "_all_fields",
         "type": "text"
       },
+      "keywords": {
+        "copy_to": "_all_fields",
+        "type": "text"
+      },
       "description": {
         "copy_to": "_all_fields",
         "type": "text"
