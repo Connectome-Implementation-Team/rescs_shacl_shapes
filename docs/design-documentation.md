@@ -68,7 +68,6 @@ Currently, we are using the following properties on classes where schema.org doe
 
 - `schema:startDate` on `schema:Project`, severity: Warning thrown by schema.org validator. Reason for breakage: Expressing this via `schema:MonetaryAmount`'s property `schema:validFrom` is not very intuitive.
 - `schema:endDate` on `schema:Project`: severity: Warning thrown by schema.org validator. Reason for breakage: Expressing this via `schema:MonetaryAmount`'s property `schema:validThrough` is not very intuitive.
-- `schema:abstract` on `schema:Project`: severity: Warning thrown by schema.org validator. Reason for breakage: We need to represent abstracts with a specific property as `schema:description` might already be used.
 
 ### Known Validation Issues
 

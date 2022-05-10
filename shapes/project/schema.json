@@ -38,20 +38,6 @@
               "description": "The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).",
               "datatype": "xsd:date",
               "maxCount": 1
-            },
-            {
-              "path": "schema:abstract",
-              "name": "abstract",
-              "description": "An abstract is a short description that summarizes a [[Project]].",
-              "or": [
-                {
-                  "datatype": "xsd:string"
-                },
-                {
-                  "datatype": "rdf:langString"
-                }
-              ],
-              "maxCount": 1
             }
           ]
         }
