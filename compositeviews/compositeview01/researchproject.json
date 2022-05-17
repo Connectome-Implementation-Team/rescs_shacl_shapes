@@ -13,11 +13,44 @@
         "type": "keyword"
       },
       "name": {
-        "copy_to": "_all_fields",
+        "copy_to": [
+          "_all_fields",
+          "_sayt"
+        ],
+        "fields": {
+          "raw": {
+            "type": "keyword"
+          },
+          "reverse": {
+            "analyzer": "reverse",
+            "type": "text"
+          },
+          "trigram": {
+            "analyzer": "trigram",
+            "type": "text"
+          }
+        },
+        "term_vector": "with_positions_offsets",
         "type": "text"
       },
       "keywords": {
-        "copy_to": "_all_fields",
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "keywords_en": {
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "keywords_de": {
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "keywords_fr": {
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "keywords_it": {
+        "copy_to": "_keywords",
         "type": "text"
       },
       "description": {
