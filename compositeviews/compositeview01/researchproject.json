@@ -111,7 +111,9 @@
         "type": "search_as_you_type"
       },
       "_all_fields": {
-        "copy_to": "_all_fields",
+        "type": "text"
+      },
+      "_keywords": {
         "type": "text"
       }
     }
