@@ -1,4 +1,5 @@
 pyld
+wheel
 requests
 types-requests
 pyparsing
