@@ -1,5 +1,5 @@
 {
-  "@id": "connectome-es-projection-dataset-01",
+  "@id": "connectome-es-projection-dataset-scholarlyarticle-01",
   "@type": "ElasticSearchProjection",
   "mapping": {
     "dynamic": false,
@@ -198,7 +198,8 @@
     }
   },
   "resourceTypes": [
-    "http://schema.org/Dataset"
+    "http://schema.org/Dataset",
+    "http://schema.org/ScholarlyArticle"
   ],
   "includeMetadata": false
 }
