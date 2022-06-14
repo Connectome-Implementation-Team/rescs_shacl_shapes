@@ -13,11 +13,44 @@
         "type": "keyword"
       },
       "name": {
-        "copy_to": "_all_fields",
+        "copy_to": [
+          "_all_fields",
+          "_sayt"
+        ],
+        "fields": {
+          "raw": {
+            "type": "keyword"
+          },
+          "reverse": {
+            "analyzer": "reverse",
+            "type": "text"
+          },
+          "trigram": {
+            "analyzer": "trigram",
+            "type": "text"
+          }
+        },
+        "term_vector": "with_positions_offsets",
         "type": "text"
       },
       "keywords": {
-        "copy_to": "_all_fields",
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "keywords_en": {
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "keywords_de": {
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "keywords_fr": {
+        "copy_to": "_keywords",
+        "type": "text"
+      },
+      "keywords_it": {
+        "copy_to": "_keywords",
         "type": "text"
       },
       "description": {
@@ -40,6 +73,26 @@
         "copy_to": "_all_fields",
         "type": "text"
       },
+      "abstract": {
+        "copy_to": "_all_fields",
+        "type": "text"
+      },
+      "abstract_en": {
+        "copy_to": "_all_fields",
+        "type": "text"
+      },
+      "abstract_de": {
+        "copy_to": "_all_fields",
+        "type": "text"
+      },
+      "abstract_fr": {
+        "copy_to": "_all_fields",
+        "type": "text"
+      },
+      "abstract_it": {
+        "copy_to": "_all_fields",
+        "type": "text"
+      },
       "member": {
         "properties": {
           "name": {
@@ -54,8 +107,13 @@
         },
         "type": "nested"
       },
+      "_sayt": {
+        "type": "search_as_you_type"
+      },
       "_all_fields": {
-        "copy_to": "_all_fields",
+        "type": "text"
+      },
+      "_keywords": {
         "type": "text"
       }
     }
@@ -84,6 +142,38 @@
     },
     "description_it": {
       "@id": "description",
+      "@language": "it"
+    },
+    "abstract_en": {
+      "@id": "abstract",
+      "@language": "en"
+    },
+    "abstract_de": {
+      "@id": "abstract",
+      "@language": "de"
+    },
+    "abstract_fr": {
+      "@id": "abstract",
+      "@language": "fr"
+    },
+    "abstract_it": {
+      "@id": "abstract",
+      "@language": "it"
+    },
+    "keywords_en": {
+      "@id": "keywords",
+      "@language": "en"
+    },
+    "keywords_de": {
+      "@id": "keywords",
+      "@language": "de"
+    },
+    "keywords_fr": {
+      "@id": "keywords",
+      "@language": "fr"
+    },
+    "keywords_it": {
+      "@id": "keywords",
       "@language": "it"
     },
     "url": {

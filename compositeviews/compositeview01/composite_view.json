@@ -9,7 +9,7 @@
   ],
   "projections": [
     "researchproject.json",
-    "dataset.json",
+    "dataset-scholarlyarticle.json",
     {
       "@id": "connectome-sparql-projection-01",
       "@type": "SparqlProjection",

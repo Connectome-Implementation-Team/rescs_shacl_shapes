@@ -4,6 +4,7 @@
 - python-decouple, Copyright (c) 2022 Henrique Bastos, https://github.com/henriquebastos/python-decouple
 - mypy, Copyright (c) 2022 Jukka Lehtosalo and contributors, https://github.com/python/mypy
 - Ontospy, Copyright (c) 2022 Michele Pasin, https://github.com/lambdamusic/Ontospy
+- wheel, Copyright (c) 2022 Daniel Holth, https://github.com/pypa/wheel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
