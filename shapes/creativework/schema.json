@@ -58,7 +58,8 @@
                   "class": "schema:Organization",
                   "nodeKind": "sh:IRI"
                 }
-              ]
+              ],
+              "minCount": 1
             },
             {
               "path": "schema:citation",
