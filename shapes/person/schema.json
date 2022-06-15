@@ -42,7 +42,6 @@
               "description": "An organization that this person is affiliated with. For example, a school/university, a club, or a team.",
               "class": "schema:Organization",
               "nodeKind": "sh:IRI",
-              "minCount": 1
             },
             {
               "path": "schema:birthDate",
@@ -101,8 +100,7 @@
               "path": "schema:jobTitle",
               "name": "jobTitle",
               "description": "The job title of the person (for example, Financial Manager).",
-              "datatype": "xsd:string",
-              "minCount": 1
+              "datatype": "xsd:string"
             }
           ]
         }
