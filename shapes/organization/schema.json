@@ -84,6 +84,13 @@
               "nodeKind": "sh:IRI"
             },
             {
+              "path": "schema:department",
+              "name": "department",
+              "description": "A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
+              "class": "schema:Organization",
+              "nodeKind": "sh:IRI"
+            },
+            {
               "path": "schema:keywords",
               "name": "keywords",
               "description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",

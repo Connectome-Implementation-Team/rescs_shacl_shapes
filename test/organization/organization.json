@@ -67,6 +67,16 @@
       "@id": "http://www.contact.com/1"
     }
   },
+  "department": {
+    "@id": "http://www.example.com/8",
+    "@type": "Organization",
+    "name": "my department",
+    "email": "info@contact.com",
+    "address": "Fakerstreet, Fakertown",
+    "contactPoint": {
+      "@id": "http://www.contact.com/1"
+    }
+  },
   "keywords": [
     "creative",
     "work",
