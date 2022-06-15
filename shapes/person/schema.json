@@ -41,7 +41,7 @@
               "name": "affiliation",
               "description": "An organization that this person is affiliated with. For example, a school/university, a club, or a team.",
               "class": "schema:Organization",
-              "nodeKind": "sh:IRI",
+              "nodeKind": "sh:IRI"
             },
             {
               "path": "schema:birthDate",
