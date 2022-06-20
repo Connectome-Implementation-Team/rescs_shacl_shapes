@@ -6,6 +6,7 @@
   "@type": "Project",
   "alternateName": "My alias name",
   "description": "a description",
+  "abstract": "The project's abstract",
   "identifier": {
     "@id": "http://www.example.com/1"
   },
