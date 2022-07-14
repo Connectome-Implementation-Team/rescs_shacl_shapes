@@ -12,19 +12,19 @@ CONSTRUCT {
     {resource_id} ?p ?o .
 
     # get rid of Nexus metadata and statements used for validation in Nexus (see https://gitlab.switch.ch/connectome/rdf2rdf/-/blob/wip/import_snf/import.py#L75)
-    FILTER(!strstarts(str(?p),str(nxv:)) && ?o != "validate"^^xsd:string && ?o != "validate@validate.com"^^xsd:string && ?o != <http://schema.org/Thing>)
+    FILTER(!strstarts(str(?p),str(nxv:)) && str(?o) != "validate"^^xsd:string && str(?o) != "validate@validate.com"^^xsd:string && ?o != <http://schema.org/Thing>)
 
     OPTIONAL {
         # 2nd level: properties associated with a linked resource
         ?o ?pp ?oo .
         # get rid of Nexus metadata and statements used for validation in Nexus
-        FILTER(!strstarts(str(?pp),str(nxv:)) && ?oo != "validate"^^xsd:string && ?oo != "validate@validate.com"^^xsd:string && ?oo != <http://schema.org/Thing>)
+        FILTER(!strstarts(str(?pp),str(nxv:)) && str(?oo) != "validate"^^xsd:string && str(?oo) != "validate@validate.com"^^xsd:string && ?oo != <http://schema.org/Thing>)
 
         OPTIONAL {
             # 3rd level
             ?oo ?ppp ?ooo .
             # get rid of Nexus metadata and statements used for validation in Nexus
-            FILTER(!strstarts(str(?ppp),str(nxv:)) && ?ooo != "validate"^^xsd:string && ?ooo != "validate@validate.com"^^xsd:string && ?ooo != <http://schema.org/Thing>)
+            FILTER(!strstarts(str(?ppp),str(nxv:)) && str(?ooo) != "validate"^^xsd:string && str(?ooo) != "validate@validate.com"^^xsd:string && ?ooo != <http://schema.org/Thing>)
         }
     }
 }
