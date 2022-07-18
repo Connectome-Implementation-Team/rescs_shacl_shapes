@@ -39,6 +39,13 @@
       }
     },
     {
+      "@id": "schema:Book",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
       "@id": "schema:Article",
       "@type": "rdfs:Class",
       "rdfs:subClassOf": {
