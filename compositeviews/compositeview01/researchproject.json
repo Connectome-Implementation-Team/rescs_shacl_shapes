@@ -155,6 +155,9 @@
       "_sayt": {
         "type": "search_as_you_type"
       },
+      "_abstract": {
+        "type": "text",
+      },
       "_all_fields": {
         "type": "text"
       },
