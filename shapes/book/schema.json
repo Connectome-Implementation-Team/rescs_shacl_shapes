@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/book/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/book",
+  "imports": [
+    "http://rescs.org/dash/creativework"
+  ],
+  "shapes": [
+    {
+      "@id": "this:BookShape",
+      "@type": "sh:NodeShape",
+      "label": "Book",
+      "comment": "A book.",
+      "targetClass": "schema:Book",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/creativework/CreativeWorkShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:numberOfPages",
+              "name": "numberOfPages",
+              "description": "The number of pages in the book.",
+              "datatype": "xsd:integer",
+              "maxCount": 1
+            },
+            {
+              "path": "schema:isbn",
+              "name": "isbn",
+              "description": "The ISBN of the book.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
