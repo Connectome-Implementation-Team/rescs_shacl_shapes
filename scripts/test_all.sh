@@ -80,6 +80,7 @@ fi
 
 validate "thing" "thing"
 validate "creativework" "creativework"
+validate "book" "book"
 validate "article" "article"
 validate "scholarlyarticle" "scholarlyarticle"
 validate "datadownload" "datadownload"
