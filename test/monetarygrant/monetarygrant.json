@@ -18,8 +18,15 @@
   },
   "fundedItem": {
     "@id": "http://www.example.com/4",
-    "@type": "Thing",
-    "name": "item"
+    "@type": "CreativeWork",
+    "name": "item",
+    "author": {
+      "@id": "http://www.example.com/5",
+      "@type": "Person",
+      "name": "John Doe",
+      "givenName": "John",
+      "familyName": "Doe"
+    }
   },
   "funder": {
     "@id": "http://www.example.com/5",
