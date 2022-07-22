@@ -29,8 +29,7 @@
               "description": "Indicates an item funded or sponsored through a [[Grant]].",
               "class": "schema:Thing",
               "nodeKind": "sh:IRI",
-              "minCount": 1,
-              "maxCount": 1
+              "minCount": 1
             }
           ]
         }
