@@ -56,7 +56,9 @@
                   "datatype": "xsd:integer"
                 }
               ],
-              "lessThan": "schema:pageEnd",
+              "http://www.w3.org/ns/shacl#lessThanOrEquals": {
+                "@id": "schema:pageEnd"
+              },
               "maxCount": 1
             }
           ]
