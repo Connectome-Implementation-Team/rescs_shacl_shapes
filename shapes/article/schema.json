@@ -56,7 +56,6 @@
                   "datatype": "xsd:integer"
                 }
               ],
-              "lessThan": "schema:pageEnd",
               "maxCount": 1
             }
           ]
