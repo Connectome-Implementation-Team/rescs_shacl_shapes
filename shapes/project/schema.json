@@ -31,7 +31,7 @@
               "minCount": 1,
               "maxCount": 1,
               "http://www.w3.org/ns/shacl#lessThanOrEquals": {
-                "@id": "schema:pageEnd"
+                "@id": "schema:endDate"
               }
             },
             {
