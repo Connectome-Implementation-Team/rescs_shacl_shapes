@@ -37,7 +37,9 @@
               "name": "validFrom",
               "description": "The date when the item becomes valid.",
               "datatype": "xsd:date",
-              "lessThan": "schema:validThrough",
+              "http://www.w3.org/ns/shacl#lessThanOrEquals": {
+                "@id": "schema:validThrough"
+              },
               "maxCount": 1
             },
             {
