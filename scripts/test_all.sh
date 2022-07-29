@@ -78,6 +78,7 @@ if (($status != 0)); then
   exit 1
 fi
 
+# validate throws an error if object is not valid
 validate "thing" "thing"
 validate "creativework" "creativework"
 validate "book" "book"
@@ -97,8 +98,12 @@ validate "monetaryamount" "monetaryamount"
 validate "grant" "grant"
 validate "monetarygrant" "monetarygrant"
 validate "place" "place"
+validate "project" "edge_project"
 
+# attempt throws an error if object is valid
 attempt "thing" "bad_thing"
 attempt "person" "bad_person"
 attempt "organization" "bad_organization_keywords"
+attempt "project" "bad_project"
+attempt "monetaryamount" "bad_monetaryamount"
 
