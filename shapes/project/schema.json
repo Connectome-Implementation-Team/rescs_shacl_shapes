@@ -30,7 +30,9 @@
               "datatype": "xsd:date",
               "minCount": 1,
               "maxCount": 1,
-              "lessThan": "schema:endDate"
+              "http://www.w3.org/ns/shacl#lessThanOrEquals": {
+                "@id": "schema:endDate"
+              }
             },
             {
               "path": "schema:endDate",
