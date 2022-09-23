@@ -13,7 +13,7 @@
     {
       "@id": "connectome-sparql-projection-01",
       "@type": "SparqlProjection",
-      "query": "PREFIX nxv: <https://bluebrain.github.io/nexus/vocabulary/> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> CONSTRUCT { {resource_id} ?p ?o . ?amount ?ap ?ao . } WHERE { {resource_id} ?p ?o . FILTER(!strstarts(str(?p),str(nxv:)) && str(?o) != \"validate\"^^xsd:string && str(?o) != \"validate@validate.com\"^^xsd:string && ?o != <http://schema.org/Thing>) . OPTIONAL { {resource_id} a <http://schema.org/MonetaryGrant> ; <http://schema.org/amount> ?amount . ?amount ?ap ?ao . }}",
+      "query": "PREFIX nxv: <https://bluebrain.github.io/nexus/vocabulary/> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> CONSTRUCT { {resource_id} ?p ?o ; <http://schema.org/amount> ?amount . ?amount ?ap ?ao . } WHERE { {resource_id} ?p ?o . FILTER(!strstarts(str(?p),str(nxv:)) && str(?o) != \"validate\"^^xsd:string && str(?o) != \"validate@validate.com\"^^xsd:string && ?o != <http://schema.org/Thing>) . OPTIONAL { {resource_id} a <http://schema.org/MonetaryGrant> ; <http://schema.org/amount> ?amount . ?amount ?ap ?ao . }}",
       "includeMetadata": false,
       "includeDeprecated": false
     }
