@@ -394,7 +394,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_30"><a   href="prop-schemaavailablelanguage.html">schema:availableLanguage</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_31"><a class="active"  href="prop-schemabirthdate.html">schema:birthDate</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_31"><a   href="prop-schemabirthdate.html">schema:birthDate</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_32"><a   href="prop-schemacitation.html">schema:citation</a></li>
           
@@ -494,7 +494,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_80"><a   href="prop-schemasameas.html">schema:sameAs</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_81"><a   href="prop-schemaspatialcoverage.html">schema:spatialCoverage</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_81"><a class="active"  href="prop-schemaspatialcoverage.html">schema:spatialCoverage</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_82"><a   href="prop-schemastartdate.html">schema:startDate</a></li>
           
@@ -616,7 +616,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            schema:birthDate
+            schema:spatialCoverage
         </li>
   </ol>
 
@@ -641,7 +641,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             <h1>
 
-                schema:birthDate
+                schema:spatialCoverage
                 
                     <small class="label label-info label-xs ">leaf node</small>
                   
@@ -660,7 +660,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'birthDate' - Date of birth.">schema:birthDate</a>
+                            <li><a style="font-weight: bold;" title="'spatialCoverage' - The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of …">schema:spatialCoverage</a>
 
                             
                               </li>
@@ -684,7 +684,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 <code>http://schema.org/birthDate</code>
+                 <code>http://schema.org/spatialCoverage</code>
              </div>
            </div>
             </div></div>
@@ -699,7 +699,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 birthDate
+                 spatialCoverage
              </div>
            </div>
             </div></div>
@@ -714,7 +714,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             </div>
             <div class="panel-body">
 
-                <p>Date of birth.</p>
+                <p>The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of<br>      contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates<br>      areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.</p>
             </div>
           </div>
            </div></div>
@@ -745,7 +745,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                      
                          
                          
-                              <a href="class-schemaperson.html" title="http://schema.org/Person">schema:Person</a>
+                              <a href="class-schemacreativework.html" title="http://schema.org/CreativeWork">schema:CreativeWork</a>
                            
                            
                          
@@ -753,15 +753,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                    </td>
 
                     <td>
-                      schema:birthDate
+                      schema:spatialCoverage
                     </td>
 
                     <td>
                       
                           
                           
-                               <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">xsd:date</a>
-                             
+                               <a href="class-schemaplace.html" title="http://schema.org/Place">schema:Place</a>
+                            
                             
                           
                       
@@ -785,13 +785,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">schema:</span><span class="w"> </span><span class="nv">&lt;http://schema.org/&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nn">schema</span><span class="p">:</span><span class="nt">birthDate</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;birthDate&quot;</span> <span class="p">;</span>
-    <span class="nn">schema</span><span class="p">:</span><span class="nt">domainIncludes</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">Person</span> <span class="p">;</span>
-    <span class="nn">schema</span><span class="p">:</span><span class="nt">rangeIncludes</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">date</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;Date of birth.&quot;</span> <span class="p">.</span>
+<span class="nn">schema</span><span class="p">:</span><span class="nt">spatialCoverage</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;spatialCoverage&quot;</span> <span class="p">;</span>
+    <span class="nn">schema</span><span class="p">:</span><span class="nt">domainIncludes</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">CreativeWork</span> <span class="p">;</span>
+    <span class="nn">schema</span><span class="p">:</span><span class="nt">rangeIncludes</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">Place</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;&quot;&quot;The spatialCoverage of a CreativeWork indicates the place(s) which are the focus of the content. It is a subproperty of</span>
+<span class="s">      contentLocation intended primarily for more technical and detailed materials. For example with a Dataset, it indicates</span>
+<span class="s">      areas that the dataset describes: a dataset of New York weather would have spatialCoverage which was the place: the state of New York.&quot;&quot;&quot; .</span>
 </pre></div>
 
 
@@ -891,7 +892,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_31").offset().top - 100
+          scrollTop: $("#sd_81").offset().top - 100
       }, 100);
     });
 

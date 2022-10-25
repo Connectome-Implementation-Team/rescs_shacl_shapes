@@ -394,7 +394,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_30"><a   href="prop-schemaavailablelanguage.html">schema:availableLanguage</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_31"><a class="active"  href="prop-schemabirthdate.html">schema:birthDate</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_31"><a   href="prop-schemabirthdate.html">schema:birthDate</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_32"><a   href="prop-schemacitation.html">schema:citation</a></li>
           
@@ -502,7 +502,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_84"><a   href="prop-schematelephone.html">schema:telephone</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_85"><a   href="prop-schematemporalcoverage.html">schema:temporalCoverage</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_85"><a class="active"  href="prop-schematemporalcoverage.html">schema:temporalCoverage</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_86"><a   href="prop-schemaurl.html">schema:url</a></li>
           
@@ -616,7 +616,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            schema:birthDate
+            schema:temporalCoverage
         </li>
   </ol>
 
@@ -641,7 +641,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             <h1>
 
-                schema:birthDate
+                schema:temporalCoverage
                 
                     <small class="label label-info label-xs ">leaf node</small>
                   
@@ -660,7 +660,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'birthDate' - Date of birth.">schema:birthDate</a>
+                            <li><a style="font-weight: bold;" title="'temporalCoverage' - The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a …">schema:temporalCoverage</a>
 
                             
                               </li>
@@ -684,7 +684,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 <code>http://schema.org/birthDate</code>
+                 <code>http://schema.org/temporalCoverage</code>
              </div>
            </div>
             </div></div>
@@ -699,7 +699,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 birthDate
+                 temporalCoverage
              </div>
            </div>
             </div></div>
@@ -714,7 +714,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             </div>
             <div class="panel-body">
 
-                <p>Date of birth.</p>
+                <p>The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in ISO 8601 time interval format. In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written &quot;2011/2012&quot;). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via &quot;1939/1945&quot;.</p>
+
+<p>Open-ended date ranges can be written with &quot;..&quot; in place of the end date. For example, &quot;2015-11/..&quot; indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.</p>
             </div>
           </div>
            </div></div>
@@ -745,7 +747,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                      
                          
                          
-                              <a href="class-schemaperson.html" title="http://schema.org/Person">schema:Person</a>
+                              <a href="class-schemacreativework.html" title="http://schema.org/CreativeWork">schema:CreativeWork</a>
                            
                            
                          
@@ -753,7 +755,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                    </td>
 
                     <td>
-                      schema:birthDate
+                      schema:temporalCoverage
                     </td>
 
                     <td>
@@ -761,6 +763,21 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                           
                           
                                <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">xsd:date</a>
+                             
+                            , 
+                          
+                          
+                               <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+                             
+                            , 
+                          
+                          
+                               <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" target="_blank" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a>
+                             
+                            , 
+                          
+                          
+                               <a href="http://www.w3.org/ns/shacl#IRI" target="_blank" title="http://www.w3.org/ns/shacl#IRI">sh:IRI</a>
                              
                             
                           
@@ -785,13 +802,19 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">schema:</span><span class="w"> </span><span class="nv">&lt;http://schema.org/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">sh:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/ns/shacl#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nn">schema</span><span class="p">:</span><span class="nt">birthDate</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;birthDate&quot;</span> <span class="p">;</span>
-    <span class="nn">schema</span><span class="p">:</span><span class="nt">domainIncludes</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">Person</span> <span class="p">;</span>
-    <span class="nn">schema</span><span class="p">:</span><span class="nt">rangeIncludes</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">date</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;Date of birth.&quot;</span> <span class="p">.</span>
+<span class="nn">schema</span><span class="p">:</span><span class="nt">temporalCoverage</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;temporalCoverage&quot;</span> <span class="p">;</span>
+    <span class="nn">schema</span><span class="p">:</span><span class="nt">domainIncludes</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">CreativeWork</span> <span class="p">;</span>
+    <span class="nn">schema</span><span class="p">:</span><span class="nt">rangeIncludes</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">langString</span><span class="p">,</span>
+        <span class="nn">xsd</span><span class="p">:</span><span class="nt">date</span><span class="p">,</span>
+        <span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span><span class="p">,</span>
+        <span class="nn">sh</span><span class="p">:</span><span class="nt">IRI</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;&quot;&quot;The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in ISO 8601 time interval format. In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written &quot;2011/2012&quot;). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via &quot;1939/1945&quot;.</span>
+
+<span class="s">Open-ended date ranges can be written with &quot;..&quot; in place of the end date. For example, &quot;2015-11/..&quot; indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.&quot;&quot;&quot; .</span>
 </pre></div>
 
 
@@ -891,7 +914,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_31").offset().top - 100
+          scrollTop: $("#sd_85").offset().top - 100
       }, 100);
     });
 

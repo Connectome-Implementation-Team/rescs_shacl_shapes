@@ -394,7 +394,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_30"><a   href="prop-schemaavailablelanguage.html">schema:availableLanguage</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_31"><a class="active"  href="prop-schemabirthdate.html">schema:birthDate</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_31"><a   href="prop-schemabirthdate.html">schema:birthDate</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_32"><a   href="prop-schemacitation.html">schema:citation</a></li>
           
@@ -482,7 +482,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_74"><a   href="prop-schemaname.html">schema:name</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_75"><a   href="prop-schemanumberofpages.html">schema:numberOfPages</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_75"><a class="active"  href="prop-schemanumberofpages.html">schema:numberOfPages</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_76"><a   href="prop-schemapageend.html">schema:pageEnd</a></li>
           
@@ -616,7 +616,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            schema:birthDate
+            schema:numberOfPages
         </li>
   </ol>
 
@@ -641,7 +641,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             <h1>
 
-                schema:birthDate
+                schema:numberOfPages
                 
                     <small class="label label-info label-xs ">leaf node</small>
                   
@@ -660,7 +660,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'birthDate' - Date of birth.">schema:birthDate</a>
+                            <li><a style="font-weight: bold;" title="'numberOfPages' - The number of pages in the book.">schema:numberOfPages</a>
 
                             
                               </li>
@@ -684,7 +684,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 <code>http://schema.org/birthDate</code>
+                 <code>http://schema.org/numberOfPages</code>
              </div>
            </div>
             </div></div>
@@ -699,7 +699,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 birthDate
+                 numberOfPages
              </div>
            </div>
             </div></div>
@@ -714,7 +714,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             </div>
             <div class="panel-body">
 
-                <p>Date of birth.</p>
+                <p>The number of pages in the book.</p>
             </div>
           </div>
            </div></div>
@@ -745,7 +745,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                      
                          
                          
-                              <a href="class-schemaperson.html" title="http://schema.org/Person">schema:Person</a>
+                              <a href="class-schemabook.html" title="http://schema.org/Book">schema:Book</a>
                            
                            
                          
@@ -753,14 +753,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                    </td>
 
                     <td>
-                      schema:birthDate
+                      schema:numberOfPages
                     </td>
 
                     <td>
                       
                           
                           
-                               <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">xsd:date</a>
+                               <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a>
                              
                             
                           
@@ -787,11 +787,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">schema:</span><span class="w"> </span><span class="nv">&lt;http://schema.org/&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nn">schema</span><span class="p">:</span><span class="nt">birthDate</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;birthDate&quot;</span> <span class="p">;</span>
-    <span class="nn">schema</span><span class="p">:</span><span class="nt">domainIncludes</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">Person</span> <span class="p">;</span>
-    <span class="nn">schema</span><span class="p">:</span><span class="nt">rangeIncludes</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">date</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;Date of birth.&quot;</span> <span class="p">.</span>
+<span class="nn">schema</span><span class="p">:</span><span class="nt">numberOfPages</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;numberOfPages&quot;</span> <span class="p">;</span>
+    <span class="nn">schema</span><span class="p">:</span><span class="nt">domainIncludes</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">Book</span> <span class="p">;</span>
+    <span class="nn">schema</span><span class="p">:</span><span class="nt">rangeIncludes</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">integer</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;The number of pages in the book.&quot;</span> <span class="p">.</span>
 </pre></div>
 
 
@@ -891,7 +891,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_31").offset().top - 100
+          scrollTop: $("#sd_75").offset().top - 100
       }, 100);
     });
 

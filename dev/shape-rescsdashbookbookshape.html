@@ -624,7 +624,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-shapes.html">Shapes</a>
     </li>
       <li class="active">
-            rescs:dash/article/ArticleShape
+            rescs:dash/book/BookShape
         </li>
   </ol>
 
@@ -638,7 +638,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
     
     <h1>
-        rescs:dash/article/ArticleShape
+        rescs:dash/book/BookShape
         
           <small class="label label-info label-xs">leaf node</small>
         
@@ -653,7 +653,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
             <li><a href="entities-tree-classes.html">sh:Shape</a>
               <ul>
-                <li><a style="font-weight: bold;" title="'Article' - An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different …">rescs:dash/article/ArticleShape</a>
+                <li><a style="font-weight: bold;" title="'Book' - A book.">rescs:dash/book/BookShape</a>
                   
                 </li>
               </ul>
@@ -673,7 +673,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             <h3 class="panel-title">URI</h3>
           </div>
           <div class="panel-body">
-            <code>http://rescs.org/dash/article/ArticleShape</code>
+            <code>http://rescs.org/dash/book/BookShape</code>
           </div>
         </div>
       </div>
@@ -689,7 +689,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             <h3 class="panel-title">Label</h3>
           </div>
           <div class="panel-body">
-            Article
+            Book
           </div>
           </div>
         </div>
@@ -706,7 +706,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
               <h3 class="panel-title">Description</h3>
             </div>
             <div class="panel-body">
-              <p>An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.\\n\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).</p>
+              <p>A book.</p>
             </div>
           </div>
         </div>
@@ -728,7 +728,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             </div>
             <div class="panel-body">
               
-                <li><a href="class-schemaarticle.html">schema:Article</a></li>
+                <li><a href="class-schemabook.html">schema:Book</a></li>
                 
             </div>
           </div>
@@ -748,7 +748,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                 <h3 class="panel-title">Shape Properties</h3>
               </div>
               <div class="panel-body" style="overflow: auto;">
-                <p>Instances of schema:Article can have the following properties:</p>
+                <p>Instances of schema:Book can have the following properties:</p>
               </div>
               <table class="table table-bordered" style="overflow: auto;">
                 <tr class="table-classproperties">   
@@ -761,7 +761,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                   <tr>
                      
                       <td colspan="5">
-                        <small class="label label-info label-xs">schema:Article</small>
+                        <small class="label label-info label-xs">schema:Book</small>
                       </td>
                         
                     
@@ -771,7 +771,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                        
                       <td>   
                         
-                          <a class="propcolor" title="schema:articleBody" href="prop-schemaarticlebody.html">schema:articleBody</a>
+                          <a class="propcolor" title="schema:isbn" href="prop-schemaisbn.html">schema:isbn</a>
                         
                       </td>
  
@@ -799,7 +799,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                        
                       <td>   
                         
-                          <a class="propcolor" title="schema:pageEnd" href="prop-schemapageend.html">schema:pageEnd</a>
+                          <a class="propcolor" title="schema:numberOfPages" href="prop-schemanumberofpages.html">schema:numberOfPages</a>
                         
                       </td>
  
@@ -813,28 +813,10 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         
                       <td>     
                         
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema:pageStart" href="prop-schemapagestart.html">schema:pageStart</a>
-                        
-                      </td>
- 
-                      <td>     
-                        0
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
-                        
-                      <td>     
+                          
+                            <i>xsd:integer</i>
+                           
+                            <br>
                         
                         
                       </td>
@@ -1750,25 +1732,20 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">sh:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/ns/shacl#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nv">&lt;http://rescs.org/dash/article/ArticleShape&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">NodeShape</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;Article&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.\\\\n\\\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html).&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-    <span class="nn">sh</span><span class="p">:</span><span class="nt">and</span> <span class="p">(</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">node</span> <span class="nv">&lt;http://rescs.org/dash/creativework/CreativeWorkShape&gt;</span> <span class="p">]</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;The page on which the work starts; for example \\\&quot;135\\\&quot; or \\\&quot;xiii\\\&quot;&quot;</span> <span class="p">;</span>
+<span class="nv">&lt;http://rescs.org/dash/book/BookShape&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">NodeShape</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;Book&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;A book.&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
+    <span class="nn">sh</span><span class="p">:</span><span class="nt">and</span> <span class="p">(</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">node</span> <span class="nv">&lt;http://rescs.org/dash/creativework/CreativeWorkShape&gt;</span> <span class="p">]</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">integer</span> <span class="p">;</span>
+                        <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;The number of pages in the book.&quot;</span> <span class="p">;</span>
                         <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;pageStart&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">or</span> <span class="p">(</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">]</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">integer</span> <span class="p">]</span> <span class="p">)</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">pageStart</span> <span class="p">],</span>
+                        <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;numberOfPages&quot;</span> <span class="p">;</span>
+                        <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">numberOfPages</span> <span class="p">],</span>
                     <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;The actual body of the article.&quot;</span> <span class="p">;</span>
+                        <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;The ISBN of the book.&quot;</span> <span class="p">;</span>
                         <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;articleBody&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">articleBody</span> <span class="p">],</span>
-                    <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;The page on which the work ends; for example \\\&quot;138\\\&quot; or \\\&quot;xvi\\\&quot;.&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;pageEnd&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">or</span> <span class="p">(</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">]</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">integer</span> <span class="p">]</span> <span class="p">)</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">pageEnd</span> <span class="p">]</span> <span class="p">]</span> <span class="p">)</span> <span class="p">;</span>
-    <span class="nn">sh</span><span class="p">:</span><span class="nt">targetClass</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">Article</span> <span class="p">.</span>
+                        <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;isbn&quot;</span> <span class="p">;</span>
+                        <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">isbn</span> <span class="p">]</span> <span class="p">]</span> <span class="p">)</span> <span class="p">;</span>
+    <span class="nn">sh</span><span class="p">:</span><span class="nt">targetClass</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">Book</span> <span class="p">.</span>
 </pre></div>
 
             
@@ -1859,7 +1836,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_170").offset().top - 100
+          scrollTop: $("#sd_161").offset().top - 100
       }, 100);
     });
 
