@@ -42,7 +42,13 @@ def validate_file(file: Path):
         ont_graph=ontology_file,
         inference='rdfs'
     )
-    print(file, r[0])
+
+    conforms, results_graph, results_text = r
+
+    if conforms:
+       print(f'{str(file)} is valid')
+    else:
+        print(f'{str(file)} is invalid, {str(results_text)}', file=sys.stderr)
 
 def usage() -> None:
     print('Usage: ' + sys.argv[0] + ' -d <data dir> -s <shapes_graph.jsonld> -o <ontology.jsonld> -m <move dir>')
