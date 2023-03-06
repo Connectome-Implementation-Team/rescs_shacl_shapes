@@ -28,5 +28,5 @@ jobs:
           mypy -V
       - name: Run tests
         run: |
-          mypy --ignore-missing-imports .
+          mypy --ignore-missing-imports --explicit-package-bases .
           cd scripts; ./test_all.sh
