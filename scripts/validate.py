@@ -24,6 +24,7 @@ from pathlib import Path
 from pyshacl import validate
 from multiprocessing import Pool, cpu_count
 import time
+import os
 
 data_dir = ''
 
@@ -49,6 +50,7 @@ def validate_file(file: Path):
        print(f'{str(file)} is valid')
     else:
         print(f'{str(file)} is invalid, {str(results_text)}', file=sys.stderr)
+        os.rename(str(file), f'{move_dir}/{file.name}')
 
 def usage() -> None:
     print('Usage: ' + sys.argv[0] + ' -d <data dir> -s <shapes_graph.jsonld> -o <ontology.jsonld> -m <move dir>')
