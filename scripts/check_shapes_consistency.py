@@ -18,7 +18,7 @@
 #      along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from rdflib import Graph
-from rdflib.query import Result
+from rdflib.query import Result, ResultRow
 import sys
 import os
 
@@ -59,7 +59,9 @@ q_res: Result = g.query(query)
 if (len(q_res)) > 0:
     print('Broken sh:node reference(s) detected:', file=sys.stderr)
     for row in q_res:
-        print(row.get('nodeShape'), file=sys.stderr)
+        # for a SELECT query, a collection of result rows is returned
+        if isinstance(row, ResultRow):
+            print(row.get('nodeShape'), file=sys.stderr)
     exit(1)
 
 
