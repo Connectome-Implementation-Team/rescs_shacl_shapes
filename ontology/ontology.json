@@ -156,6 +156,13 @@
       "rdfs:subClassOf": {
         "@id": "schema:Thing"
       }
+    },
+    {
+      "@id": "schema:GeoCoordinates",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
     }
   ]
 }

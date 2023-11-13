@@ -1,6 +1,7 @@
 {
   "@context": {
-    "@vocab": "http://schema.org/"
+    "@vocab": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@type": "Place",
   "alternateName": "My alias name",
@@ -19,5 +20,17 @@
     "@id": "http://www.example.com/4"
   },
   "address": "Fakestreet, Faketown",
-  "telephone": "+41 52 111 11 11"
+  "telephone": "+41 52 111 11 11",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "name": "Basel",
+    "latitude": {
+      "@type": "xsd:float",
+      "@value": 47.560555555556
+    },
+    "longitude": {
+      "@type": "xsd:float",
+      "@value": 7.5905555555556
+    }
+  }
 }

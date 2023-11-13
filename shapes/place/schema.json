@@ -36,6 +36,15 @@
               "description": "The telephone number.",
               "datatype": "xsd:string",
               "maxCount": 1
+            },
+            {
+              "path": "schema:geo",
+              "name": "geo",
+              "description": "The geo coordinates of the place.",
+              "class": "schema:GeoCoordinates",
+              "nodeKind": "sh:BlankNode",
+              "node": "http://rescs.org/dash/geocoordinates/GeoCoordinatesShape",
+              "maxCount": 1
             }
           ]
         }

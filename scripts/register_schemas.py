@@ -35,7 +35,7 @@ VERIFY_SSL: bool = bool(int(config('VERIFY_SSL'))) # throws an uncaught error if
 # order in which schemas are created (dependency)
 order: List[str] = ['thing', 'person', 'organization', 'place', 'creativework', 'intangible', 'structuredvalue', 'contactpoint',
          'monetaryamount', 'article', 'dataset', 'mediaobject', 'book', 'scholarlyarticle', 'datadownload', 'grant',
-         'monetarygrant', 'project', 'researchproject']
+         'monetarygrant', 'project', 'researchproject', 'geocoordinates']
 
 for schema_name in order:
     print(schema_name)

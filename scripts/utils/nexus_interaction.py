@@ -45,8 +45,10 @@ def create_schema(schema: Dict, nexus_url: str, organisation: str, project: str,
 
         return req.json()
     except requests.exceptions.HTTPError as e:
-        raise Exception(e.response.text)
-
+        if e.response is not None:
+            raise Exception(e.response.text)
+        else:
+            raise e
 
 def get_composite_view(id: str, nexus_url: str, organisation: str, project: str, token: str, verify_ssl=True) -> Union[
     Dict, None]:
@@ -74,11 +76,14 @@ def get_composite_view(id: str, nexus_url: str, organisation: str, project: str,
 
         req.raise_for_status()
     except requests.exceptions.HTTPError as e:
-        if e.response.status_code == 404:
+        if e.response is not None and e.response.status_code == 404:
             # Composite view was not found
             return None
         else:
-            raise Exception(e.response.text)
+            if e.response is not None:
+                raise Exception(e.response.text)
+            else:
+                raise e
 
     return req.json()
 
@@ -108,8 +113,10 @@ def create_composite_view(composite_view: Dict, nexus_url: str, organisation: st
 
         return req.json()
     except requests.exceptions.HTTPError as e:
-        raise Exception(e.response.text)
-
+        if e.response is not None:
+            raise Exception(e.response.text)
+        else:
+            raise e
 
 def update_composite_view(composite_view: Dict, rev: int, nexus_url: str, organisation: str, project: str, token: str,
                           verify_ssl=True) -> Dict:

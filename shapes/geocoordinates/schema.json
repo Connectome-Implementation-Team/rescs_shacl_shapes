@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/geocoordinates/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/geocoordinates",
+  "imports": [
+    "http://rescs.org/dash/structuredvalue"
+  ],
+  "shapes": [
+    {
+      "@id": "this:GeoCoordinatesShape",
+      "@type": "sh:NodeShape",
+      "label": "Geo coordinates",
+      "comment": "The geographic coordinates of a place or event.",
+      "targetClass": "schema:GeoCoordinates",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/structuredvalue/StructuredValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:latitude",
+              "name": "latitude",
+              "description": "The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).",
+              "datatype": "xsd:float",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "schema:longitude",
+              "name": "longitude",
+              "description": "The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).",
+              "datatype": "xsd:float",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
