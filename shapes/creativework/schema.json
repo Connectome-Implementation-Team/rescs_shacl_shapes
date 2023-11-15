@@ -28,8 +28,7 @@
               "name": "about",
               "description": "The subject matter of the content.",
               "class": "schema:Thing",
-              "nodeKind": "sh:IRI",
-              "maxCount": 1
+              "nodeKind": "sh:IRI"
             },
             {
               "path": "schema:abstract",
