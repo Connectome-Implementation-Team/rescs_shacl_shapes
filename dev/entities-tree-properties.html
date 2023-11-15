@@ -10,7 +10,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="static/libs/img/favicon.ico">
+    <link rel="icon" href="static/custom/favicon.ico">
 
 	
 		<title>Ontospy > http://rescs.org</title>
@@ -152,7 +152,80 @@
 
 
 /*pygments css*/
-
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #E40000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #687822 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #767600 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
 
 /*overloading this class from pygments*/
 .highlight {
@@ -224,7 +297,6 @@
 
   </div>
 </nav>
-
   
 
 
@@ -252,7 +324,7 @@
         </li>
 
         
-          <li class="-second-level" id="sd_classes"><a href="entities-tree-classes.html">Classes (19)</a>
+          <li class="-second-level" id="sd_classes"><a href="entities-tree-classes.html">Classes (20)</a>
           </li>
 
             
@@ -269,177 +341,185 @@
           
               <li class="second-level" style="line-height: 20px;" id="sd_7"><a  href="class-schemadataset.html">schema:Dataset</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_8"><a  href="class-schemagrant.html">schema:Grant</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_8"><a  href="class-schemageocoordinates.html">schema:GeoCoordinates</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_9"><a  href="class-schemaintangible.html">schema:Intangible</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_9"><a  href="class-schemagrant.html">schema:Grant</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_10"><a  href="class-schemamediaobject.html">schema:MediaObject</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_10"><a  href="class-schemaintangible.html">schema:Intangible</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_11"><a  href="class-schemamonetaryamount.html">schema:MonetaryAmount</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_11"><a  href="class-schemamediaobject.html">schema:MediaObject</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_12"><a  href="class-schemamonetarygrant.html">schema:MonetaryGrant</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_12"><a  href="class-schemamonetaryamount.html">schema:MonetaryAmount</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_13"><a  href="class-schemaorganization.html">schema:Organization</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_13"><a  href="class-schemamonetarygrant.html">schema:MonetaryGrant</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_14"><a  href="class-schemaperson.html">schema:Person</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_14"><a  href="class-schemaorganization.html">schema:Organization</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_15"><a  href="class-schemaplace.html">schema:Place</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_15"><a  href="class-schemaperson.html">schema:Person</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_16"><a  href="class-schemaproject.html">schema:Project</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_16"><a  href="class-schemaplace.html">schema:Place</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_17"><a  href="class-schemaresearchproject.html">schema:ResearchProject</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_17"><a  href="class-schemaproject.html">schema:Project</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_18"><a  href="class-schemascholarlyarticle.html">schema:ScholarlyArticle</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_18"><a  href="class-schemaresearchproject.html">schema:ResearchProject</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_19"><a  href="class-schemastructuredvalue.html">schema:StructuredValue</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_19"><a  href="class-schemascholarlyarticle.html">schema:ScholarlyArticle</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_20"><a  href="class-schemathing.html">schema:Thing</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_20"><a  href="class-schemastructuredvalue.html">schema:StructuredValue</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_21"><a  href="class-schemathing.html">schema:Thing</a></li>
           
         
 
         
-            <li class="-second-level" id="sd_properties"><a class="active" href="entities-tree-properties.html">Properties (69)</a>
+            <li class="-second-level" id="sd_properties"><a class="active" href="entities-tree-properties.html">Properties (72)</a>
             </li>
 
             
           
-              <li class="second-level" style="line-height: 20px;" id="sd_21"><a   href="prop-schemaabout.html">schema:about</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_22"><a   href="prop-schemaabout.html">schema:about</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_22"><a   href="prop-schemaabstract.html">schema:abstract</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_23"><a   href="prop-schemaabstract.html">schema:abstract</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_23"><a   href="prop-schemaadditionalname.html">schema:additionalName</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_24"><a   href="prop-schemaadditionalname.html">schema:additionalName</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_24"><a   href="prop-schemaaddress.html">schema:address</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_25"><a   href="prop-schemaaddress.html">schema:address</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_25"><a   href="prop-schemaaffiliation.html">schema:affiliation</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_26"><a   href="prop-schemaaffiliation.html">schema:affiliation</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_26"><a   href="prop-schemaalternatename.html">schema:alternateName</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_27"><a   href="prop-schemaalternatename.html">schema:alternateName</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_27"><a   href="prop-schemaamount.html">schema:amount</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_28"><a   href="prop-schemaamount.html">schema:amount</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_28"><a   href="prop-schemaarticlebody.html">schema:articleBody</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_29"><a   href="prop-schemaarticlebody.html">schema:articleBody</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_29"><a   href="prop-schemaauthor.html">schema:author</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_30"><a   href="prop-schemaauthor.html">schema:author</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_30"><a   href="prop-schemaavailablelanguage.html">schema:availableLanguage</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_31"><a   href="prop-schemaavailablelanguage.html">schema:availableLanguage</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_31"><a   href="prop-schemabirthdate.html">schema:birthDate</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_32"><a   href="prop-schemabirthdate.html">schema:birthDate</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_32"><a   href="prop-schemacitation.html">schema:citation</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_33"><a   href="prop-schemacitation.html">schema:citation</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_33"><a   href="prop-schemaconditionsofaccess.html">schema:conditionsOfAccess</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_34"><a   href="prop-schemaconditionsofaccess.html">schema:conditionsOfAccess</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_34"><a   href="prop-schemacontactpoint.html">schema:contactPoint</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_35"><a   href="prop-schemacontactpoint.html">schema:contactPoint</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_35"><a   href="prop-schemacontacttype.html">schema:contactType</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_36"><a   href="prop-schemacontacttype.html">schema:contactType</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_36"><a   href="prop-schemacontentsize.html">schema:contentSize</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_37"><a   href="prop-schemacontentsize.html">schema:contentSize</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_37"><a   href="prop-schemacontenturl.html">schema:contentUrl</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_38"><a   href="prop-schemacontenturl.html">schema:contentUrl</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_38"><a   href="prop-schemacopyrightholder.html">schema:copyrightHolder</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_39"><a   href="prop-schemacopyrightholder.html">schema:copyrightHolder</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_39"><a   href="prop-schemacopyrightnotice.html">schema:copyrightNotice</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_40"><a   href="prop-schemacopyrightnotice.html">schema:copyrightNotice</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_40"><a   href="prop-schemacopyrightyear.html">schema:copyrightYear</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_41"><a   href="prop-schemacopyrightyear.html">schema:copyrightYear</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_41"><a   href="prop-schemacreativeworkstatus.html">schema:creativeWorkStatus</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_42"><a   href="prop-schemacreativeworkstatus.html">schema:creativeWorkStatus</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_42"><a   href="prop-schemacurrency.html">schema:currency</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_43"><a   href="prop-schemacurrency.html">schema:currency</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_43"><a   href="prop-schemadatecreated.html">schema:dateCreated</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_44"><a   href="prop-schemadatecreated.html">schema:dateCreated</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_44"><a   href="prop-schemadatemodified.html">schema:dateModified</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_45"><a   href="prop-schemadatemodified.html">schema:dateModified</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_45"><a   href="prop-schemadatepublished.html">schema:datePublished</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_46"><a   href="prop-schemadatepublished.html">schema:datePublished</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_46"><a   href="prop-schemadeathdate.html">schema:deathDate</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_47"><a   href="prop-schemadeathdate.html">schema:deathDate</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_47"><a   href="prop-schemadepartment.html">schema:department</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_48"><a   href="prop-schemadepartment.html">schema:department</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_48"><a   href="prop-schemadescription.html">schema:description</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_49"><a   href="prop-schemadescription.html">schema:description</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_49"><a   href="prop-schemadistribution.html">schema:distribution</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_50"><a   href="prop-schemadistribution.html">schema:distribution</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_50"><a   href="prop-schemaeditor.html">schema:editor</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_51"><a   href="prop-schemaeditor.html">schema:editor</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_51"><a   href="prop-schemaemail.html">schema:email</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_52"><a   href="prop-schemaemail.html">schema:email</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_52"><a   href="prop-schemaencodingformat.html">schema:encodingFormat</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_53"><a   href="prop-schemaencodingformat.html">schema:encodingFormat</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_53"><a   href="prop-schemaenddate.html">schema:endDate</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_54"><a   href="prop-schemaenddate.html">schema:endDate</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_54"><a   href="prop-schemafamilyname.html">schema:familyName</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_55"><a   href="prop-schemafamilyname.html">schema:familyName</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_55"><a   href="prop-schemafundeditem.html">schema:fundedItem</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_56"><a   href="prop-schemafundeditem.html">schema:fundedItem</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_56"><a   href="prop-schemafunder.html">schema:funder</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_57"><a   href="prop-schemafunder.html">schema:funder</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_57"><a   href="prop-schemagenre.html">schema:genre</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_58"><a   href="prop-schemagenre.html">schema:genre</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_58"><a   href="prop-schemagivenname.html">schema:givenName</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_59"><a   href="prop-schemageo.html">schema:geo</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_59"><a   href="prop-schemahaspart.html">schema:hasPart</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_60"><a   href="prop-schemagivenname.html">schema:givenName</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_60"><a   href="prop-schemahonorificprefix.html">schema:honorificPrefix</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_61"><a   href="prop-schemahaspart.html">schema:hasPart</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_61"><a   href="prop-schemahonorificsuffix.html">schema:honorificSuffix</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_62"><a   href="prop-schemahonorificprefix.html">schema:honorificPrefix</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_62"><a   href="prop-schemaidentifier.html">schema:identifier</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_63"><a   href="prop-schemahonorificsuffix.html">schema:honorificSuffix</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_63"><a   href="prop-schemaimage.html">schema:image</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_64"><a   href="prop-schemaidentifier.html">schema:identifier</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_64"><a   href="prop-schemainlanguage.html">schema:inLanguage</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_65"><a   href="prop-schemaimage.html">schema:image</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_65"><a   href="prop-schemaisaccessibleforfree.html">schema:isAccessibleForFree</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_66"><a   href="prop-schemainlanguage.html">schema:inLanguage</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_66"><a   href="prop-schemaisbn.html">schema:isbn</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_67"><a   href="prop-schemaisaccessibleforfree.html">schema:isAccessibleForFree</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_67"><a   href="prop-schemajobtitle.html">schema:jobTitle</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_68"><a   href="prop-schemaisbn.html">schema:isbn</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_68"><a   href="prop-schemakeywords.html">schema:keywords</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_69"><a   href="prop-schemajobtitle.html">schema:jobTitle</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_69"><a   href="prop-schemalicense.html">schema:license</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_70"><a   href="prop-schemakeywords.html">schema:keywords</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_70"><a   href="prop-schemamaintainer.html">schema:maintainer</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_71"><a   href="prop-schemalatitude.html">schema:latitude</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_71"><a   href="prop-schemameasurementtechnique.html">schema:measurementTechnique</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_72"><a   href="prop-schemalicense.html">schema:license</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_72"><a   href="prop-schemamember.html">schema:member</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_73"><a   href="prop-schemalongitude.html">schema:longitude</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_73"><a   href="prop-schemamentions.html">schema:mentions</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_74"><a   href="prop-schemamaintainer.html">schema:maintainer</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_74"><a   href="prop-schemaname.html">schema:name</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_75"><a   href="prop-schemameasurementtechnique.html">schema:measurementTechnique</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_75"><a   href="prop-schemanumberofpages.html">schema:numberOfPages</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_76"><a   href="prop-schemamember.html">schema:member</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_76"><a   href="prop-schemapageend.html">schema:pageEnd</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_77"><a   href="prop-schemamentions.html">schema:mentions</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_77"><a   href="prop-schemapagestart.html">schema:pageStart</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_78"><a   href="prop-schemaname.html">schema:name</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_78"><a   href="prop-schemaposition.html">schema:position</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_79"><a   href="prop-schemanumberofpages.html">schema:numberOfPages</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_79"><a   href="prop-schemapublisher.html">schema:publisher</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_80"><a   href="prop-schemapageend.html">schema:pageEnd</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_80"><a   href="prop-schemasameas.html">schema:sameAs</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_81"><a   href="prop-schemapagestart.html">schema:pageStart</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_81"><a   href="prop-schemaspatialcoverage.html">schema:spatialCoverage</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_82"><a   href="prop-schemaposition.html">schema:position</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_82"><a   href="prop-schemastartdate.html">schema:startDate</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_83"><a   href="prop-schemapublisher.html">schema:publisher</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_83"><a   href="prop-schemasuborganization.html">schema:subOrganization</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_84"><a   href="prop-schemasameas.html">schema:sameAs</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_84"><a   href="prop-schematelephone.html">schema:telephone</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_85"><a   href="prop-schemaspatialcoverage.html">schema:spatialCoverage</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_85"><a   href="prop-schematemporalcoverage.html">schema:temporalCoverage</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_86"><a   href="prop-schemastartdate.html">schema:startDate</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_86"><a   href="prop-schemaurl.html">schema:url</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_87"><a   href="prop-schemasuborganization.html">schema:subOrganization</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_87"><a   href="prop-schemavalidfrom.html">schema:validFrom</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_88"><a   href="prop-schematelephone.html">schema:telephone</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_88"><a   href="prop-schemavalidthrough.html">schema:validThrough</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_89"><a   href="prop-schematemporalcoverage.html">schema:temporalCoverage</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_89"><a   href="prop-schemavalue.html">schema:value</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_90"><a   href="prop-schemaurl.html">schema:url</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_91"><a   href="prop-schemavalidfrom.html">schema:validFrom</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_92"><a   href="prop-schemavalidthrough.html">schema:validThrough</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_93"><a   href="prop-schemavalue.html">schema:value</a></li>
           
 
         
@@ -463,7 +543,6 @@
 
 
 <!-- /#sidebar-wrapper -->
-
     
 
 
@@ -513,7 +592,6 @@
           Properties
       </li>
 </ol>
-
 
 
 
@@ -651,6 +729,8 @@
 						  </tr><tr>
 							<td class="tc" colspan=4><a title="http://schema.org/genre" class="treelinks" href="prop-schemagenre.html">schema:genre</a></td>
 						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://schema.org/geo" class="treelinks" href="prop-schemageo.html">schema:geo</a></td>
+						  </tr><tr>
 							<td class="tc" colspan=4><a title="http://schema.org/givenName" class="treelinks" href="prop-schemagivenname.html">schema:givenName</a></td>
 						  </tr><tr>
 							<td class="tc" colspan=4><a title="http://schema.org/hasPart" class="treelinks" href="prop-schemahaspart.html">schema:hasPart</a></td>
@@ -673,7 +753,11 @@
 						  </tr><tr>
 							<td class="tc" colspan=4><a title="http://schema.org/keywords" class="treelinks" href="prop-schemakeywords.html">schema:keywords</a></td>
 						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://schema.org/latitude" class="treelinks" href="prop-schemalatitude.html">schema:latitude</a></td>
+						  </tr><tr>
 							<td class="tc" colspan=4><a title="http://schema.org/license" class="treelinks" href="prop-schemalicense.html">schema:license</a></td>
+						  </tr><tr>
+							<td class="tc" colspan=4><a title="http://schema.org/longitude" class="treelinks" href="prop-schemalongitude.html">schema:longitude</a></td>
 						  </tr><tr>
 							<td class="tc" colspan=4><a title="http://schema.org/maintainer" class="treelinks" href="prop-schemamaintainer.html">schema:maintainer</a></td>
 						  </tr><tr>
@@ -750,7 +834,7 @@
   <footer class="footer">
     <div class="container">
     
-      <p class="text-muted">Documentation automatically generated on 25th October 2022 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (v2.0.0-alpha)</p>
+      <p class="text-muted">Documentation automatically generated on Wed, 15 Nov 2023 10:30:42 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (v2.1.1)</p>
 
     
     </div>
@@ -800,6 +884,22 @@ $('#search-input-sidebar').keyup(function() {
 </script>
 
 
+
+
+  <!-- Scroll Sidebar Script -->
+
+  
+  
+
+  <script type="text/javascript">
+
+    $(document).ready(function (){
+      $('#sidebar-wrapper').animate({
+          scrollTop: $("#sd_21").offset().top - 100
+      }, 100);
+    });
+
+  </script>
 
 
 

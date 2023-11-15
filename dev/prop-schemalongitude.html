@@ -377,7 +377,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_22"><a   href="prop-schemaabout.html">schema:about</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_23"><a class="active"  href="prop-schemaabstract.html">schema:abstract</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_23"><a   href="prop-schemaabstract.html">schema:abstract</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_24"><a   href="prop-schemaadditionalname.html">schema:additionalName</a></li>
           
@@ -477,7 +477,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_72"><a   href="prop-schemalicense.html">schema:license</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_73"><a   href="prop-schemalongitude.html">schema:longitude</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_73"><a class="active"  href="prop-schemalongitude.html">schema:longitude</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_74"><a   href="prop-schemamaintainer.html">schema:maintainer</a></li>
           
@@ -622,7 +622,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            schema:abstract
+            schema:longitude
         </li>
   </ol>
 
@@ -646,7 +646,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             <h1>
 
-                schema:abstract
+                schema:longitude
                 
                     <small class="label label-info label-xs ">leaf node</small>
                   
@@ -665,7 +665,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'abstract' - An abstract is a short description that summarizes a [[Project]]. - An abstract is a short description that summarizes a..">schema:abstract</a>
+                            <li><a style="font-weight: bold;" title="'longitude' - The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).">schema:longitude</a>
 
                             
                               </li>
@@ -689,7 +689,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 <code>http://schema.org/abstract</code>
+                 <code>http://schema.org/longitude</code>
              </div>
            </div>
             </div></div>
@@ -704,7 +704,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 abstract
+                 longitude
              </div>
            </div>
             </div></div>
@@ -719,7 +719,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             </div>
             <div class="panel-body">
 
-                <p>An abstract is a short description that summarizes a [[Project]]. - An abstract is a short description that summarizes a [[CreativeWork]].</p>
+                <p>The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).</p>
             </div>
           </div>
            </div></div>
@@ -750,12 +750,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                      
                          
                          
-                              <a href="class-schemacreativework.html" title="http://schema.org/CreativeWork">schema:CreativeWork</a>
-                           
-                           , 
-                         
-                         
-                              <a href="class-schemaproject.html" title="http://schema.org/Project">schema:Project</a>
+                              <a href="class-schemageocoordinates.html" title="http://schema.org/GeoCoordinates">schema:GeoCoordinates</a>
                            
                            
                          
@@ -763,19 +758,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                    </td>
 
                     <td>
-                      schema:abstract
+                      schema:longitude
                     </td>
 
                     <td>
                       
                           
                           
-                               <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
-                             
-                            , 
-                          
-                          
-                               <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" target="_blank" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">rdf:langString</a>
+                               <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">xsd:float</a>
                              
                             
                           
@@ -802,14 +792,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">schema:</span><span class="w"> </span><span class="nv">&lt;http://schema.org/&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nn">schema</span><span class="p">:</span><span class="nt">abstract</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;abstract&quot;</span> <span class="p">;</span>
-    <span class="nn">schema</span><span class="p">:</span><span class="nt">domainIncludes</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">CreativeWork</span><span class="p">,</span>
-        <span class="nn">schema</span><span class="p">:</span><span class="nt">Project</span> <span class="p">;</span>
-    <span class="nn">schema</span><span class="p">:</span><span class="nt">rangeIncludes</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">langString</span><span class="p">,</span>
-        <span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;An abstract is a short description that summarizes a [[CreativeWork]].&quot;</span><span class="p">,</span>
-        <span class="s">&quot;An abstract is a short description that summarizes a [[Project]].&quot;</span> <span class="p">.</span>
+<span class="nn">schema</span><span class="p">:</span><span class="nt">longitude</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">Property</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;longitude&quot;</span> <span class="p">;</span>
+    <span class="nn">schema</span><span class="p">:</span><span class="nt">domainIncludes</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">GeoCoordinates</span> <span class="p">;</span>
+    <span class="nn">schema</span><span class="p">:</span><span class="nt">rangeIncludes</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">float</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).&quot;</span> <span class="p">.</span>
 </pre></div>
 
 
@@ -848,7 +835,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <footer class="footer">
     <div class="container">
     
-      <p class="text-muted">Documentation automatically generated on Wed, 15 Nov 2023 10:30:42 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (v2.1.1)</p>
+      <p class="text-muted">Documentation automatically generated on Wed, 15 Nov 2023 10:30:43 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (v2.1.1)</p>
 
     
     </div>
@@ -909,7 +896,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_23").offset().top - 100
+          scrollTop: $("#sd_73").offset().top - 100
       }, 100);
     });
 

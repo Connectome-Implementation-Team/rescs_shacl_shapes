@@ -342,7 +342,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_7"><a  href="class-schemadataset.html">schema:Dataset</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_8"><a  href="class-schemageocoordinates.html">schema:GeoCoordinates</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_8"><a class="active" href="class-schemageocoordinates.html">schema:GeoCoordinates</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_9"><a  href="class-schemagrant.html">schema:Grant</a></li>
           
@@ -559,21 +559,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
     
     
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
 
 
@@ -627,12 +613,26 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-az.html">Entities</a>
     </li>
     <li>
-          <a href="entities-tree-shapes.html">Shapes</a>
+          <a href="entities-tree-classes.html">Classes</a>
     </li>
       <li class="active">
-            rescs:dash/thing/ThingShape
+            schema:GeoCoordinates
         </li>
   </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -643,12 +643,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
     
     <h1>
-        rescs:dash/thing/ThingShape
-        
-          <small class="label label-info label-xs">leaf node</small>
-        
+      schema:GeoCoordinates
+      
+        <small class="label label-info label-xs">leaf node</small>
+      
     </h1>
-    
+
     <hr>  
 
     
@@ -656,18 +656,20 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
       <div class="tree">
         <ul>
           
-            <li><a href="entities-tree-classes.html">sh:Shape</a>
-              <ul>
-                <li><a style="font-weight: bold;" title="'Thing' - The most generic type of item.">rescs:dash/thing/ThingShape</a>
-                  
-                </li>
-              </ul>
-            </li>
+            
+              <li>
+                <a href="class-schemastructuredvalue.html" title="'StructuredValue'">schema:StructuredValue</a>
+                  <ul>
+                    <li><a style="font-weight: bold;" title="'GeoCoordinates'">schema:GeoCoordinates</a>
+                    
+                  </li>
+                </ul>
+              </li>
+            
           
         </ul>
       </div>
     </div>
-
 
 
     
@@ -678,7 +680,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             <h3 class="panel-title">URI</h3>
           </div>
           <div class="panel-body">
-            <code>http://rescs.org/dash/thing/ThingShape</code>
+            <code>http://schema.org/GeoCoordinates</code>
           </div>
         </div>
       </div>
@@ -694,25 +696,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             <h3 class="panel-title">Label</h3>
           </div>
           <div class="panel-body">
-            Thing
+            GeoCoordinates
           </div>
-          </div>
-        </div>
-      </div>
-    
-
-
-    
-    
-      <div class="row">
-        <div class="col-md-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Description</h3>
-            </div>
-            <div class="panel-body">
-              <p>The most generic type of item.</p>
-            </div>
           </div>
         </div>
       </div>
@@ -729,12 +714,18 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <div class="col-md-12">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Target Classes (1)</h3>
+              <h3 class="panel-title">Superclasses (3)</h3>
             </div>
             <div class="panel-body">
               
-                <li><a href="class-schemathing.html">schema:Thing</a></li>
                 
+                  <li><a href="class-schemastructuredvalue.html" title="http://schema.org/StructuredValue">schema:StructuredValue</a></li>
+                
+                  <li><a href="class-schemaintangible.html" title="http://schema.org/Intangible">schema:Intangible</a></li>
+                
+                  <li><a href="class-schemathing.html" title="http://schema.org/Thing">schema:Thing</a></li>
+                
+              
             </div>
           </div>
         </div>
@@ -744,214 +735,719 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
     
     
-    
-           
-         
-        <div class="row">
-          <div class="col-md-12">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Shape Properties</h3>
-              </div>
-              <div class="panel-body" style="overflow: auto;">
-                <p>Instances of schema:Thing can have the following properties:</p>
-              </div>
-              <table class="table table-bordered" style="overflow: auto;">
-                <tr class="table-classproperties">   
-                    <th><p style="text-align:center;">PROPERTY</p></th>
-                    <th><p style="text-align:center;">MIN COUNT</p></th>
-                    <th><p style="text-align:center;">MAX COUNT</p></th>
-                    <th><p style="text-align:center;">TYPE</p></th>
-                </tr>
-                   
-                  <tr>
-                     
-                      <td colspan="5">
-                        <small class="label label-info label-xs">schema:Thing</small>
-                      </td>
-                        
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema:alternateName" href="prop-schemaalternatename.html">schema:alternateName</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
-                        
-                      <td>     
-                        
-                          
-                            <i>xsd:string</i>
-                           
-                            <br>
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema:description" href="prop-schemadescription.html">schema:description</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
-                        
-                      <td>     
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema:identifier" href="prop-schemaidentifier.html">schema:identifier</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
-                        
-                      <td>     
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema:image" href="prop-schemaimage.html">schema:image</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
-                        
-                      <td>     
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema:name" href="prop-schemaname.html">schema:name</a>
-                        
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
-                        
-                      <td>     
-                        
-                          
-                            <i>xsd:string</i>
-                           
-                            <br>
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema:sameAs" href="prop-schemasameas.html">schema:sameAs</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
-                        
-                      <td>     
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema:url" href="prop-schemaurl.html">schema:url</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
-                        
-                      <td>     
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                
-
-              </table>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Shapes (1)</h3>
+            </div>
+            <div class="panel-body">
+              
+                <li><a href="shape-rescsdashgeocoordinatesgeocoordinatesshape.html" title="http://rescs.org/dash/geocoordinates/GeoCoordinatesShape">rescs:dash/geocoordinates/GeoCoordinatesShape</a></li>
+              
             </div>
           </div>
         </div>
-      
+      </div>
+    
+
+
     
     
+
+
+    
+    
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Usage</h3>
+            </div>
+            <div class="panel-body" style="overflow: auto;">
+              <p>Instances of schema:GeoCoordinates can have the following properties:</p>
+            </div>
+            <table class="table table-bordered" style="overflow: auto;">
+              <tr class="table-classproperties">
+                <th>PROPERTY</th><th>TYPE</th><th>DESCRIPTION</th><th>RANGE</th>
+              </tr>
+              
+                
+                  
+                      <tr class="table-inheritanceinfo">
+                        <th colspan="4" class="treeinfo">
+                          <span class="label label-default">From class <a title="schema:GeoCoordinates" href="class-schemageocoordinates.html" class="fromclass_link">schema:GeoCoordinates</a></span>
+                        </th>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema:latitude" href="prop-schemalatitude.html">schema:latitude</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:float</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema:longitude" href="prop-schemalongitude.html">schema:longitude</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:float</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  
+                
+              
+                
+                  
+                      <tr class="table-inheritanceinfo">
+                        <th colspan="4" class="treeinfo">
+                          <span class="label label-default">From class <a title="schema:Thing" href="class-schemathing.html" class="fromclass_link">schema:Thing</a></span>
+                        </th>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema:alternateName" href="prop-schemaalternatename.html">schema:alternateName</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>An alias for the item.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:string</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema:description" href="prop-schemadescription.html">schema:description</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>A description of the item.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>rdf:langString</i>
+                                
+                            
+                                
+                                  <i>xsd:string</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema:identifier" href="prop-schemaidentifier.html">schema:identifier</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:string</i>
+                                
+                            
+                                
+                                  <i>sh:IRI</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema:image" href="prop-schemaimage.html">schema:image</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>An image of the item.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>sh:IRI</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema:name" href="prop-schemaname.html">schema:name</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>The name of the item.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:string</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema:sameAs" href="prop-schemasameas.html">schema:sameAs</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>URL of a reference Web page that unambiguously indicates the item&#39;s identity. E.g. the URL of the item&#39;s Wikipedia page, Wikidata entry, or official website.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>sh:IRI</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema:url" href="prop-schemaurl.html">schema:url</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>URL of the item.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>sh:IRI</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  
+                
+              
+            </table>
+          </div>
+        </div>
+      </div>
+    
+
+
+    
+    
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Property Shapes</h3>
+            </div>
+            <div class="panel-body" style="overflow: auto;">
+              <p>By the associated SHACL property shapes, instances of schema:GeoCoordinates can have the following properties:</p>
+            </div>
+            <table class="table table-bordered" style="overflow: auto;">
+              <tr class="table-classproperties">
+                <th><p style="text-align:center;">PROPERTY</p></th>
+                <th><p style="text-align:center;">PROPERTY TYPE</p></th>
+                <th><p style="text-align:center;">DESCRIPTION</p></th>
+                <th><p style="text-align:center;">MIN COUNT</p></th>
+                <th><p style="text-align:center;">MAX COUNT</p></th>
+                <th><p style="text-align:center;">LOCAL RANGE<br><i>(type range for property on this class)</i></p></th>
+                <th><p style="text-align:center;">GLOBAL RANGE<br><i>(type range for property globally)</i></p></th>
+              </tr>
+              
+                <tr>
+                  
+                  
+                    <td colspan="8">
+                      <small class="label label-info label-xs">schema:GeoCoordinates</small>
+                    </td>
+
+
+                  
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema:latitude" href="prop-schemalatitude.html">schema:latitude</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+                      <br>
+                      The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                        
+                          <i>xsd:float</i>
+                         
+                          <br>
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema:longitude" href="prop-schemalongitude.html">schema:longitude</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+                      <br>
+                      The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                        
+                          <i>xsd:float</i>
+                         
+                          <br>
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td colspan="8">
+                      <small class="label label-info label-xs">schema:Thing</small>
+                    </td>
+
+
+                  
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema:alternateName" href="prop-schemaalternatename.html">schema:alternateName</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      An alias for the item.
+                      <br>
+                      An alias for the item.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                        
+                          <i>xsd:string</i>
+                         
+                          <br>
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema:description" href="prop-schemadescription.html">schema:description</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      A description of the item.
+                      <br>
+                      A description of the item.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema:identifier" href="prop-schemaidentifier.html">schema:identifier</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+                      <br>
+                      The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema:image" href="prop-schemaimage.html">schema:image</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      An image of the item.
+                      <br>
+                      An image of the item.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema:name" href="prop-schemaname.html">schema:name</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      The name of the item.
+                      <br>
+                      The name of the item.
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                        
+                          <i>xsd:string</i>
+                         
+                          <br>
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema:sameAs" href="prop-schemasameas.html">schema:sameAs</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      URL of a reference Web page that unambiguously indicates the item&#39;s identity. E.g. the URL of the item&#39;s Wikipedia page, Wikidata entry, or official website.
+                      <br>
+                      URL of a reference Web page that unambiguously indicates the item&#39;s identity. E.g. the URL of the item&#39;s Wikipedia page, Wikidata entry, or official website.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema:url" href="prop-schemaurl.html">schema:url</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      URL of the item.
+                      <br>
+                      URL of the item.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+            </table>
+          </div>
+        </div>
+      </div>
+    
+
 
     
     <div class="row">
@@ -962,49 +1458,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           </div>
           <div class="panel-body implementation-panel">
             
-              <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+              <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">schema:</span><span class="w"> </span><span class="nv">&lt;http://schema.org/&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">sh:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/ns/shacl#&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nv">&lt;http://rescs.org/dash/thing/ThingShape&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">NodeShape</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;Thing&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;The most generic type of item.&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-    <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;URL of a reference Web page that unambiguously indicates the item&#39;s identity. E.g. the URL of the item&#39;s Wikipedia page, Wikidata entry, or official website.&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;sameAs&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">IRI</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">sameAs</span> <span class="p">],</span>
-        <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;An image of the item.&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;image&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">IRI</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">image</span> <span class="p">],</span>
-        <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;An alias for the item.&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;alternateName&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">alternateName</span> <span class="p">],</span>
-        <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;A description of the item.&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;description&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">or</span> <span class="p">(</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">]</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">langString</span> <span class="p">]</span> <span class="p">)</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">description</span> <span class="p">],</span>
-        <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;The name of the item.&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;name&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">name</span> <span class="p">],</span>
-        <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;identifier&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">or</span> <span class="p">(</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">]</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">IRI</span> <span class="p">]</span> <span class="p">)</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">identifier</span> <span class="p">],</span>
-        <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;URL of the item.&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;url&quot;</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">IRI</span> <span class="p">;</span>
-            <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">url</span> <span class="p">]</span> <span class="p">;</span>
-    <span class="nn">sh</span><span class="p">:</span><span class="nt">targetClass</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">Thing</span> <span class="p">.</span>
+<span class="nn">schema</span><span class="p">:</span><span class="nt">GeoCoordinates</span> <span class="kt">a</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">Class</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span> <span class="nn">schema</span><span class="p">:</span><span class="nt">StructuredValue</span> <span class="p">.</span>
 </pre></div>
 
             
@@ -1014,7 +1472,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     </div>
 
 
-  
+        
 
 
 
@@ -1034,7 +1492,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <footer class="footer">
     <div class="container">
     
-      <p class="text-muted">Documentation automatically generated on Wed, 15 Nov 2023 10:30:43 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (v2.1.1)</p>
+      <p class="text-muted">Documentation automatically generated on Wed, 15 Nov 2023 10:30:42 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (v2.1.1)</p>
 
     
     </div>
@@ -1095,7 +1553,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_174").offset().top - 100
+          scrollTop: $("#sd_8").offset().top - 100
       }, 100);
     });
 
