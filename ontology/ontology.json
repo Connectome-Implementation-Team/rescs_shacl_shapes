@@ -24,7 +24,7 @@
       "rdfs:label": "RESCS SHACL Shapes",
       "owl:versionInfo": {
         "@type": "xsd:date",
-        "@value": "2022-01-10"
+        "@value": "2023-11-15"
       }
     },
     {
