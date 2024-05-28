@@ -130,5 +130,9 @@
     "@id": "http://www.example.com/12",
     "@type": "Place",
     "name": "New York"
+  },
+  "usageInfo": [{
+    "@id": "https://creativecommons.org/publicdomain/zero/1.0/deed.en"
   }
+  ]
 }
