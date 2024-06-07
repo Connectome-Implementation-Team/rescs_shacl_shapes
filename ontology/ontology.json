@@ -74,6 +74,13 @@
       }
     },
     {
+      "@id": "schema:ArchiveComponent",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
       "@id": "schema:DataDownload",
       "@type": "rdfs:Class",
       "rdfs:subClassOf": {
@@ -85,6 +92,20 @@
       "@type": "rdfs:Class",
       "rdfs:subClassOf": {
         "@id": "schema:Thing"
+      }
+    },
+    {
+      "@id": "schema:LocalBusiness",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Organization"
+      }
+    },
+    {
+      "@id": "schema:ArchiveOrganization",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:LocalBusiness"
       }
     },
     {

@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/archivecomponent/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/archivecomponent",
+  "imports": [
+    "http://rescs.org/dash/creativework"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ArchiveComponentShape",
+      "@type": "sh:NodeShape",
+      "label": "Archive component",
+      "comment": "An intangible type to be applied to any archive content, carrying with it a set of properties required to describe archival items and collections.",
+      "targetClass": "schema:ArchiveComponent",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/creativework/CreativeWorkShape"
+        },
+        {
+            "property": [
+              {
+                "path": "schema:holdingArchive",
+                "name": "holdingArchive",
+                "description": "[[ArchiveOrganization]] that holds, keeps or maintains the [[ArchiveComponent]].",
+                "class": "schema:ArchiveOrganization",
+                "nodeKind": "sh:IRI",
+                "maxCount": 1
+              },
+              {
+                "path": "schema:itemLocation",
+                "name": "itemLocation",
+                "description": "Current location of the item.",
+                "class": "schema:Place",
+                "nodeKind": "sh:IRI",
+                "maxCount": 1
+              }
+            ]
+        }
+      ]
+    }
+  ]
+}
