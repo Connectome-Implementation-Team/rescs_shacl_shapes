@@ -28,8 +28,7 @@
                 "name": "holdingArchive",
                 "description": "[[ArchiveOrganization]] that holds, keeps or maintains the [[ArchiveComponent]].",
                 "class": "schema:ArchiveOrganization",
-                "nodeKind": "sh:IRI",
-                "maxCount": 1
+                "nodeKind": "sh:IRI"
               },
               {
                 "path": "schema:itemLocation",

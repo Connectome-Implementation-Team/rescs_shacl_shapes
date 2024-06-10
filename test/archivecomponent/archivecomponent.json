@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "ArchiveComponent",
+  "name": "An archival object",
+  "author": {
+    "@id": "http://www.example.com/6",
+    "@type": "Person",
+    "name": "John Doe",
+    "additionalName": "Joe",
+    "address": "Fakestreet, Faketown",
+    "email": "john@doe.com",
+    "familyName": "Doe",
+    "givenName": "John",
+    "jobTitle": "developer",
+    "affiliation": {
+      "@id": "http://www.example.com/17",
+      "@type": "Organization",
+      "name": "my org",
+      "address": "Fakestreet, Faketown",
+      "email": "info@contact.com",
+      "contactPoint": {
+        "@id": "http://www.contact.com/1",
+        "@type": "ContactPoint",
+        "name": "a contact point,",
+        "availableLanguage": "eng",
+        "contactType": "sales",
+        "email": "info@contact.com"
+      }
+    }
+  },
+  "holdingArchive": {
+    "@id": "http://www.example.com/1111",
+    "@type": "ArchiveOrganization",
+    "name": "An archive"
+  },
+  "itemLocation": {
+    "@id": "http://www.example.com/2222",
+    "@type": "Place",
+    "name": "An archive"
+  }
+}
