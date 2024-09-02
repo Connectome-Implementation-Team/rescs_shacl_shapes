@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/localbusiness/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/localbusiness",
+  "imports": [
+    "http://rescs.org/dash/organization"
+  ],
+  "shapes": [
+    {
+      "@id": "this:LocalBusinessShape",
+      "@type": "sh:NodeShape",
+      "label": "Local business",
+      "comment": "A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.",
+      "targetClass": "schema:LocalBusiness",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/organization/OrganizationShape"
+        }
+      ]
+    }
+  ]
+}

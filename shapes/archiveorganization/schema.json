@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/archiveorganization/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/archiveorganization",
+  "imports": [
+    "http://rescs.org/dash/localbusiness"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ArchiveOrganizationShape",
+      "@type": "sh:NodeShape",
+      "label": "ArchiveOrganization",
+      "comment": "An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public.",
+      "targetClass": "schema:ArchiveOrganization",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/localbusiness/LocalBusinessShape"
+        }
+      ]
+    }
+  ]
+}
