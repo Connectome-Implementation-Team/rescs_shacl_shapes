@@ -100,6 +100,7 @@ validate "monetarygrant" "monetarygrant"
 validate "place" "place"
 validate "project" "edge_project"
 validate "archivecomponent" "archivecomponent"
+validate "archiveorganization" "archiveorganization"
 
 # attempt throws an error if object is valid
 attempt "thing" "bad_thing"
