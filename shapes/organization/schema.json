@@ -77,9 +77,9 @@
               ]
             },
             {
-              "path": "schema:subOrganization",
-              "name": "subOrganization",
-              "description": "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.",
+              "path": "schema:parentOrganization",
+              "name": "parentOrganization",
+              "description": "The larger organization that this organization is a subOrganization of, if any.",
               "class": "schema:Organization",
               "nodeKind": "sh:IRI"
             },
