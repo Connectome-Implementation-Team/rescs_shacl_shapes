@@ -57,7 +57,7 @@
   "member": {
     "@id": "http://www.example.com/5"
   },
-  "subOrganization": {
+  "parentOrganization": {
     "@id": "http://www.example.com/7",
     "@type": "Organization",
     "name": "my suborg",
