@@ -24,7 +24,7 @@
       "rdfs:label": "RESCS SHACL Shapes",
       "owl:versionInfo": {
         "@type": "xsd:date",
-        "@value": "2024-09-02"
+        "@value": "2025-01-29"
       }
     },
     {
@@ -54,6 +54,13 @@
     },
     {
       "@id": "schema:ScholarlyArticle",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Article"
+      }
+    },
+    {
+      "@id": "schema:Report",
       "@type": "rdfs:Class",
       "rdfs:subClassOf": {
         "@id": "schema:Article"
