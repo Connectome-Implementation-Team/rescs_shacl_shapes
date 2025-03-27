@@ -95,6 +95,20 @@
       }
     },
     {
+      "@id": "schema:DigitalDocument",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:CreativeWork"
+      }
+    },
+    {
+      "@id": "schema:PresentationDigitalDocument",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:DigitalDocument"
+      }
+    },
+    {
       "@id": "schema:Organization",
       "@type": "rdfs:Class",
       "rdfs:subClassOf": {

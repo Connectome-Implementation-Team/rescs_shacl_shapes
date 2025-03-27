@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/presentationdigitaldocument/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/presentationdigitaldocument",
+  "imports": [
+    "http://rescs.org/dash/digitaldocument"
+  ],
+  "shapes": [
+    {
+      "@id": "this:PresentationDigitalDocumentShape",
+      "@type": "sh:NodeShape",
+      "label": "PresentationDigitalDocument",
+      "comment": "A file containing slides or used for a presentation.",
+      "targetClass": "schema:PresentationDigitalDocument",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/digitaldocument/DigitalDocumentShape"
+        }
+      ]
+    }
+  ]
+}

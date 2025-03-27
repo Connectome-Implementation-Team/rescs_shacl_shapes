@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/digitaldocument/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/digitaldocument",
+  "imports": [
+    "http://rescs.org/dash/creativework"
+  ],
+  "shapes": [
+    {
+      "@id": "this:DigitalDocumentShape",
+      "@type": "sh:NodeShape",
+      "label": "DigitalDocument",
+      "comment": "An electronic file or document.",
+      "targetClass": "schema:DigitalDocument",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/creativework/CreativeWorkShape"
+        }
+      ]
+    }
+  ]
+}
