@@ -648,7 +648,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-shapes.html">Shapes</a>
     </li>
       <li class="active">
-            rescs:dash/place/PlaceShape
+            rescs:dash/digitaldocument/DigitalDocumentShape
         </li>
   </ol>
 
@@ -661,7 +661,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
     
     <h1>
-        rescs:dash/place/PlaceShape
+        rescs:dash/digitaldocument/DigitalDocumentShape
         
           <small class="label label-info label-xs">leaf node</small>
         
@@ -676,7 +676,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
             <li><a href="entities-tree-classes.html">sh:Shape</a>
               <ul>
-                <li><a style="font-weight: bold;" title="'Place' - Entities that have a somewhat fixed, physical extension.">rescs:dash/place/PlaceShape</a>
+                <li><a style="font-weight: bold;" title="'DigitalDocument' - An electronic file or document.">rescs:dash/digitaldocument/DigitalDocumentShape</a>
                   
                 </li>
               </ul>
@@ -696,7 +696,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             <h3 class="panel-title">URI</h3>
           </div>
           <div class="panel-body">
-            <code>http://rescs.org/dash/place/PlaceShape</code>
+            <code>http://rescs.org/dash/digitaldocument/DigitalDocumentShape</code>
           </div>
         </div>
       </div>
@@ -712,7 +712,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             <h3 class="panel-title">Label</h3>
           </div>
           <div class="panel-body">
-            Place
+            DigitalDocument
           </div>
           </div>
         </div>
@@ -729,7 +729,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
               <h3 class="panel-title">Description</h3>
             </div>
             <div class="panel-body">
-              <p>Entities that have a somewhat fixed, physical extension.</p>
+              <p>An electronic file or document.</p>
             </div>
           </div>
         </div>
@@ -751,7 +751,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             </div>
             <div class="panel-body">
               
-                <li><a href="class-schema1place.html">schema1:Place</a></li>
+                <li><a href="class-schema1digitaldocument.html">schema1:DigitalDocument</a></li>
                 
             </div>
           </div>
@@ -772,7 +772,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                 <h3 class="panel-title">Shape Properties</h3>
               </div>
               <div class="panel-body" style="overflow: auto;">
-                <p>Instances of schema1:Place can have the following properties:</p>
+                <p>Instances of schema1:DigitalDocument can have the following properties:</p>
               </div>
               <table class="table table-bordered" style="overflow: auto;">
                 <tr class="table-classproperties">   
@@ -785,7 +785,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                   <tr>
                      
                       <td colspan="5">
-                        <small class="label label-info label-xs">schema1:Place</small>
+                        <small class="label label-info label-xs">schema1:CreativeWork</small>
                       </td>
                         
                     
@@ -795,7 +795,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                        
                       <td>   
                         
-                          <a class="propcolor" title="schema1:address" href="prop-schema1address.html">schema1:address</a>
+                          <a class="propcolor" title="schema1:about" href="prop-schema1about.html">schema1:about</a>
                         
                       </td>
  
@@ -804,42 +804,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                       </td>
  
                       <td>     
-                        1
-                      </td>
                         
-                      <td>     
-                        
-                          
-                            <i>xsd:string</i>
-                           
-                            <br>
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema1:geo" href="prop-schema1geo.html">schema1:geo</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        1
                       </td>
                         
                       <td>     
                         
                         
                           
-                            <a title="schema1:GeoCoordinates" href="class-schema1geocoordinates.html" class="rdfclass">schema1:GeoCoordinates</a>
+                            <a title="schema1:Thing" href="class-schema1thing.html" class="rdfclass">schema1:Thing</a>
                            
                           <br>
                         
@@ -851,7 +823,76 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                        
                       <td>   
                         
-                          <a class="propcolor" title="schema1:telephone" href="prop-schema1telephone.html">schema1:telephone</a>
+                          <a class="propcolor" title="schema1:abstract" href="prop-schema1abstract.html">schema1:abstract</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:author" href="prop-schema1author.html">schema1:author</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:citation" href="prop-schema1citation.html">schema1:citation</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:conditionsOfAccess" href="prop-schema1conditionsofaccess.html">schema1:conditionsOfAccess</a>
                         
                       </td>
  
@@ -869,6 +910,600 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                             <i>xsd:string</i>
                            
                             <br>
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:copyrightHolder" href="prop-schema1copyrightholder.html">schema1:copyrightHolder</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:copyrightNotice" href="prop-schema1copyrightnotice.html">schema1:copyrightNotice</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                          
+                            <i>xsd:string</i>
+                           
+                            <br>
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:copyrightYear" href="prop-schema1copyrightyear.html">schema1:copyrightYear</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                          
+                            <i>xsd:integer</i>
+                           
+                            <br>
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:creativeWorkStatus" href="prop-schema1creativeworkstatus.html">schema1:creativeWorkStatus</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                          
+                            <i>xsd:string</i>
+                           
+                            <br>
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:dateCreated" href="prop-schema1datecreated.html">schema1:dateCreated</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                          
+                            <i>xsd:date</i>
+                           
+                            <br>
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:dateModified" href="prop-schema1datemodified.html">schema1:dateModified</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                          
+                            <i>xsd:date</i>
+                           
+                            <br>
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:datePublished" href="prop-schema1datepublished.html">schema1:datePublished</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                          
+                            <i>xsd:date</i>
+                           
+                            <br>
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:editor" href="prop-schema1editor.html">schema1:editor</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                          
+                            <a title="schema1:Person" href="class-schema1person.html" class="rdfclass">schema1:Person</a>
+                           
+                          <br>
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:encodingFormat" href="prop-schema1encodingformat.html">schema1:encodingFormat</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                          
+                            <i>xsd:string</i>
+                           
+                            <br>
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:funder" href="prop-schema1funder.html">schema1:funder</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:genre" href="prop-schema1genre.html">schema1:genre</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:hasPart" href="prop-schema1haspart.html">schema1:hasPart</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                          
+                            <a title="schema1:CreativeWork" href="class-schema1creativework.html" class="rdfclass">schema1:CreativeWork</a>
+                           
+                          <br>
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:inLanguage" href="prop-schema1inlanguage.html">schema1:inLanguage</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+                        
+                      <td>     
+                        
+                          
+                            <i>xsd:string</i>
+                           
+                            <br>
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:isAccessibleForFree" href="prop-schema1isaccessibleforfree.html">schema1:isAccessibleForFree</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                          
+                            <i>xsd:boolean</i>
+                           
+                            <br>
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:keywords" href="prop-schema1keywords.html">schema1:keywords</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:license" href="prop-schema1license.html">schema1:license</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:maintainer" href="prop-schema1maintainer.html">schema1:maintainer</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:mentions" href="prop-schema1mentions.html">schema1:mentions</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                          
+                            <a title="schema1:Thing" href="class-schema1thing.html" class="rdfclass">schema1:Thing</a>
+                           
+                          <br>
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:position" href="prop-schema1position.html">schema1:position</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:publisher" href="prop-schema1publisher.html">schema1:publisher</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:spatialCoverage" href="prop-schema1spatialcoverage.html">schema1:spatialCoverage</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                          
+                            <a title="schema1:Place" href="class-schema1place.html" class="rdfclass">schema1:Place</a>
+                           
+                          <br>
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:temporalCoverage" href="prop-schema1temporalcoverage.html">schema1:temporalCoverage</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+                        
+                      <td>     
+                        
+                        
+                      </td>
+                    
+                  </tr>
+                   
+                  <tr>
+                       
+                      <td>   
+                        
+                          <a class="propcolor" title="schema1:usageInfo" href="prop-schema1usageinfo.html">schema1:usageInfo</a>
+                        
+                      </td>
+ 
+                      <td>     
+                        
+                      </td>
+ 
+                      <td>     
+                        1
+                      </td>
+                        
+                      <td>     
                         
                         
                       </td>
@@ -1079,27 +1714,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">sh:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/ns/shacl#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nv">&lt;http://rescs.org/dash/place/PlaceShape&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">NodeShape</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;Place&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;Entities that have a somewhat fixed, physical extension.&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-    <span class="nn">sh</span><span class="p">:</span><span class="nt">and</span> <span class="p">(</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">node</span> <span class="nv">&lt;http://rescs.org/dash/thing/ThingShape&gt;</span> <span class="p">]</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;The telephone number.&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;telephone&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema1</span><span class="p">:</span><span class="nt">telephone</span> <span class="p">],</span>
-                    <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">class</span> <span class="nn">schema1</span><span class="p">:</span><span class="nt">GeoCoordinates</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;The geo coordinates of the place.&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;geo&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">node</span> <span class="nv">&lt;http://rescs.org/dash/geocoordinates/GeoCoordinatesShape&gt;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">nodeKind</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">BlankNode</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema1</span><span class="p">:</span><span class="nt">geo</span> <span class="p">],</span>
-                    <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;Physical address of the item.&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;address&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema1</span><span class="p">:</span><span class="nt">address</span> <span class="p">]</span> <span class="p">]</span> <span class="p">)</span> <span class="p">;</span>
-    <span class="nn">sh</span><span class="p">:</span><span class="nt">targetClass</span> <span class="nn">schema1</span><span class="p">:</span><span class="nt">Place</span> <span class="p">.</span>
+<span class="nv">&lt;http://rescs.org/dash/digitaldocument/DigitalDocumentShape&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">NodeShape</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;DigitalDocument&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;An electronic file or document.&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
+    <span class="nn">sh</span><span class="p">:</span><span class="nt">and</span> <span class="p">(</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">node</span> <span class="nv">&lt;http://rescs.org/dash/creativework/CreativeWorkShape&gt;</span> <span class="p">]</span> <span class="p">)</span> <span class="p">;</span>
+    <span class="nn">sh</span><span class="p">:</span><span class="nt">targetClass</span> <span class="nn">schema1</span><span class="p">:</span><span class="nt">DigitalDocument</span> <span class="p">.</span>
 </pre></div>
 
             
@@ -1190,7 +1809,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_180").offset().top - 100
+          scrollTop: $("#sd_189").offset().top - 100
       }, 100);
     });
 
