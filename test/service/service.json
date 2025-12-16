@@ -9,7 +9,7 @@
   "identifier": {
     "@id": "http://www.example.com/1"
   },
-  "name": "a grant",
+  "name": "a service",
   "sameAs": {
     "@id": "http://www.example.com/2"
   },
