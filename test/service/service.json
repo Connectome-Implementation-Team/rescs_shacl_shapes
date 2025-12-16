@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@type": "Service",
+  "alternateName": "My alias name",
+  "description": "a description",
+  "identifier": {
+    "@id": "http://www.example.com/1"
+  },
+  "name": "a grant",
+  "sameAs": {
+    "@id": "http://www.example.com/2"
+  },
+  "url": {
+    "@id": "http://www.example.com/3"
+  },
+  "provider": {
+    "@id": "http://www.example.com/4",
+    "@type": "Organization",
+    "name": "org"
+  },
+  "inLanguage": ["ger"],
+  "keywords": "my keyword"
+}
