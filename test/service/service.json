@@ -22,5 +22,6 @@
     "name": "org"
   },
   "inLanguage": ["ger"],
-  "keywords": "my keyword"
+  "keywords": "my keyword",
+  "isAccessibleForFree": true
 }

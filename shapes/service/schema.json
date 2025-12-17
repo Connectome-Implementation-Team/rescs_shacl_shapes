@@ -61,6 +61,13 @@
                 }
               ],
               "minCount": 1
+            },
+            {
+              "path": "schema:isAccessibleForFree",
+              "name": "isAccessibleForFree",
+              "description": "A flag to signal that the item, event, or place is accessible for free.",
+              "datatype": "xsd:boolean",
+              "maxCount": 1
             }
           ]
         }
