@@ -379,7 +379,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_25"><a  href="class-schema1scholarlyarticle.html">schema1:ScholarlyArticle</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_26"><a  href="class-schema1service.html">schema1:Service</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_26"><a class="active" href="class-schema1service.html">schema1:Service</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_27"><a  href="class-schema1structuredvalue.html">schema1:StructuredValue</a></li>
           
@@ -582,21 +582,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
     
     
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
 
 
@@ -650,12 +636,26 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-az.html">Entities</a>
     </li>
     <li>
-          <a href="entities-tree-shapes.html">Shapes</a>
+          <a href="entities-tree-classes.html">Classes</a>
     </li>
       <li class="active">
-            rescs:dash/geocoordinates/GeoCoordinatesShape
+            schema1:Service
         </li>
   </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -666,12 +666,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
     
     <h1>
-        rescs:dash/geocoordinates/GeoCoordinatesShape
-        
-          <small class="label label-info label-xs">leaf node</small>
-        
+      schema1:Service
+      
+        <small class="label label-info label-xs">leaf node</small>
+      
     </h1>
-    
+
     <hr>  
 
     
@@ -679,18 +679,20 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
       <div class="tree">
         <ul>
           
-            <li><a href="entities-tree-classes.html">sh:Shape</a>
-              <ul>
-                <li><a style="font-weight: bold;" title="'Geo coordinates' - The geographic coordinates of a place or event.">rescs:dash/geocoordinates/GeoCoordinatesShape</a>
-                  
-                </li>
-              </ul>
-            </li>
+            
+              <li>
+                <a href="class-schema1intangible.html" title="'Intangible'">schema1:Intangible</a>
+                  <ul>
+                    <li><a style="font-weight: bold;" title="'Service'">schema1:Service</a>
+                    
+                  </li>
+                </ul>
+              </li>
+            
           
         </ul>
       </div>
     </div>
-
 
 
     
@@ -701,7 +703,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             <h3 class="panel-title">URI</h3>
           </div>
           <div class="panel-body">
-            <code>http://rescs.org/dash/geocoordinates/GeoCoordinatesShape</code>
+            <code>http://schema.org/Service</code>
           </div>
         </div>
       </div>
@@ -717,25 +719,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             <h3 class="panel-title">Label</h3>
           </div>
           <div class="panel-body">
-            Geo coordinates
+            Service
           </div>
-          </div>
-        </div>
-      </div>
-    
-
-
-    
-    
-      <div class="row">
-        <div class="col-md-12">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Description</h3>
-            </div>
-            <div class="panel-body">
-              <p>The geographic coordinates of a place or event.</p>
-            </div>
           </div>
         </div>
       </div>
@@ -752,12 +737,16 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         <div class="col-md-12">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Target Classes (1)</h3>
+              <h3 class="panel-title">Superclasses (2)</h3>
             </div>
             <div class="panel-body">
               
-                <li><a href="class-schema1geocoordinates.html">schema1:GeoCoordinates</a></li>
                 
+                  <li><a href="class-schema1intangible.html" title="http://schema.org/Intangible">schema1:Intangible</a></li>
+                
+                  <li><a href="class-schema1thing.html" title="http://schema.org/Thing">schema1:Thing</a></li>
+                
+              
             </div>
           </div>
         </div>
@@ -767,279 +756,857 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
     
     
-    
-           
-         
-        <div class="row">
-          <div class="col-md-12">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Shape Properties</h3>
-              </div>
-              <div class="panel-body" style="overflow: auto;">
-                <p>Instances of schema1:GeoCoordinates can have the following properties:</p>
-              </div>
-              <table class="table table-bordered" style="overflow: auto;">
-                <tr class="table-classproperties">   
-                    <th><p style="text-align:center;">PROPERTY</p></th>
-                    <th><p style="text-align:center;">MIN COUNT</p></th>
-                    <th><p style="text-align:center;">MAX COUNT</p></th>
-                    <th><p style="text-align:center;">TYPE</p></th>
-                </tr>
-                   
-                  <tr>
-                     
-                      <td colspan="5">
-                        <small class="label label-info label-xs">schema1:GeoCoordinates</small>
-                      </td>
-                        
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema1:latitude" href="prop-schema1latitude.html">schema1:latitude</a>
-                        
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
-                        
-                      <td>     
-                        
-                          
-                            <i>xsd:float</i>
-                           
-                            <br>
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema1:longitude" href="prop-schema1longitude.html">schema1:longitude</a>
-                        
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
-                        
-                      <td>     
-                        
-                          
-                            <i>xsd:float</i>
-                           
-                            <br>
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                     
-                      <td colspan="5">
-                        <small class="label label-info label-xs">schema1:Thing</small>
-                      </td>
-                        
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema1:alternateName" href="prop-schema1alternatename.html">schema1:alternateName</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
-                        
-                      <td>     
-                        
-                          
-                            <i>xsd:string</i>
-                           
-                            <br>
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema1:description" href="prop-schema1description.html">schema1:description</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
-                        
-                      <td>     
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema1:identifier" href="prop-schema1identifier.html">schema1:identifier</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
-                        
-                      <td>     
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema1:image" href="prop-schema1image.html">schema1:image</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
-                        
-                      <td>     
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema1:name" href="prop-schema1name.html">schema1:name</a>
-                        
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
- 
-                      <td>     
-                        1
-                      </td>
-                        
-                      <td>     
-                        
-                          
-                            <i>xsd:string</i>
-                           
-                            <br>
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema1:sameAs" href="prop-schema1sameas.html">schema1:sameAs</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
-                        
-                      <td>     
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                   
-                  <tr>
-                       
-                      <td>   
-                        
-                          <a class="propcolor" title="schema1:url" href="prop-schema1url.html">schema1:url</a>
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
- 
-                      <td>     
-                        
-                      </td>
-                        
-                      <td>     
-                        
-                        
-                      </td>
-                    
-                  </tr>
-                
-
-              </table>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Shapes (1)</h3>
+            </div>
+            <div class="panel-body">
+              
+                <li><a href="shape-rescsdashserviceserviceshape.html" title="http://rescs.org/dash/service/ServiceShape">rescs:dash/service/ServiceShape</a></li>
+              
             </div>
           </div>
         </div>
-      
+      </div>
+    
+
+
     
     
+
+
+    
+    
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Usage</h3>
+            </div>
+            <div class="panel-body" style="overflow: auto;">
+              <p>Instances of schema1:Service can have the following properties:</p>
+            </div>
+            <table class="table table-bordered" style="overflow: auto;">
+              <tr class="table-classproperties">
+                <th>PROPERTY</th><th>TYPE</th><th>DESCRIPTION</th><th>RANGE</th>
+              </tr>
+              
+                
+                  
+                      <tr class="table-inheritanceinfo">
+                        <th colspan="4" class="treeinfo">
+                          <span class="label label-default">From class <a title="schema1:Service" href="class-schema1service.html" class="fromclass_link">schema1:Service</a></span>
+                        </th>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema1:inLanguage" href="prop-schema1inlanguage.html">schema1:inLanguage</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:string</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema1:isAccessibleForFree" href="prop-schema1isaccessibleforfree.html">schema1:isAccessibleForFree</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>A flag to signal that the item, event, or place is accessible for free.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:boolean</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema1:keywords" href="prop-schema1keywords.html">schema1:keywords</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>rdf:langString</i>
+                                
+                            
+                                
+                                  <i>sh:IRI</i>
+                                
+                            
+                                
+                                  <i>xsd:string</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema1:provider" href="prop-schema1provider.html">schema1:provider</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <a title="schema1:Person" href="class-schema1person.html" class="rdfclass">schema1:Person</a>
+                                
+                            
+                                
+                                  <a title="schema1:Organization" href="class-schema1organization.html" class="rdfclass">schema1:Organization</a>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  
+                
+              
+                
+                  
+                      <tr class="table-inheritanceinfo">
+                        <th colspan="4" class="treeinfo">
+                          <span class="label label-default">From class <a title="schema1:Thing" href="class-schema1thing.html" class="fromclass_link">schema1:Thing</a></span>
+                        </th>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema1:alternateName" href="prop-schema1alternatename.html">schema1:alternateName</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>An alias for the item.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:string</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema1:description" href="prop-schema1description.html">schema1:description</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>A description of the item.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>rdf:langString</i>
+                                
+                            
+                                
+                                  <i>xsd:string</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema1:identifier" href="prop-schema1identifier.html">schema1:identifier</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>sh:IRI</i>
+                                
+                            
+                                
+                                  <i>xsd:string</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema1:image" href="prop-schema1image.html">schema1:image</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>An image of the item.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>sh:IRI</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema1:name" href="prop-schema1name.html">schema1:name</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>The name of the item.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>xsd:string</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema1:sameAs" href="prop-schema1sameas.html">schema1:sameAs</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>URL of a reference Web page that unambiguously indicates the item&#39;s identity. E.g. the URL of the item&#39;s Wikipedia page, Wikidata entry, or official website.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>sh:IRI</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="schema1:url" href="prop-schema1url.html">schema1:url</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>rdf:Property<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span>URL of the item.</span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <i>sh:IRI</i>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  
+                
+              
+            </table>
+          </div>
+        </div>
+      </div>
+    
+
+
+    
+    
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Property Shapes</h3>
+            </div>
+            <div class="panel-body" style="overflow: auto;">
+              <p>By the associated SHACL property shapes, instances of schema1:Service can have the following properties:</p>
+            </div>
+            <table class="table table-bordered" style="overflow: auto;">
+              <tr class="table-classproperties">
+                <th><p style="text-align:center;">PROPERTY</p></th>
+                <th><p style="text-align:center;">PROPERTY TYPE</p></th>
+                <th><p style="text-align:center;">DESCRIPTION</p></th>
+                <th><p style="text-align:center;">MIN COUNT</p></th>
+                <th><p style="text-align:center;">MAX COUNT</p></th>
+                <th><p style="text-align:center;">LOCAL RANGE<br><i>(type range for property on this class)</i></p></th>
+                <th><p style="text-align:center;">GLOBAL RANGE<br><i>(type range for property globally)</i></p></th>
+              </tr>
+              
+                <tr>
+                  
+                  
+                    <td colspan="8">
+                      <small class="label label-info label-xs">schema1:Service</small>
+                    </td>
+
+
+                  
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema1:inLanguage" href="prop-schema1inlanguage.html">schema1:inLanguage</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+                      <br>
+                      The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                        
+                          <i>xsd:string</i>
+                         
+                          <br>
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema1:isAccessibleForFree" href="prop-schema1isaccessibleforfree.html">schema1:isAccessibleForFree</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      A flag to signal that the item, event, or place is accessible for free.
+                      <br>
+                      A flag to signal that the item, event, or place is accessible for free.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                        
+                          <i>xsd:boolean</i>
+                         
+                          <br>
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema1:keywords" href="prop-schema1keywords.html">schema1:keywords</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.
+                      <br>
+                      Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema1:provider" href="prop-schema1provider.html">schema1:provider</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.
+                      <br>
+                      The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td colspan="8">
+                      <small class="label label-info label-xs">schema1:Thing</small>
+                    </td>
+
+
+                  
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema1:alternateName" href="prop-schema1alternatename.html">schema1:alternateName</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      An alias for the item.
+                      <br>
+                      An alias for the item.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                        
+                          <i>xsd:string</i>
+                         
+                          <br>
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema1:description" href="prop-schema1description.html">schema1:description</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      A description of the item.
+                      <br>
+                      A description of the item.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema1:identifier" href="prop-schema1identifier.html">schema1:identifier</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+                      <br>
+                      The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema1:image" href="prop-schema1image.html">schema1:image</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      An image of the item.
+                      <br>
+                      An image of the item.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema1:name" href="prop-schema1name.html">schema1:name</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      The name of the item.
+                      <br>
+                      The name of the item.
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      1
+                    </td>
+
+                    <td>     
+                      
+                        
+                          <i>xsd:string</i>
+                         
+                          <br>
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema1:sameAs" href="prop-schema1sameas.html">schema1:sameAs</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      URL of a reference Web page that unambiguously indicates the item&#39;s identity. E.g. the URL of the item&#39;s Wikipedia page, Wikidata entry, or official website.
+                      <br>
+                      URL of a reference Web page that unambiguously indicates the item&#39;s identity. E.g. the URL of the item&#39;s Wikipedia page, Wikidata entry, or official website.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                  
+                  
+                    <td>    
+                      
+                        <a class="propcolor" title="schema1:url" href="prop-schema1url.html">schema1:url</a>
+                      
+                    </td>
+
+                    <td>    
+                      rdf:Property
+                    </td>
+
+                    <td>     
+                      URL of the item.
+                      <br>
+                      URL of the item.
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                    </td>
+
+                    <td>     
+                      
+                      
+                    </td>
+
+                    <td>    
+                      
+                        
+                          <i>owl:Thing</i>
+                        
+                      
+                    </td>
+                  
+                </tr>
+              
+            </table>
+          </div>
+        </div>
+      </div>
+    
+
 
     
     <div class="row">
@@ -1050,28 +1617,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           </div>
           <div class="panel-body implementation-panel">
             
-              <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+              <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">schema1:</span><span class="w"> </span><span class="nv">&lt;http://schema.org/&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">sh:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/ns/shacl#&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nv">&lt;http://rescs.org/dash/geocoordinates/GeoCoordinatesShape&gt;</span> <span class="kt">a</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">NodeShape</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;Geo coordinates&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;The geographic coordinates of a place or event.&quot;</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">string</span> <span class="p">;</span>
-    <span class="nn">sh</span><span class="p">:</span><span class="nt">and</span> <span class="p">(</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">node</span> <span class="nv">&lt;http://rescs.org/dash/structuredvalue/StructuredValueShape&gt;</span> <span class="p">]</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">property</span> <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">float</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;The longitude of a location. For example ```-122.08585``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;longitude&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema1</span><span class="p">:</span><span class="nt">longitude</span> <span class="p">],</span>
-                    <span class="p">[</span> <span class="nn">sh</span><span class="p">:</span><span class="nt">datatype</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">float</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">description</span> <span class="s">&quot;The latitude of a location. For example ```37.42242``` ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">maxCount</span> <span class="mi">1</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">minCount</span> <span class="mi">1</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">name</span> <span class="s">&quot;latitude&quot;</span> <span class="p">;</span>
-                        <span class="nn">sh</span><span class="p">:</span><span class="nt">path</span> <span class="nn">schema1</span><span class="p">:</span><span class="nt">latitude</span> <span class="p">]</span> <span class="p">]</span> <span class="p">)</span> <span class="p">;</span>
-    <span class="nn">sh</span><span class="p">:</span><span class="nt">targetClass</span> <span class="nn">schema1</span><span class="p">:</span><span class="nt">GeoCoordinates</span> <span class="p">.</span>
+<span class="nn">schema1</span><span class="p">:</span><span class="nt">Service</span> <span class="kt">a</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">Class</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span> <span class="nn">schema1</span><span class="p">:</span><span class="nt">Intangible</span> <span class="p">.</span>
 </pre></div>
 
             
@@ -1081,7 +1631,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     </div>
 
 
-  
+        
 
 
 
@@ -1162,7 +1712,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_180").offset().top - 100
+          scrollTop: $("#sd_26").offset().top - 100
       }, 100);
     });
 
