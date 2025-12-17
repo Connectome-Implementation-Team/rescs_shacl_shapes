@@ -186,6 +186,13 @@
       }
     },
     {
+      "@id": "schema:Service",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
       "@id": "schema:MonetaryGrant",
       "@type": "rdfs:Class",
       "rdfs:subClassOf": {

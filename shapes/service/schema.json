@@ -1,0 +1,77 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "http://rescs.org/dash/service/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "@id": "http://rescs.org/dash/service",
+  "imports": [
+    "http://rescs.org/dash/intangible"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ServiceShape",
+      "@type": "sh:NodeShape",
+      "label": "Service",
+      "comment": "A service provided by an organization, e.g. delivery service, print services, etc.",
+      "targetClass": "schema:Service",
+      "and": [
+        {
+          "node": "http://rescs.org/dash/intangible/IntangibleShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:keywords",
+              "name": "keywords",
+              "description": "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+              "or": [
+                {
+                  "datatype": "xsd:string"
+                },
+                {
+                  "datatype": "rdf:langString"
+                },
+                {
+                  "nodeKind": "sh:IRI"
+                }
+              ]
+            },
+            {
+              "path": "schema:inLanguage",
+              "name": "inLanguage",
+              "description": "The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].",
+              "datatype": "xsd:string",
+              "pattern": "^[a-z]{3}$"
+            },
+            {
+              "path": "schema:provider",
+              "name": "provider",
+              "description": "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+              "or": [
+                {
+                  "class": "schema:Person",
+                  "nodeKind": "sh:IRI"
+                },
+                {
+                  "class": "schema:Organization",
+                  "nodeKind": "sh:IRI"
+                }
+              ],
+              "minCount": 1
+            },
+            {
+              "path": "schema:isAccessibleForFree",
+              "name": "isAccessibleForFree",
+              "description": "A flag to signal that the item, event, or place is accessible for free.",
+              "datatype": "xsd:boolean",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

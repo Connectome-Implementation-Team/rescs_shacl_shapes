@@ -103,6 +103,7 @@ validate "project" "edge_project"
 validate "archivecomponent" "archivecomponent"
 validate "archiveorganization" "archiveorganization"
 validate "presentationdigitaldocument" "presentationdigitaldocument"
+validate "service" "service"
 
 # attempt throws an error if object is valid
 attempt "thing" "bad_thing"
