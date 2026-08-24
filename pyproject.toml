@@ -5,7 +5,7 @@ description = "This repo contains the SHACL shapes for RESCS (Research Commons).
 authors = [
     { name = "Tobias Schweizer", email = "tobias.schweizer@switch.ch" }
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.11,<3.14"
 dependencies = [
     "pyld==3.2.0",
     "requests==2.34.2",
