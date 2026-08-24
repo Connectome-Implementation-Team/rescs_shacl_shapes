@@ -20,4 +20,4 @@ jobs:
       - name: Run tests
         run: |
           uv run mypy --ignore-missing-imports --explicit-package-bases .
-          cd scripts; uv run test_all.sh
+          cd scripts; uv run bash test_all.sh
