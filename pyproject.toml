@@ -1,0 +1,22 @@
+[project]
+name = "rescs-shacl-shapes"
+version = "0.1.0"
+description = "This repo contains the SHACL shapes for RESCS (Research Commons)."
+authors = [
+    { name = "Tobias Schweizer", email = "tobias.schweizer@switch.ch" }
+]
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "pyld>=3.2.0",
+    "requests>=2.34.2",
+    "types-requests>=2.33.0.20260712",
+    "pyparsing>=3.3.2",
+    "pyshacl>=0.40.1",
+    "python-decouple>=3.8",
+    "rdflib>=7.6.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=2.1.0",
+]

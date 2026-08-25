@@ -1,8 +1,0 @@
-pyld
-wheel
-requests
-types-requests
-pyparsing
-pyshacl
-python-decouple
-rdflib
