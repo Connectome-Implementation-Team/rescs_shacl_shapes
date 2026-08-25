@@ -459,17 +459,17 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "pyld", specifier = "==3.2.0" },
-    { name = "pyparsing", specifier = "==3.3.2" },
-    { name = "pyshacl", specifier = "==0.40.1" },
-    { name = "python-decouple", specifier = "==3.8" },
-    { name = "rdflib", specifier = "==7.6.0" },
-    { name = "requests", specifier = "==2.34.2" },
-    { name = "types-requests", specifier = "==2.33.0.20260712" },
+    { name = "pyld", specifier = ">=3.2.0" },
+    { name = "pyparsing", specifier = ">=3.3.2" },
+    { name = "pyshacl", specifier = ">=0.40.1" },
+    { name = "python-decouple", specifier = ">=3.8" },
+    { name = "rdflib", specifier = ">=7.6.0" },
+    { name = "requests", specifier = ">=2.34.2" },
+    { name = "types-requests", specifier = ">=2.33.0.20260712" },
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "mypy", specifier = "==2.1.0" }]
+dev = [{ name = "mypy", specifier = ">=2.1.0" }]
 
 [[package]]
 name = "types-requests"
